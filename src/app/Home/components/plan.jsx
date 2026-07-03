@@ -65,11 +65,11 @@ export default function Plan() {
           </p>
 
           {/* Billing toggle */}
-          <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-zinc-50 p-1.5">
+          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 p-1 sm:gap-3 sm:p-1.5">
             <button
               type="button"
               onClick={() => setYearly(false)}
-              className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+              className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-colors sm:px-5 sm:py-2 sm:text-sm ${
                 !yearly ? "bg-emerald-500 text-white shadow" : "text-zinc-500"
               }`}
             >
@@ -78,12 +78,12 @@ export default function Plan() {
             <button
               type="button"
               onClick={() => setYearly(true)}
-              className={`flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+              className={`flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold transition-colors sm:gap-2 sm:px-5 sm:py-2 sm:text-sm ${
                 yearly ? "bg-emerald-500 text-white shadow" : "text-zinc-500"
               }`}
             >
               Yearly
-              <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+              <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 text-[9px] font-bold text-emerald-700 sm:px-2 sm:text-[10px]">
                 SAVE 12%
               </span>
             </button>

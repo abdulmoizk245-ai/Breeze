@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {
-  FaHeartPulse,
   FaFacebookF,
   FaXTwitter,
   FaInstagram,
@@ -58,14 +58,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 pb-16 lg:grid-cols-[1.3fr_2fr]">
           {/* Brand + newsletter */}
           <div>
-            <Link href="/" className="group inline-flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/40 transition-transform group-hover:scale-105">
-                <FaHeartPulse className="h-4 w-4 text-white" />
-              </span>
-              <span className="text-xl font-bold tracking-tight text-white">
-                Breeze<span className="text-emerald-400">Health</span>
-              </span>
-            </Link>
+            <Link href="/" className="block transition-transform hover:scale-105">
+  <Image
+    src="/logo.png"
+    alt="Breezy Health Solutions"
+    width={150}
+    height={60}
+    priority
+    unoptimized
+    className="h-14 w-auto object-contain"
+  />
+</Link>
 
             <p className="mt-5 max-w-sm text-sm leading-6 text-emerald-100/70">
               Affordable, human-first health insurance. We help 12,000+

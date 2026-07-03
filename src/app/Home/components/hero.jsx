@@ -34,7 +34,7 @@ return (
     {/* Decorative glow */}
     <div className="pointer-events-none absolute -bottom-40 right-0 h-96 w-96 rounded-full bg-emerald-500/20 blur-3xl" />
 
-<div className="relative z-10 flex w-full flex-col gap-10 px-6 py-24 lg:flex-row lg:items-center lg:justify-between">
+<div className="relative z-10 flex w-full flex-col gap-10 px-6 py-16 sm:py-20 lg:flex-row lg:items-center lg:justify-between lg:py-24">
       {/* Text + CTA - LEFT SIDE */}
       <div className="max-w-xl text-white">
         <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-emerald-300 backdrop-blur-sm">
