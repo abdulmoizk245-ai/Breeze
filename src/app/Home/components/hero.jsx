@@ -19,7 +19,7 @@ export default function Hero() {
 
 return (
   <section className="relative isolate flex min-h-[92vh] w-full items-center overflow-hidden">
-    {/* Background image */}
+  
     <Image
       src="/home/hero.png"
       alt="Family protected by health insurance"
