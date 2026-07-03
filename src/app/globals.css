@@ -24,3 +24,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes quote-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-quote-pulse {
+  animation: quote-pulse 2s ease-out infinite;
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-shine {
+  animation: shine-sweep 1.6s ease-in-out infinite;
+}

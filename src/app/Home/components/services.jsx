@@ -61,9 +61,11 @@ export default function Services() {
           {SERVICES.map(({ title, description, icon: Icon, points }) => (
             <div
               key={title}
-              className="group relative flex flex-col rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/5"
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-2xl hover:shadow-black/30"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 transition-colors duration-300 group-hover:bg-emerald-500">
+              <span className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:animate-shine" />
+
+              <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 transition-colors duration-300 group-hover:bg-emerald-500">
                 <Icon className="h-6 w-6 text-emerald-500 transition-colors duration-300 group-hover:text-white" />
               </span>
 

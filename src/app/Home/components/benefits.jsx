@@ -43,8 +43,10 @@ export default function Benefits() {
           {BENEFITS.map(({ title, description, icon: Icon }, i) => (
             <div
               key={title}
-              className="group relative flex items-start gap-5 overflow-hidden rounded-2xl border border-emerald-100 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/5"
+              className="group relative flex items-start gap-5 overflow-hidden rounded-2xl border border-emerald-100 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-2xl hover:shadow-black/30"
             >
+              <span className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:animate-shine" />
+
               <span className="absolute right-4 top-2 text-5xl font-black text-emerald-50 transition-colors duration-300 group-hover:text-emerald-100">
                 0{i + 1}
               </span>

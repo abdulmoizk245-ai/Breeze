@@ -20,7 +20,7 @@ export default function Header() {
       <nav className="mx-auto flex  items-center justify-between px-6 ">
         <Link
           href="/"
-          className="relative inline-block h-16 w-44 shrink-0 transition-transform hover:scale-105 sm:h-20 sm:w-52"
+          className="relative inline-block h-20 w-56 shrink-0 transition-transform hover:scale-105 sm:h-24 sm:w-64"
         >
           <Image
             src="/BRZ LOGO.png"
@@ -38,10 +38,9 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="group relative text-sm font-medium text-zinc-200 transition-colors hover:text-white"
+              className="group relative rounded-full px-3 py-1.5 text-sm font-medium text-zinc-200 transition-colors hover:bg-emerald-500 hover:text-white"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-emerald-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
@@ -55,7 +54,7 @@ export default function Header() {
           </a>
           <a
             href="#quote"
-            className="rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 transition-all hover:scale-105 hover:bg-emerald-600 hover:shadow-emerald-500/50"
+            className="animate-quote-pulse rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-bold tracking-wide text-white shadow-lg shadow-emerald-500/30 transition-all hover:scale-105 hover:bg-emerald-400 hover:shadow-emerald-500/50 active:scale-95 active:bg-emerald-700"
           >
             Get a Quote
           </a>
@@ -103,7 +102,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-base font-medium text-zinc-200 hover:text-white"
+                className="rounded-lg px-3 py-2 text-base font-medium text-zinc-200 transition-colors hover:bg-emerald-500 hover:text-white"
               >
                 {link.label}
               </a>
@@ -117,7 +116,7 @@ export default function Header() {
             <a
               href="#quote"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-emerald-500 px-5 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 transition-colors hover:bg-emerald-600"
+              className="animate-quote-pulse mt-2 rounded-full bg-emerald-500 px-5 py-3 text-center text-sm font-bold tracking-wide text-white shadow-lg shadow-emerald-500/30 transition-all hover:bg-emerald-400 active:scale-95 active:bg-emerald-700"
             >
               Get a Quote
             </a>

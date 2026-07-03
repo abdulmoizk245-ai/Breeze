@@ -21,7 +21,7 @@ const CATEGORIES = [
 
 export default function Categories() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-emerald-500 to-emerald-800 py-20">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-emerald-500 to-emerald-800 py-10">
       {/* Decorative dot grid + glow */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.15]"
@@ -46,23 +46,24 @@ export default function Categories() {
           budget
         </p>
 
-        <div className="mt-12 flex flex-nowrap justify-center gap-4 overflow-x-auto pb-2">
-          {CATEGORIES.map(({ label, icon: Icon, href }) => (
-            <a
-              key={label}
-              href={href}
-              className="group flex w-32 shrink-0 flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white p-4 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-emerald-950/30 sm:w-36 sm:p-6"
-            >
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 transition-colors duration-300 group-hover:bg-emerald-500">
-                <Icon className="h-6 w-6 text-emerald-500 transition-colors duration-300 group-hover:text-white" />
-              </span>
-              <span className="flex items-center justify-center gap-1 whitespace-nowrap text-xs font-semibold text-zinc-900 sm:text-sm">
-                {label}
-                <FaChevronRight className="h-3 w-3 shrink-0 text-emerald-500 transition-transform duration-300 group-hover:translate-x-1" />
-              </span>
-            </a>
-          ))}
-        </div>
+    <div className="mt-12 flex flex-nowrap justify-center gap-4 overflow-x-auto pt-3 pb-2">
+  {CATEGORIES.map(({ label, icon: Icon, href }) => (
+    <a
+      key={label}
+      href={href}
+      className="group flex w-32 shrink-0 flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white p-4 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-emerald-950/30 sm:w-36 sm:p-6"
+    >
+      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 transition-colors duration-300 group-hover:bg-emerald-500">
+        <Icon className="h-6 w-6 text-emerald-500 transition-colors duration-300 group-hover:text-white" />
+      </span>
+
+      <span className="flex items-center justify-center gap-1 whitespace-nowrap text-xs font-semibold text-zinc-900 sm:text-sm">
+        {label}
+        <FaChevronRight className="h-3 w-3 shrink-0 text-emerald-500 transition-transform duration-300 group-hover:translate-x-1" />
+      </span>
+    </a>
+  ))}
+</div>
       </div>
     </section>
   );
