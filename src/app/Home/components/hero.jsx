@@ -21,7 +21,7 @@ return (
   <section className="relative isolate flex min-h-[92vh] w-full items-center overflow-hidden">
   
     <Image
-      src="/home/hero.png"
+      src="/Home/hero.png"
       alt="Family protected by health insurance"
       fill
       priority
