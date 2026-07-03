@@ -17,16 +17,19 @@ export default function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 w-full">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link href="/" className="relative inline-block h-11 w-32 shrink-0 transition-transform hover:scale-105 sm:h-12 sm:w-36">
+      <nav className="mx-auto flex  items-center justify-between px-6 ">
+        <Link
+          href="/"
+          className="relative inline-block h-16 w-44 shrink-0 transition-transform hover:scale-105 sm:h-20 sm:w-52"
+        >
           <Image
-    src="/logo.png"
-    alt="Breezy Health Solutions"
-    fill
-    priority
-    sizes="160px"
-    className="object-contain"
-  />
+            src="/BRZ LOGO.png"
+            alt="Breezy Health Solutions"
+            fill
+            priority
+            sizes="(max-width: 640px) 176px, 208px"
+            className="object-contain"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -75,9 +78,17 @@ export default function Header() {
             className="h-7 w-7"
           >
             {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
+              />
             )}
           </svg>
         </button>

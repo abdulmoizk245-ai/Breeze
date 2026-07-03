@@ -54,25 +54,28 @@ export default function Footer() {
     <footer className="relative w-full overflow-hidden bg-emerald-950 pt-20">
       <div className="pointer-events-none absolute -top-32 left-1/3 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto  px-6">
         <div className="grid grid-cols-1 gap-12 pb-16 lg:grid-cols-[1.3fr_2fr]">
           {/* Brand + newsletter */}
           <div>
-            <Link href="/" className="block transition-transform hover:scale-105">
-  <Image
-    src="/logo.png"
-    alt="Breezy Health Solutions"
-    width={150}
-    height={60}
-    priority
-    unoptimized
-    className="h-14 w-auto object-contain"
-  />
-</Link>
+            <Link
+              href="/"
+              className="block transition-transform hover:scale-105"
+            >
+              <Image
+                src="/BRZ LOGO.png"
+                alt="Breezy Health Solutions"
+                width={150}
+                height={60}
+                priority
+                unoptimized
+                className="h-40 w-auto object-contain"
+              />
+            </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-6 text-emerald-100/70">
-              Affordable, human-first health insurance. We help 12,000+
-              members find plans that fit their life and budget.
+              Affordable, human-first health insurance. We help 12,000+ members
+              find plans that fit their life and budget.
             </p>
 
             <form
