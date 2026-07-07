@@ -51,20 +51,20 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-24">
+    <section className="relative w-full overflow-hidden bg-[#f8fffb] py-24">
       {/* Decorative soft blobs */}
-      <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-emerald-100/70 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-emerald-50 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-primary-100/70 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-primary-50 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-emerald-700">
+          <span className="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-700">
             Real Voices, Real Relief
           </span>
 
-          <h2 className="mx-auto mt-6 max-w-2xl text-3xl font-bold tracking-tight text-emerald-950 sm:text-4xl">
+          <h2 className="mx-auto mt-6 max-w-2xl text-3xl font-bold tracking-tight text-primary-950 sm:text-4xl">
             Loved by thousands.{" "}
-            <span className="bg-gradient-to-r from-emerald-500 to-emerald-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">
               Trusted for life.
             </span>
           </h2>
@@ -77,17 +77,17 @@ export default function Testimonials() {
           {/* Stat strip */}
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             <div>
-              <span className="text-2xl font-bold text-emerald-950">4.9/5</span>
+              <span className="text-2xl font-bold text-primary-950">4.9/5</span>
               <span className="ml-2 text-sm text-zinc-500">average rating</span>
             </div>
-            <div className="hidden h-6 w-px bg-emerald-100 sm:block" />
+            <div className="hidden h-6 w-px bg-primary-100 sm:block" />
             <div>
-              <span className="text-2xl font-bold text-emerald-950">12,000+</span>
+              <span className="text-2xl font-bold text-primary-950">12,000+</span>
               <span className="ml-2 text-sm text-zinc-500">members covered</span>
             </div>
-            <div className="hidden h-6 w-px bg-emerald-100 sm:block" />
+            <div className="hidden h-6 w-px bg-primary-100 sm:block" />
             <div>
-              <span className="text-2xl font-bold text-emerald-950">98%</span>
+              <span className="text-2xl font-bold text-primary-950">98%</span>
               <span className="ml-2 text-sm text-zinc-500">claims approved fast</span>
             </div>
           </div>
@@ -99,10 +99,10 @@ export default function Testimonials() {
             t.featured ? (
               <div
                 key={t.name}
-                className="flex flex-col justify-between rounded-3xl bg-gradient-to-br from-emerald-600 to-emerald-800 p-8 shadow-lg shadow-emerald-900/10 transition-transform duration-300 hover:-translate-y-1 lg:col-span-2"
+                className="flex flex-col justify-between rounded-3xl bg-gradient-to-br from-primary-600 to-primary-800 p-8 shadow-lg shadow-primary-900/10 transition-transform duration-300 hover:-translate-y-1 lg:col-span-2"
               >
                 <div>
-                  <FaQuoteLeft className="h-8 w-8 text-emerald-300/60" />
+                  <FaQuoteLeft className="h-8 w-8 text-primary-300/60" />
                   <p className="mt-6 text-xl font-medium leading-relaxed text-white sm:text-2xl">
                     &ldquo;{t.quote}&rdquo;
                   </p>
@@ -114,13 +114,13 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <p className="font-semibold text-white">{t.name}</p>
-                    <p className="text-sm text-emerald-100/80">
+                    <p className="text-sm text-primary-100/80">
                       {t.plan} · {t.location}
                     </p>
                   </div>
                   <div className="ml-auto flex gap-1">
                     {Array.from({ length: t.rating }).map((_, i) => (
-                      <FaStar key={i} className="h-4 w-4 text-emerald-300" />
+                      <FaStar key={i} className="h-4 w-4 text-primary-300" />
                     ))}
                   </div>
                 </div>
@@ -128,21 +128,21 @@ export default function Testimonials() {
             ) : (
               <div
                 key={t.name}
-                className="flex flex-col justify-between rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-900/5"
+                className="flex flex-col justify-between rounded-3xl border border-primary-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-900/5"
               >
                 <div>
-                  <FaQuoteLeft className="h-6 w-6 text-emerald-200" />
+                  <FaQuoteLeft className="h-6 w-6 text-primary-200" />
                   <p className="mt-4 text-base leading-relaxed text-zinc-600">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
                     {t.initials}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-emerald-950">
+                    <p className="text-sm font-semibold text-primary-950">
                       {t.name}
                     </p>
                     <p className="text-xs text-zinc-500">
@@ -153,7 +153,7 @@ export default function Testimonials() {
 
                 <div className="mt-4 flex gap-1">
                   {Array.from({ length: t.rating }).map((_, i) => (
-                    <FaStar key={i} className="h-3.5 w-3.5 text-emerald-500" />
+                    <FaStar key={i} className="h-3.5 w-3.5 text-primary-500" />
                   ))}
                 </div>
               </div>

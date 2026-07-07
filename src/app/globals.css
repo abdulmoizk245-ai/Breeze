@@ -10,6 +10,31 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-fraunces);
+
+  --color-primary-50: #f7faef;
+  --color-primary-100: #ecf4dc;
+  --color-primary-200: #d9e9b9;
+  --color-primary-300: #c2dc8e;
+  --color-primary-400: #a7cc5c;
+  --color-primary-500: #83a935;
+  --color-primary-600: #6c8c2c;
+  --color-primary-700: #577123;
+  --color-primary-800: #45591c;
+  --color-primary-900: #364616;
+  --color-primary-950: #212b0d;
+
+  --color-secondary-50: #fffbf0;
+  --color-secondary-100: #fef6dc;
+  --color-secondary-200: #fdebb4;
+  --color-secondary-300: #fcde82;
+  --color-secondary-400: #fbcc41;
+  --color-secondary-500: #fabd08;
+  --color-secondary-600: #d29e04;
+  --color-secondary-700: #aa8003;
+  --color-secondary-800: #876603;
+  --color-secondary-900: #694f02;
+  --color-secondary-950: #413101;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,10 +53,10 @@ body {
 @keyframes quote-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55);
+    box-shadow: 0 0 0 0 rgba(131, 169, 53, 0.55);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 12px rgba(131, 169, 53, 0);
   }
 }
 

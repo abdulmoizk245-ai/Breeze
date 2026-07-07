@@ -40,15 +40,15 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section className="relative w-full overflow-hidden bg-zinc-50 py-24">
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-emerald-100/60 blur-3xl" />
+    <section className="relative w-full overflow-hidden bg-[#f8fffb] py-24">
+      <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-primary-100/60 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6 ">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-emerald-700">
+          <span className="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-700">
             What We Offer
           </span>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-emerald-950 sm:text-4xl">
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-primary-950 sm:text-4xl">
             Services designed around your life
           </h2>
           <p className="mt-4 text-lg text-zinc-500">
@@ -61,15 +61,15 @@ export default function Services() {
           {SERVICES.map(({ title, description, icon: Icon, points }) => (
             <div
               key={title}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-2xl hover:shadow-black/30"
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-2xl hover:shadow-black/30"
             >
               <span className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:animate-shine" />
 
-              <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 transition-colors duration-300 group-hover:bg-emerald-500">
-                <Icon className="h-6 w-6 text-emerald-500 transition-colors duration-300 group-hover:text-white" />
+              <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 transition-colors duration-300 group-hover:bg-primary-500">
+                <Icon className="h-6 w-6 text-primary-500 transition-colors duration-300 group-hover:text-white" />
               </span>
 
-              <h3 className="mt-6 text-xl font-semibold text-emerald-950">
+              <h3 className="mt-6 text-xl font-semibold text-primary-950">
                 {title}
               </h3>
               <p className="mt-2 text-sm leading-6 text-zinc-500">
@@ -82,7 +82,7 @@ export default function Services() {
                     key={point}
                     className="flex items-center gap-2 text-sm text-zinc-600"
                   >
-                    <FaCheck className="h-3 w-3 shrink-0 text-emerald-500" />
+                    <FaCheck className="h-3 w-3 shrink-0 text-primary-500" />
                     {point}
                   </li>
                 ))}
@@ -90,7 +90,7 @@ export default function Services() {
 
               <a
                 href="#quote"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary-600 transition-colors hover:text-primary-700"
               >
                 Explore coverage
                 <FaArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />

@@ -30,13 +30,13 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="relative w-full overflow-hidden bg-zinc-50 py-24">
+    <section className="relative w-full overflow-hidden bg-[#f8fffb] py-24">
       <div className="relative mx-auto max-w-4xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-emerald-700">
+          <span className="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-700">
             Got Questions?
           </span>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-emerald-950 sm:text-4xl">
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-primary-950 sm:text-4xl">
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg text-zinc-500">
@@ -52,7 +52,7 @@ export default function Faq() {
               <div
                 key={item.q}
                 className={`overflow-hidden rounded-2xl border bg-white transition-colors duration-300 ${
-                  isOpen ? "border-emerald-300" : "border-zinc-200"
+                  isOpen ? "border-primary-300" : "border-zinc-200"
                 }`}
               >
                 <button
@@ -61,14 +61,14 @@ export default function Faq() {
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base font-semibold text-emerald-950">
+                  <span className="text-base font-semibold text-primary-950">
                     {item.q}
                   </span>
                   <span
                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
                       isOpen
-                        ? "rotate-45 bg-emerald-500 text-white"
-                        : "bg-emerald-50 text-emerald-600"
+                        ? "rotate-45 bg-primary-500 text-white"
+                        : "bg-primary-50 text-primary-600"
                     }`}
                   >
                     <FaPlus className="h-3.5 w-3.5" />
