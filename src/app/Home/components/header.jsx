@@ -1,132 +1,4 @@
-// "use client";
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import { useState } from "react";
-
-// const NAV_LINKS = [
-//   { label: "Plans", href: "/#plans" },
-//   { label: "Services", href: "/Service" },
-//   { label: "Claims", href: "#claims" },
-//   { label: "About", href: "/About" },
-//   { label: "Contact", href: "#contact" },
-// ];
-
-// export default function Header() {
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <header className="absolute inset-x-0 top-0 z-50 w-full">
-//       <nav className="mx-auto flex  items-center justify-between px-6 ">
-//         <Link
-//           href="/"
-//           className="relative inline-block h-20 w-56 shrink-0 transition-transform hover:scale-105 sm:h-24 sm:w-64"
-//         >
-//           <Image
-//             src="/BRZ LOGO.png"
-//             alt="Breezy Health Solutions"
-//             fill
-//             priority
-//             sizes="(max-width: 640px) 176px, 208px"
-//             className="object-contain"
-//           />
-//         </Link>
-
-//         {/* Desktop nav */}
-//         <div className="hidden items-center gap-8 lg:flex">
-//           {NAV_LINKS.map((link) => (
-//             <Link
-//               key={link.href}
-//               href={link.href}
-//               className="group relative rounded-full px-3 py-1.5 text-sm font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
-//             >
-//               {link.label}
-//             </Link>
-//           ))}
-//         </div>
-
-//         <div className="hidden items-center gap-4 lg:flex">
-//           <a
-//             href="tel:+18005551234"
-//             className="text-sm font-semibold text-white"
-//           >
-//             +1 (800) 555-1234
-//           </a>
-//           <a
-//             href="#quote"
-//             className="animate-quote-pulse rounded-full bg-primary-500 px-5 py-2.5 text-sm font-bold tracking-wide text-white shadow-lg shadow-primary-500/30 transition-all hover:scale-105 hover:bg-primary-400 hover:shadow-primary-500/50 active:scale-95 active:bg-primary-700"
-//           >
-//             Get a Quote
-//           </a>
-//         </div>
-
-//         {/* Mobile menu button */}
-//         <button
-//           type="button"
-//           onClick={() => setOpen((prev) => !prev)}
-//           className="inline-flex items-center justify-center rounded-md p-2 text-white lg:hidden"
-//           aria-label="Toggle menu"
-//           aria-expanded={open}
-//         >
-//           <svg
-//             xmlns="http://www.w3.org/2000/svg"
-//             fill="none"
-//             viewBox="0 0 24 24"
-//             strokeWidth={1.8}
-//             stroke="currentColor"
-//             className="h-7 w-7"
-//           >
-//             {open ? (
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 d="M6 18L18 6M6 6l12 12"
-//               />
-//             ) : (
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
-//               />
-//             )}
-//           </svg>
-//         </button>
-//       </nav>
-
-//       {/* Mobile nav panel */}
-//       {open && (
-//         <div className="border-t border-white/10 bg-black/90 px-6 py-6 backdrop-blur-md lg:hidden">
-//           <div className="flex flex-col gap-4">
-//             {NAV_LINKS.map((link) => (
-//               <Link
-//                 key={link.href}
-//                 href={link.href}
-//                 onClick={() => setOpen(false)}
-//                 className="rounded-lg px-3 py-2 text-base font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
-//               >
-//                 {link.label}
-//               </Link>
-//             ))}
-//             <a
-//               href="tel:+18005551234"
-//               className="text-base font-semibold text-white"
-//             >
-//               +1 (800) 555-1234
-//             </a>
-//             <a
-//               href="#quote"
-//               onClick={() => setOpen(false)}
-//               className="animate-quote-pulse mt-2 rounded-full bg-primary-500 px-5 py-3 text-center text-sm font-bold tracking-wide text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-400 active:scale-95 active:bg-primary-700"
-//             >
-//               Get a Quote
-//             </a>
-//           </div>
-//         </div>
-//       )}
-//     </header>
-//   );
 // }
-
 "use client";
 
 import Image from "next/image";
@@ -134,18 +6,17 @@ import Link from "next/link";
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { label: "Plans", href: "/#plans" },
-  { label: "Claims", href: "#claims" },
   { label: "About", href: "/About" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const SERVICE_LINKS = [
-  { label: "Private PPO Health Plans", href: "/Service#ppo" },
-  { label: "Family Coverage", href: "/Service#family" },
-  { label: "Dental & Vision Insurance", href: "/Service#dental-vision" },
-  { label: "Medicare Supplement Plans", href: "/Service#medicare" },
-  { label: "Small Business Coverage", href: "/Service#business" },
+  // { label: "All Services", href: "/Service" },
+  { label: "Stress Management", href: "/Stressmanagement" },
+  { label: "Quit Smoking", href: "/quietsomking" },
+  { label: "Managing Stress", href: "/Managestress" },
+  { label: "Boost Immune System", href: "/Immuesystem" },
+  { label: "Three Pillars of Health", href: "/pillarhealth" },
 ];
 
 export default function Header() {
@@ -157,7 +28,7 @@ export default function Header() {
       <nav className="mx-auto flex items-center justify-between px-6">
         <Link
           href="/"
-          className="relative inline-block h-20 w-56 shrink-0 transition-transform hover:scale-105 sm:h-24 sm:w-64"
+          className="relative inline-flex h-20 w-52 shrink-0 items-center transition-transform duration-300 hover:scale-105 sm:h-24 sm:w-64"
         >
           <Image
             src="/BRZ LOGO.png"
@@ -165,24 +36,17 @@ export default function Header() {
             fill
             priority
             sizes="(max-width: 640px) 176px, 208px"
-            className="object-contain"
+            className="object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.35)]"
           />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-8 lg:flex">
-          <Link
-            href="/#plans"
-            className="group relative rounded-full px-3 py-1.5 text-sm font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
-          >
-            Plans
-          </Link>
-
+        <div className="hidden items-center rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl shadow-black/10 backdrop-blur-md lg:flex">
           {/* Services Dropdown */}
           <div className="group relative">
             <Link
               href="/Service"
-              className="flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
+              className="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-500 hover:text-white hover:shadow-lg hover:shadow-primary-500/25"
             >
               Services
               <svg
@@ -191,7 +55,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="h-4 w-4 transition-transform group-hover:rotate-180"
+                className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180"
               >
                 <path
                   strokeLinecap="round"
@@ -201,45 +65,62 @@ export default function Header() {
               </svg>
             </Link>
 
-            <div className="invisible absolute left-1/2 top-full z-50 mt-4 w-72 -translate-x-1/2 rounded-2xl border border-white/10 bg-white p-3 opacity-0 shadow-2xl shadow-black/20 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="absolute -top-3 left-0 h-3 w-full" />
+            <div className="invisible absolute left-1/2 top-full z-50 mt-5 w-80 -translate-x-1/2 translate-y-3 rounded-3xl border border-white/20 bg-white/95 p-3 opacity-0 shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="absolute -top-4 left-0 h-4 w-full" />
 
-              {SERVICE_LINKS.map((service) => (
-                <Link
-                  key={service.href}
-                  href={service.href}
-                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-primary-50 hover:text-primary-600"
-                >
-                  {service.label}
-                </Link>
-              ))}
+              <div className="mb-2 rounded-2xl bg-primary-500/10 px-4 py-3">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-600">
+                  Our Services
+                </p>
+                <p className="mt-1 text-sm font-medium text-slate-600">
+                  Explore wellness and health support services
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                {SERVICE_LINKS.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="group/item flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-primary-500 hover:text-white"
+                  >
+                    <span>{service.label}</span>
+
+                    <span className="translate-x-[-4px] text-primary-500 opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:text-white group-hover/item:opacity-100">
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          {NAV_LINKS.slice(1).map((link) => (
+          {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="group relative rounded-full px-3 py-1.5 text-sm font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
+              className="relative rounded-full px-4 py-2 text-sm font-semibold text-white/85 transition-all duration-300 hover:bg-white/15 hover:text-white"
             >
               {link.label}
             </Link>
           ))}
         </div>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        {/* Desktop CTA */}
+        <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+18005551234"
-            className="text-sm font-semibold text-white"
+            className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-black/10 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-primary-300"
           >
             +1 (800) 555-1234
           </a>
 
           <a
             href="#quote"
-            className="animate-quote-pulse rounded-full bg-primary-500 px-5 py-2.5 text-sm font-bold tracking-wide text-white shadow-lg shadow-primary-500/30 transition-all hover:scale-105 hover:bg-primary-400 hover:shadow-primary-500/50 active:scale-95 active:bg-primary-700"
+            className="group relative overflow-hidden rounded-full bg-primary-500 px-6 py-3 text-sm font-bold tracking-wide text-white shadow-xl shadow-primary-500/35 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-400 hover:shadow-primary-500/50 active:translate-y-0 active:scale-95"
           >
-            Get a Quote
+            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+            <span className="relative z-10">Get a Quote</span>
           </a>
         </div>
 
@@ -276,77 +157,117 @@ export default function Header() {
         </button>
       </nav>
 
+      {/* Mobile nav overlay */}
+      <div
+        onClick={() => setOpen(false)}
+        aria-hidden="true"
+        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+          open ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      />
+
       {/* Mobile nav panel */}
-      {open && (
-        <div className="border-t border-white/10 bg-black/90 px-6 py-6 backdrop-blur-md lg:hidden">
-          <div className="flex flex-col gap-4">
-            <Link
-              href="/#plans"
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-3 py-2 text-base font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
+      <div
+        className={`fixed inset-y-0 right-0 z-50 flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-primary-950 px-6 py-6 shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="mb-6 flex items-center justify-end">
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center justify-center rounded-md p-2 text-white"
+            aria-label="Close menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.8}
+              stroke="currentColor"
+              className="h-7 w-7"
             >
-              Plans
-            </Link>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
 
-            {/* Mobile Services Dropdown */}
-            <div>
-              <button
-                type="button"
-                onClick={() => setServiceOpen((prev) => !prev)}
-                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-base font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
+        <div className="flex flex-col gap-1">
+          {/* Mobile Services Dropdown */}
+          <div className="border-b border-white/10 pb-2">
+            <button
+              type="button"
+              onClick={() => setServiceOpen((prev) => !prev)}
+              className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-primary-300 transition-all hover:bg-white/10 hover:text-white"
+            >
+              <span>Services</span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className={`h-4 w-4 transition-transform duration-300 ${
+                  serviceOpen ? "rotate-180" : ""
+                }`}
               >
-                Services
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className={`h-4 w-4 transition-transform ${
-                    serviceOpen ? "rotate-180" : ""
-                  }`}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 8.25 12 15.75 4.5 8.25"
-                  />
-                </svg>
-              </button>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 8.25 12 15.75 4.5 8.25"
+                />
+              </svg>
+            </button>
 
-              {serviceOpen && (
-                <div className="mt-2 space-y-2 rounded-2xl bg-white/10 p-3">
-                  {SERVICE_LINKS.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      onClick={() => {
-                        setOpen(false);
-                        setServiceOpen(false);
-                      }}
-                      className="block rounded-xl px-4 py-2 text-sm font-medium text-zinc-200 transition hover:bg-primary-500 hover:text-white"
-                    >
-                      {service.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
+            <div
+              className={`grid overflow-hidden transition-all duration-300 ease-out ${
+                serviceOpen
+                  ? "mt-2 grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="min-h-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2">
+                {SERVICE_LINKS.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    onClick={() => {
+                      setOpen(false);
+                      setServiceOpen(false);
+                    }}
+                    className="block rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-300 transition-all hover:bg-primary-500 hover:text-white"
+                  >
+                    {service.label}
+                  </Link>
+                ))}
+              </div>
             </div>
+          </div>
 
-            {NAV_LINKS.slice(1).map((link) => (
+          {/* Mobile Main Links */}
+          <div className="border-b border-white/10 py-2">
+            {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2 text-base font-medium text-zinc-200 transition-colors hover:bg-primary-500 hover:text-white"
+                className="block rounded-xl px-4 py-3 text-base font-semibold text-primary-300 transition-all hover:bg-white/10 hover:text-white"
               >
                 {link.label}
               </Link>
             ))}
+          </div>
 
+          {/* Mobile Contact */}
+          <div className="pt-4">
             <a
               href="tel:+18005551234"
-              className="text-base font-semibold text-white"
+              className="flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10"
             >
               +1 (800) 555-1234
             </a>
@@ -354,13 +275,13 @@ export default function Header() {
             <a
               href="#quote"
               onClick={() => setOpen(false)}
-              className="animate-quote-pulse mt-2 rounded-full bg-primary-500 px-5 py-3 text-center text-sm font-bold tracking-wide text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-400 active:scale-95 active:bg-primary-700"
+              className="animate-quote-pulse mt-3 flex items-center justify-center rounded-full bg-primary-500 px-5 py-3 text-center text-sm font-bold tracking-wide text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-400 active:scale-95 active:bg-primary-700"
             >
               Get a Quote
             </a>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

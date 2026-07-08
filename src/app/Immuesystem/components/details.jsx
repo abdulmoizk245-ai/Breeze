@@ -120,115 +120,100 @@ const services = [
   "Medicare Supplement Plans",
 ];
 
-const seoKeywords = [
-  "Boost your immune system naturally",
-  "Healthy immune system tips",
-  "Preventive health habits",
-  "Healthy lifestyle",
-  "Private PPO health insurance",
-  "Affordable health insurance",
-  "Wellness and prevention",
-  "Health insurance for families",
-  "Small business health insurance",
-  "Breezy Health Solutions",
-];
-
 export default function ImmuneSystemPage() {
   return (
-    <main className="overflow-hidden bg-[#f8fffb]">
-      {/* Hero */}
-      <section className="relative px-6 pb-24 pt-36 lg:px-8 lg:pt-44">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,#d1fae5,transparent_35%),radial-gradient(circle_at_bottom_right,#cffafe,transparent_35%)]" />
+    <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
+      {/* Hero — dark, editorial */}
+      <section className="relative isolate overflow-hidden bg-slate-950 px-6 pb-24 pt-40 lg:px-16 lg:pb-32 lg:pt-48">
+        <div className="pointer-events-none absolute left-[-10%] top-[-20%] h-[32rem] w-[32rem] rounded-full bg-primary-500/15 blur-[130px]" />
+        <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[32rem] w-[32rem] rounded-full bg-secondary-500/10 blur-[130px]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:88px_88px]" />
 
-        <div className="mx-auto grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="relative mx-auto grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <span className="inline-flex rounded-full bg-emerald-50 px-5 py-2 text-sm font-black uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-100">
-              Wellness & Prevention
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="h-px w-10 bg-primary-400" />
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-300">
+                Wellness &amp; Prevention
+              </span>
+            </div>
 
-            <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-              Boost Your Immune System Naturally
+            <h1 className="mt-8 text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <span className="font-sans font-semibold">
+                Boost your immune system
+              </span>
+              <br />
+              <span className="font-serif italic text-primary-300">
+                naturally.
+              </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              Healthy habits that help you stay well, feel stronger, and protect
-              your long-term health with confidence.
+            <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-300">
+              Healthy habits that help you stay well, feel stronger, and
+              protect your long-term health with confidence.
             </p>
 
-            <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600">
+            <p className="mt-5 max-w-xl text-base leading-8 text-zinc-400">
               Your immune system works around the clock to protect you from
-              viruses, bacteria, and other harmful invaders. While no lifestyle
-              can guarantee that you&apos;ll never get sick, daily healthy
-              choices can help your immune system function at its best.
+              viruses, bacteria, and other harmful invaders. While no
+              lifestyle can guarantee that you&apos;ll never get sick, daily
+              healthy choices can help your immune system function at its
+              best.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap items-center gap-8">
               <a
                 href="tel:+15125579308"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-emerald-600 px-7 py-4 text-sm font-black text-white shadow-xl shadow-emerald-600/25 transition hover:-translate-y-1 hover:bg-emerald-700"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-400"
               >
-                <FaPhoneAlt className="h-4 w-4" />
+                <FaPhoneAlt className="h-3.5 w-3.5" />
                 Call (512) 557-9308
               </a>
 
               <Link
                 href="/Contact"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-black text-slate-950 shadow-lg ring-1 ring-slate-200 transition hover:-translate-y-1 hover:ring-emerald-200"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
               >
                 Speak With Brenda
-                <FaArrowRight className="h-4 w-4" />
+                <FaArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
 
+          {/* Prevention card */}
           <div className="relative">
-            <div className="absolute -left-8 -top-8 h-36 w-36 rounded-full bg-emerald-200 blur-3xl" />
-            <div className="absolute -bottom-8 -right-8 h-36 w-36 rounded-full bg-cyan-200 blur-3xl" />
-
-            <div className="relative rounded-[2rem] border border-white/70 bg-white/90 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
-              <div className="rounded-[1.7rem] bg-slate-950 p-8 text-white">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-300">
-                  <FaShieldAlt className="h-8 w-8" />
-                </div>
-
-                <h2 className="mt-7 text-3xl font-black">
-                  Prevention Is Protection
-                </h2>
-
-                <p className="mt-4 text-sm leading-7 text-slate-300">
-                  At Breezy Health Solutions, we believe prevention is one of
-                  the greatest investments you can make in your health.
-                </p>
-
-                <div className="mt-7 grid gap-4">
-                  <div className="rounded-2xl bg-white/10 p-5">
-                    <p className="text-sm font-bold text-emerald-300">
-                      Healthy Habits
-                    </p>
-                    <p className="mt-1 text-sm text-slate-300">
-                      Support your immune system naturally every day.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl bg-white/10 p-5">
-                    <p className="text-sm font-bold text-emerald-300">
-                      Quality Coverage
-                    </p>
-                    <p className="mt-1 text-sm text-slate-300">
-                      Protect yourself when unexpected medical needs happen.
-                    </p>
-                  </div>
-                </div>
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl sm:p-9">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-500/15 text-primary-300">
+                <FaShieldAlt className="h-7 w-7" />
               </div>
 
-              <div className="mt-5 rounded-3xl border border-emerald-100 bg-emerald-50 p-6">
-                <p className="text-sm font-black uppercase tracking-widest text-emerald-700">
-                  Breezy Health Solutions
-                </p>
-                <p className="mt-3 text-sm leading-7 text-slate-700">
-                  Helping individuals, families, and small business owners find
-                  affordable health insurance options with personalized guidance.
-                </p>
+              <h2 className="mt-7 font-serif text-3xl text-white">
+                Prevention Is Protection
+              </h2>
+
+              <p className="mt-4 text-sm leading-7 text-slate-300">
+                At Breezy Health Solutions, we believe prevention is one of
+                the greatest investments you can make in your health.
+              </p>
+
+              <div className="mt-7 space-y-3 border-t border-white/10 pt-6">
+                <div className="rounded-2xl bg-white/5 p-5">
+                  <p className="text-sm font-semibold text-primary-300">
+                    Healthy Habits
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Support your immune system naturally every day.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-white/5 p-5">
+                  <p className="text-sm font-semibold text-primary-300">
+                    Quality Coverage
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Protect yourself when unexpected medical needs happen.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -237,62 +222,70 @@ export default function ImmuneSystemPage() {
 
       {/* Intro Statement */}
       <section className="px-6 py-16 lg:px-8">
-        <div className="mx-auto  rounded-[2rem] bg-gradient-to-br from-emerald-600 to-cyan-600 p-8 text-center shadow-2xl shadow-emerald-600/20 sm:p-12">
-          <FaHeartbeat className="mx-auto h-10 w-10 text-white" />
+        <div className="mx-auto max-w-9xl rounded-[1.5rem] bg-primary-600 px-6 py-12 text-center sm:px-12 sm:py-14">
+          <FaHeartbeat className="mx-auto h-9 w-9 text-white" />
 
-          <h2 className="mt-6 text-3xl font-black tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-6 font-serif text-3xl text-white sm:text-4xl">
             Small Healthy Choices Can Build a Stronger Tomorrow
           </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-emerald-50">
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-primary-50">
             By combining daily wellness habits with quality health insurance,
-            you give yourself the tools to live a stronger, healthier, and more
-            protected life.
+            you give yourself the tools to live a stronger, healthier, and
+            more protected life.
           </p>
         </div>
       </section>
 
       {/* Healthy Habits */}
-      <section className="px-6 py-24 lg:px-8">
-        <div className="mx-auto ">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-black uppercase tracking-[0.25em] text-emerald-600">
-              Healthy Immune Habits
-            </span>
+      <section className="px-6 py-20 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-9xl">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-3">
+              <span className="h-px w-10 bg-primary-500" />
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
+                Healthy Immune Habits
+              </span>
+            </div>
 
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl">
-              Natural Ways to Support Your Immune System
+            <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
+              <span className="font-sans font-semibold">
+                Natural ways to
+              </span>{" "}
+              <span className="font-serif italic">
+                support your immune system.
+              </span>
             </h2>
 
-            <p className="mt-5 text-base leading-8 text-slate-600">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
               Focus on consistent habits that support your body, mind, and
               overall wellness.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 lg:grid-cols-2">
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
             {habits.map((habit) => {
               const Icon = habit.icon;
 
               return (
                 <div
                   key={habit.title}
-                  className="group rounded-[2rem] border border-slate-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-emerald-200 hover:shadow-2xl"
+                  className="group rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl sm:p-7"
                 >
                   <div className="flex flex-col gap-5 sm:flex-row">
-                    <div className="flex h-16 w-16 flex-none items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 transition group-hover:bg-emerald-600 group-hover:text-white">
-                      <Icon className="h-7 w-7" />
+                    <div className="flex h-14 w-14 flex-none items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition group-hover:bg-primary-600 group-hover:text-white">
+                      <Icon className="h-6 w-6" />
                     </div>
 
-                    <div>
+                    <div className="min-w-0">
                       <div className="flex items-center gap-3">
-                        <span className="text-sm font-black text-emerald-600">
+                        <span className="font-serif text-lg text-primary-500/60">
                           {habit.number}
                         </span>
-                        <div className="h-px w-12 bg-emerald-200" />
+                        <div className="h-px flex-1 bg-slate-100" />
                       </div>
 
-                      <h3 className="mt-3 text-2xl font-black text-slate-950">
+                      <h3 className="mt-3 text-xl font-semibold text-slate-900">
                         {habit.title}
                       </h3>
 
@@ -303,7 +296,7 @@ export default function ImmuneSystemPage() {
                       <div className="mt-5 grid gap-3 sm:grid-cols-2">
                         {habit.points.map((point) => (
                           <div key={point} className="flex gap-3">
-                            <FaCheckCircle className="mt-1 h-4 w-4 flex-none text-emerald-500" />
+                            <FaCheckCircle className="mt-1 h-4 w-4 flex-none text-primary-500" />
                             <p className="text-sm leading-6 text-slate-600">
                               {point}
                             </p>
@@ -320,45 +313,48 @@ export default function ImmuneSystemPage() {
       </section>
 
       {/* Prevention + Insurance */}
-      <section className="relative px-6 py-24 lg:px-8">
-        <div className="absolute inset-0 -z-10 bg-slate-950" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.25),transparent_35%)]" />
+      <section className="relative overflow-hidden bg-slate-950 px-6 py-20 sm:py-24 lg:px-8">
+        <div className="pointer-events-none absolute right-[-10%] top-0 h-96 w-96 rounded-full bg-primary-500/10 blur-3xl" />
 
-        <div className="mx-auto grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="relative mx-auto grid max-w-9xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <span className="text-sm font-black uppercase tracking-[0.25em] text-emerald-300">
-              Prevention + Protection
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="h-px w-10 bg-primary-400" />
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-300">
+                Prevention + Protection
+              </span>
+            </div>
 
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-black sm:text-5xl">
-              Good Habits Help Keep You Healthy. Good Insurance Helps Protect
-              You.
+            <h2 className="mt-6 text-3xl leading-tight tracking-tight text-white sm:text-4xl">
+              Good habits help keep you healthy.
+              <br />
+              <span className="font-serif italic text-primary-300">
+                Good insurance helps protect you.
+              </span>
             </h2>
 
             <p className="mt-6 text-base leading-8 text-slate-300">
-              Living a healthy lifestyle is one of the best ways to support your
-              immune system, but even the healthiest people can experience
-              unexpected illnesses or accidents. That&apos;s why having quality
-              health insurance matters.
+              Living a healthy lifestyle is one of the best ways to support
+              your immune system, but even the healthiest people can
+              experience unexpected illnesses or accidents. That&apos;s why
+              having quality health insurance matters.
             </p>
 
-            <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6">
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-emerald-400/15 text-emerald-300">
-                  <FaStethoscope className="h-5 w-5" />
-                </div>
+            <div className="mt-8 flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-primary-400/15 text-primary-300">
+                <FaStethoscope className="h-5 w-5" />
+              </div>
 
-                <div>
-                  <h3 className="text-lg font-black text-white">
-                    The right health plan gives you access to care when you need
-                    it most.
-                  </h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-400">
-                    Preventive care, primary care, specialist support, testing,
-                    prescriptions, and emergency medical care can all play a
-                    role in protecting your health and financial future.
-                  </p>
-                </div>
+              <div>
+                <h3 className="text-base font-semibold text-white">
+                  The right health plan gives you access to care when you
+                  need it most.
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-slate-400">
+                  Preventive care, primary care, specialist support, testing,
+                  prescriptions, and emergency medical care can all play a
+                  role in protecting your health and financial future.
+                </p>
               </div>
             </div>
           </div>
@@ -367,10 +363,10 @@ export default function ImmuneSystemPage() {
             {insuranceBenefits.map((benefit) => (
               <div
                 key={benefit}
-                className="rounded-3xl border border-green/10 bg-white/10 p-6 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15"
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10"
               >
-                <FaCheckCircle className="h-6 w-6 text-emerald-300" />
-                <h3 className="mt-4 text-base font-black text-black">
+                <FaCheckCircle className="h-6 w-6 text-primary-300" />
+                <h3 className="mt-4 text-base font-semibold text-white">
                   {benefit}
                 </h3>
               </div>
@@ -380,27 +376,33 @@ export default function ImmuneSystemPage() {
       </section>
 
       {/* Investment Section */}
-      <section className="px-6 py-24 lg:px-8">
-        <div className="mx-auto ">
+      <section className="px-6 py-20 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-9xl">
           <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
-              <span className="text-sm font-black uppercase tracking-[0.25em] text-emerald-600">
-                Your Health Is Your Greatest Investment
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="h-px w-10 bg-primary-500" />
+                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
+                  Your Health Is Your Greatest Investment
+                </span>
+              </div>
 
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl">
-                Start With Small, Consistent Steps
+              <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
+                <span className="font-sans font-semibold">
+                  Start with small,
+                </span>{" "}
+                <span className="font-serif italic">consistent steps.</span>
               </h2>
 
-              <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600">
-                Every healthy choice you make today contributes to a healthier
-                tomorrow. You do not need to change everything overnight. Start
-                with simple habits and build from there.
+              <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">
+                Every healthy choice you make today contributes to a
+                healthier tomorrow. You do not need to change everything
+                overnight. Start with simple habits and build from there.
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-slate-100 bg-slate-50 p-6">
-              <div className="grid gap-4">
+            <div className="rounded-3xl border border-slate-100 bg-primary-50 p-6">
+              <div className="grid gap-3">
                 {[
                   "Move your body",
                   "Drink more water",
@@ -413,10 +415,12 @@ export default function ImmuneSystemPage() {
                     key={item}
                     className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm"
                   >
-                    <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                    <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-primary-50 text-primary-600">
                       <FaCheckCircle className="h-4 w-4" />
                     </div>
-                    <p className="text-sm font-bold text-slate-700">{item}</p>
+                    <p className="text-sm font-medium text-slate-700">
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -426,16 +430,21 @@ export default function ImmuneSystemPage() {
       </section>
 
       {/* Breezy CTA */}
-      <section className="px-6 py-24 lg:px-8">
-        <div className="mx-auto rounded-[2.5rem] bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 p-8 shadow-2xl sm:p-12 lg:p-16">
+      <section className="px-6 py-20 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-9xl rounded-[1.5rem] bg-slate-950 px-6 py-14 sm:px-10 lg:px-16">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-400/15 text-emerald-300">
-                <FaUserMd className="h-8 w-8" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-500/15 text-primary-300">
+                <FaUserMd className="h-7 w-7" />
               </div>
 
-              <h2 className="mt-7 text-3xl font-black tracking-tight text-white sm:text-5xl">
-                Let Breezy Health Solutions Help Protect Your Health
+              <h2 className="mt-7 text-3xl leading-tight text-white sm:text-4xl">
+                <span className="font-sans font-semibold">
+                  Let Breezy Health Solutions
+                </span>{" "}
+                <span className="font-serif italic text-primary-300">
+                  help protect your health.
+                </span>
               </h2>
 
               <p className="mt-6 text-base leading-8 text-slate-300">
@@ -444,8 +453,8 @@ export default function ImmuneSystemPage() {
                 insurance solutions that fit their needs and budget.
               </p>
 
-              <div className="mt-8">
-                <p className="font-black text-white">Brenda Ruiz</p>
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <p className="font-serif text-lg text-white">Brenda Ruiz</p>
                 <p className="mt-1 text-sm text-slate-400">
                   Licensed Health Insurance Advisor
                 </p>
@@ -457,24 +466,24 @@ export default function ImmuneSystemPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="tel:+15125579308"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-emerald-500 px-7 py-4 text-sm font-black text-white shadow-xl shadow-emerald-500/25 transition hover:-translate-y-1 hover:bg-emerald-400"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-400"
                 >
-                  <FaPhoneAlt className="h-4 w-4" />
+                  <FaPhoneAlt className="h-3.5 w-3.5" />
                   (512) 557-9308
                 </a>
 
                 <Link
                   href="/Contact"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-black text-slate-950 transition hover:-translate-y-1 hover:bg-emerald-50"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-primary-50"
                 >
                   Request Guidance
-                  <FaArrowRight className="h-4 w-4" />
+                  <FaArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 className="text-2xl font-black text-white">
+            <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 sm:p-7">
+              <h3 className="font-serif text-2xl text-white">
                 Coverage Options
               </h3>
 
@@ -483,20 +492,22 @@ export default function ImmuneSystemPage() {
                 personalized guidance.
               </p>
 
-              <div className="mt-6 grid gap-4">
+              <div className="mt-6 grid gap-3">
                 {services.map((service) => (
                   <div
                     key={service}
-                    className="flex items-center gap-4 rounded-2xl bg-white/10 p-4"
+                    className="flex items-center gap-4 rounded-2xl bg-white/5 p-4"
                   >
-                    <FaCheckCircle className="h-5 w-5 flex-none text-emerald-300" />
-                    <p className="text-sm font-bold text-white">{service}</p>
+                    <FaCheckCircle className="h-5 w-5 flex-none text-primary-300" />
+                    <p className="text-sm font-medium text-white">
+                      {service}
+                    </p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-7 rounded-2xl bg-emerald-500/15 p-5">
-                <p className="text-sm font-bold leading-7 text-emerald-100">
+              <div className="mt-6 rounded-2xl bg-primary-500/15 p-5">
+                <p className="text-sm leading-7 text-primary-100">
                   Helping you protect both your health and your financial
                   future — one conversation at a time.
                 </p>
@@ -505,29 +516,6 @@ export default function ImmuneSystemPage() {
           </div>
         </div>
       </section>
-
-      {/* SEO Keywords */}
-      {/* <section className="px-6 pb-24 lg:px-8">
-        <div className="mx-auto rounded-[2rem] border border-slate-100 bg-slate-50 p-8">
-          <h2 className="text-2xl font-black text-slate-950">SEO Keywords</h2>
-
-          <p className="mt-3 text-sm leading-7 text-slate-600">
-            This article is optimized for search engines using wellness,
-            prevention, and health insurance related phrases.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            {seoKeywords.map((keyword) => (
-              <span
-                key={keyword}
-                className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm ring-1 ring-slate-100"
-              >
-                {keyword}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </main>
   );
 }
