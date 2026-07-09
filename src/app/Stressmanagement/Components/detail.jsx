@@ -134,12 +134,12 @@ export default function StressWellnessPage() {
   return (
     <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
       {/* Hero — dark, editorial */}
-      <section className="relative isolate overflow-hidden bg-slate-950 px-6 pb-24 pt-40 lg:px-16 lg:pb-32 lg:pt-48">
+      <section className="relative isolate overflow-hidden bg-slate-950 px-6 pb-24 pt-28 sm:pt-32 lg:px-16 lg:pb-32 lg:pt-48">
         <div className="pointer-events-none absolute left-[-10%] top-[-20%] h-[32rem] w-[32rem] rounded-full bg-primary-500/15 blur-[130px]" />
         <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[32rem] w-[32rem] rounded-full bg-secondary-500/10 blur-[130px]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:88px_88px]" />
 
-        <div className="relative mx-auto max-w-3xl">
+        <div className="relative mx-auto ">
           <div className="flex items-center gap-3">
             <span className="h-px w-10 bg-primary-400" />
             <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-300">
@@ -269,7 +269,7 @@ export default function StressWellnessPage() {
 
       {/* Symptoms */}
       <section className="relative px-6 py-20 sm:py-24 lg:px-8">
-        <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-primary-100/60 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-tertiary-100/60 blur-3xl" />
 
         <div className="relative mx-auto max-w-9xl">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -465,49 +465,47 @@ export default function StressWellnessPage() {
       </section>
 
       {/* Consultant CTA */}
-      <section className="px-6 py-20 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-9xl rounded-[1.5rem] bg-slate-950 px-6 py-14 text-center sm:px-12">
-          <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
-            Health Solutions Consultant
+<section className="px-6 py-20 sm:py-24 lg:px-8">
+  <div className="mx-auto max-w-7xl rounded-[1.5rem] bg-slate-950 px-6 py-14 sm:px-12">
+    <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+      {/* Left Content */}
+      <div className="text-left">
+        <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
+          Health Solutions Consultant
+        </span>
+
+        <h2 className="mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
+          <span className="font-sans font-semibold">Ready to take a</span>{" "}
+          <span className="font-serif italic text-primary-300">
+            healthier step forward?
           </span>
+        </h2>
 
-          <h2 className="mx-auto mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
-            <span className="font-sans font-semibold">Ready to take a</span>{" "}
-            <span className="font-serif italic text-primary-300">
-              healthier step forward?
-            </span>
-          </h2>
+        <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
+          Learn how stress may be affecting your lifestyle and discover simple
+          wellness steps that support balance, clarity, and better daily habits.
+        </p>
+      </div>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300">
-            Learn how stress may be affecting your lifestyle and discover
-            simple wellness steps that support balance, clarity, and better
-            daily habits.
-          </p>
+      {/* Right Buttons */}
+      <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
+        >
+          Speak With a Consultant
+        </a>
 
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-400"
-            >
-              Speak With a Consultant
-            </a>
-
-            <a
-              href="/Service"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              View Wellness Services
-            </a>
-          </div>
-
-          <p className="mx-auto mt-8 max-w-3xl text-xs leading-6 text-slate-400">
-            This page is for educational wellness information only and does
-            not replace medical advice, diagnosis, or treatment. Always
-            consult a qualified healthcare professional for personal medical
-            concerns.
-          </p>
-        </div>
-      </section>
+        <a
+          href="/Service"
+          className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          View Wellness Services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   );
 }

@@ -203,7 +203,7 @@ export default function ContactPage() {
         id="contact-form"
         className="relative bg-slate-950 px-6 py-24 sm:py-28 lg:px-8"
       >
-        <div className="pointer-events-none absolute right-[-10%] top-[-10%] h-96 w-96 rounded-full bg-primary-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute right-[-10%] top-[-10%] h-96 w-96 rounded-full bg-tertiary-500/10 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-9xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
@@ -331,51 +331,59 @@ export default function ContactPage() {
 
       {/* Final CTA */}
       <section className="bg-[#f8fffb] px-6 py-24 lg:px-8">
-        <div className="mx-auto max-w-9xl rounded-[1.5rem] bg-slate-950 px-6 py-14 sm:px-10 lg:px-16">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-3">
-                <span className="h-px w-10 bg-primary-400" />
-                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-300">
-                  Trusted Guidance
-                </span>
-              </div>
+  <div className="mx-auto max-w-8xl">
+    <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-slate-950 via-slate-900 to-primary-950 px-8 py-14 shadow-2xl sm:px-10 lg:px-16">
+      {/* Background Glow */}
+      <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-primary-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-secondary-400/10 blur-3xl" />
 
-              <h2 className="mt-6 text-3xl leading-tight text-white sm:text-4xl">
-                <span className="font-sans font-semibold">
-                  Better coverage. Better protection.
-                </span>
-                <br />
-                <span className="font-serif italic text-primary-300">
-                  Breezy Solutions.
-                </span>
-              </h2>
-
-              <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
-                Take care of your health today and protect your tomorrow with
-                coverage that gives you confidence.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-              <a
-                href="tel:+15125579308"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-400"
-              >
-                <FaPhoneAlt className="h-3.5 w-3.5" />
-                Call Brenda Ruiz
-              </a>
-
-              <Link
-                href="/plans"
-                className="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold text-white underline decoration-white/30 underline-offset-4 transition hover:decoration-white"
-              >
-                View Coverage Options
-              </Link>
-            </div>
+      <div className="relative grid items-center gap-10 lg:grid-cols-[1.25fr_0.75fr]">
+        {/* Left Content */}
+        <div className="max-w-3xl">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-10 bg-primary-400" />
+            <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary-300">
+              Trusted Guidance
+            </span>
           </div>
+
+          <h2 className="mt-6 text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+            <span className="font-sans font-black">
+              Better coverage. Better protection.
+            </span>
+            <br />
+            <span className="font-serif italic text-primary-300">
+              Breezy Solutions.
+            </span>
+          </h2>
+
+          <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
+            Take care of your health today and protect your tomorrow with
+            coverage that gives you confidence.
+          </p>
         </div>
-      </section>
+
+        {/* Right Buttons */}
+        <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
+          <a
+            href="tel:+15125579308"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
+          >
+            <FaPhoneAlt className="h-3.5 w-3.5" />
+            Call Brenda Ruiz
+          </a>
+
+          <Link
+            href="/plans"
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
+          >
+            View Coverage Options
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </main>

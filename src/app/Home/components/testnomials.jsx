@@ -54,7 +54,7 @@ export default function Testimonials() {
     <section className="relative w-full overflow-hidden bg-[#f8fffb] py-24">
       {/* Decorative soft blobs */}
       <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-primary-100/70 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-primary-50 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-tertiary-50 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="text-center">

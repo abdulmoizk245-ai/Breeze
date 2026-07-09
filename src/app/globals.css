@@ -12,29 +12,41 @@
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-fraunces);
 
-  --color-primary-50: #f7faef;
-  --color-primary-100: #ecf4dc;
-  --color-primary-200: #d9e9b9;
-  --color-primary-300: #c2dc8e;
-  --color-primary-400: #a7cc5c;
-  --color-primary-500: #83a935;
-  --color-primary-600: #6c8c2c;
-  --color-primary-700: #577123;
-  --color-primary-800: #45591c;
-  --color-primary-900: #364616;
-  --color-primary-950: #212b0d;
+  --color-primary-50: #e9f0fb;
+  --color-primary-100: #ccddf5;
+  --color-primary-200: #95b8eb;
+  --color-primary-300: #528bde;
+  --color-primary-400: #2159ab;
+  --color-primary-500: #112e58;
+  --color-primary-600: #0e2649;
+  --color-primary-700: #0b1f3b;
+  --color-primary-800: #09182f;
+  --color-primary-900: #071324;
+  --color-primary-950: #040c16;
 
-  --color-secondary-50: #fffbf0;
-  --color-secondary-100: #fef6dc;
-  --color-secondary-200: #fdebb4;
-  --color-secondary-300: #fcde82;
-  --color-secondary-400: #fbcc41;
-  --color-secondary-500: #fabd08;
-  --color-secondary-600: #d29e04;
-  --color-secondary-700: #aa8003;
-  --color-secondary-800: #876603;
-  --color-secondary-900: #694f02;
-  --color-secondary-950: #413101;
+  --color-secondary-50: #f5f8f2;
+  --color-secondary-100: #e9f0e1;
+  --color-secondary-200: #d1e0c2;
+  --color-secondary-300: #b4cc9b;
+  --color-secondary-400: #8fb36a;
+  --color-secondary-500: #6b8d48;
+  --color-secondary-600: #59753c;
+  --color-secondary-700: #475e30;
+  --color-secondary-800: #394b26;
+  --color-secondary-900: #2c3a1e;
+  --color-secondary-950: #1b2412;
+
+  --color-tertiary-50: #f0f7f9;
+  --color-tertiary-100: #ddecf1;
+  --color-tertiary-200: #b9d8e1;
+  --color-tertiary-300: #8dc0ce;
+  --color-tertiary-400: #56a2b7;
+  --color-tertiary-500: #397586;
+  --color-tertiary-600: #2f616f;
+  --color-tertiary-700: #264e5a;
+  --color-tertiary-800: #1e3e47;
+  --color-tertiary-900: #183037;
+  --color-tertiary-950: #0e1e22;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,10 +65,10 @@ body {
 @keyframes quote-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(131, 169, 53, 0.55);
+    box-shadow: 0 0 0 0 rgba(17, 46, 88, 0.55);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(131, 169, 53, 0);
+    box-shadow: 0 0 0 12px rgba(17, 46, 88, 0);
   }
 }
 

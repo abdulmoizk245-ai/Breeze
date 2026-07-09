@@ -112,7 +112,7 @@ export default function AboutBrenda() {
 
           {/* Right Image + Caption */}
           <div className="flex flex-col overflow-hidden rounded-[1.5rem] border border-slate-100">
-            <div className="relative h-[600px] w-full overflow-hidden rounded-3xl">
+            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl sm:h-[420px] lg:h-[600px]">
               <img
                 src="/about/brenda-about.png"
                 alt="Brenda Ruiz helping a client choose health insurance coverage"
@@ -273,74 +273,81 @@ export default function AboutBrenda() {
         </div>
 
         {/* Final CTA */}
-        <div className="mt-24 rounded-[1.5rem] bg-slate-950 px-6 py-14 sm:px-10 lg:px-16">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-3">
-                <span className="h-px w-10 bg-primary-400" />
-                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-300">
-                  Trusted Guidance
-                </span>
-              </div>
+      <div className="relative mt-24 overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-slate-950 via-slate-900 to-primary-950 px-8 py-14 shadow-2xl sm:px-10 lg:px-16">
+  {/* Background Glow */}
+  <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-primary-500/20 blur-3xl" />
+  <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-secondary-400/10 blur-3xl" />
 
-              <h3 className="mt-6 text-3xl leading-tight text-white sm:text-4xl">
-                <span className="font-sans font-semibold">
-                  Better coverage. Better protection.
-                </span>
-                <br />
-                <span className="font-serif italic text-primary-300">
-                  Breezy Solutions.
-                </span>
-              </h3>
+  <div className="relative grid items-center gap-10 lg:grid-cols-[1.25fr_0.75fr]">
+    {/* Left Content */}
+    <div className="max-w-3xl">
+      <div className="flex items-center gap-3">
+        <span className="h-px w-10 bg-primary-400" />
+        <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary-300">
+          Trusted Guidance
+        </span>
+      </div>
 
-              <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
-                Let Brenda help you find health insurance that fits your
-                healthcare needs, your budget, and your peace of mind — with
-                honest guidance and no pressure.
-              </p>
+      <h3 className="mt-6 text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+        <span className="font-sans font-black">
+          Better coverage. Better protection.
+        </span>
+        <br />
+        <span className="font-serif italic text-primary-300">
+          Breezy Solutions.
+        </span>
+      </h3>
 
-              <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-white/10 pt-7">
-                <p className="text-sm text-slate-400">
-                  <span className="font-serif text-lg text-white">
-                    10–15 min
-                  </span>{" "}
-                  quote process
-                </p>
-                <div className="h-6 w-px bg-white/10" />
-                <p className="text-sm text-slate-400">
-                  <span className="font-serif text-lg text-white">
-                    No obligation
-                  </span>{" "}
-                  free consult
-                </p>
-                <div className="h-6 w-px bg-white/10" />
-                <p className="text-sm text-slate-400">
-                  <span className="font-serif text-lg text-white">
-                    Personalized
-                  </span>{" "}
-                  plans for you
-                </p>
-              </div>
-            </div>
+      <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
+        Let Brenda help you find health insurance that fits your healthcare
+        needs, your budget, and your peace of mind — with honest guidance and
+        no pressure.
+      </p>
 
-            <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-              <Link
-                href="/quote"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-400"
-              >
-                Get a Free Quote
-                <FaArrowRight className="h-3 w-3" />
-              </Link>
-
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold text-white underline decoration-white/30 underline-offset-4 transition hover:decoration-white"
-              >
-                Book Consultation
-              </Link>
-            </div>
-          </div>
+      {/* Trust Points */}
+      <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-white/10 pt-7">
+        <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
+          <p className="text-sm text-slate-300">
+            <span className="font-bold text-white">10–15 min</span> quote
+            process
+          </p>
         </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
+          <p className="text-sm text-slate-300">
+            <span className="font-bold text-white">No obligation</span> free
+            consult
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
+          <p className="text-sm text-slate-300">
+            <span className="font-bold text-white">Personalized</span> plans
+            for you
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Right Buttons */}
+    <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
+      <Link
+        href="/quote"
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
+      >
+        Get a Free Quote
+        <FaArrowRight className="h-3.5 w-3.5" />
+      </Link>
+
+      <Link
+        href="/contact"
+        className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
+      >
+        Book Consultation
+      </Link>
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );

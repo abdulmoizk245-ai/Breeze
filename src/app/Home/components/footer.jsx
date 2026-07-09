@@ -14,30 +14,21 @@ import {
 
 const FOOTER_LINKS = [
   {
-    heading: "Coverage",
+    heading: "Services",
     links: [
-      { label: "Health Insurance", href: "#health" },
-      { label: "Medicare", href: "#medicare" },
-      { label: "Dental & Vision", href: "#dental" },
-      { label: "Life Insurance", href: "#life" },
+      { label: "All Services", href: "/Service" },
+      { label: "Stress Management", href: "/Stressmanagement" },
+      { label: "Quit Smoking", href: "/quietsomking" },
+      { label: "Managing Stress", href: "/Managestress" },
+      { label: "Boost Immune System", href: "/Immuesystem" },
+      { label: "Three Pillars of Health", href: "/pillarhealth" },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "About Us", href: "#about" },
-      { label: "How It Works", href: "#plans" },
-      { label: "Testimonials", href: "#testimonials" },
-      { label: "Contact", href: "#contact" },
-    ],
-  },
-  {
-    heading: "Support",
-    links: [
-      { label: "FAQs", href: "#faq" },
-      { label: "File a Claim", href: "#claims" },
-      { label: "Member Login", href: "#login" },
-      { label: "Help Center", href: "#help" },
+      { label: "About Us", href: "/About" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];
@@ -52,7 +43,8 @@ const SOCIALS = [
 export default function Footer() {
   return (
     <footer className="relative w-full overflow-hidden bg-primary-950 pt-20">
-      <div className="pointer-events-none absolute -top-32 left-1/3 h-72 w-72 rounded-full bg-primary-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 left-1/3 h-72 w-72 rounded-full bg-tertiary-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 right-0 h-72 w-72 rounded-full bg-secondary-500/10 blur-3xl" />
 
       <div className="relative mx-auto  px-6">
         <div className="grid grid-cols-1 gap-12 pb-16 lg:grid-cols-[1.3fr_2fr]">
@@ -63,7 +55,7 @@ export default function Footer() {
               className="block transition-transform "
             >
               <Image
-                src="/BRZ LOGO.png"
+                src="/BRZ LOGO1.png"
                 alt="Breezy Health Solutions"
                 width={150}
                 height={60}
@@ -90,7 +82,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-full bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-primary-400"
+                className="shrink-0 rounded-full bg-secondary-500 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-secondary-400"
               >
                 Join
               </button>
@@ -104,7 +96,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-primary-100 transition-all hover:-translate-y-0.5 hover:bg-primary-500 hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-primary-100 transition-all hover:-translate-y-0.5 hover:bg-tertiary-500 hover:text-white"
                 >
                   <Icon className="h-3.5 w-3.5" />
                 </a>
@@ -113,7 +105,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             {FOOTER_LINKS.map(({ heading, links }) => (
               <div key={heading}>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
@@ -122,12 +114,12 @@ export default function Footer() {
                 <ul className="mt-4 flex flex-col gap-3">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <a
+                      <Link
                         href={link.href}
                         className="text-sm text-primary-100/70 transition-colors hover:text-primary-300"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -139,7 +131,7 @@ export default function Footer() {
         {/* Contact strip */}
         <div className="grid grid-cols-1 gap-6 border-t border-white/10 py-8 sm:grid-cols-3">
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-primary-400">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-tertiary-400">
               <FaLocationDot className="h-3.5 w-3.5" />
             </span>
             <span className="text-sm text-primary-100/70">
@@ -147,7 +139,7 @@ export default function Footer() {
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-primary-400">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-secondary-400">
               <FaPhone className="h-3.5 w-3.5" />
             </span>
             <a
@@ -158,7 +150,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-primary-400">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-tertiary-400">
               <FaEnvelope className="h-3.5 w-3.5" />
             </span>
             <a

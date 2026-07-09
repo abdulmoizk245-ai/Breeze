@@ -31,7 +31,7 @@ export default function Header() {
           className="relative inline-flex h-20 w-52 shrink-0 items-center transition-transform duration-300 hover:scale-105 sm:h-24 sm:w-64"
         >
           <Image
-            src="/BRZ LOGO.png"
+            src="/BRZ LOGO1.png"
             alt="Breezy Health Solutions"
             fill
             priority
@@ -68,14 +68,14 @@ export default function Header() {
             <div className="invisible absolute left-1/2 top-full z-50 mt-5 w-80 -translate-x-1/2 translate-y-3 rounded-3xl border border-white/20 bg-white/95 p-3 opacity-0 shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
               <div className="absolute -top-4 left-0 h-4 w-full" />
 
-              <div className="mb-2 rounded-2xl bg-primary-500/10 px-4 py-3">
+              {/* <div className="mb-2 rounded-2xl bg-primary-500/10 px-4 py-3">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-600">
                   Our Services
                 </p>
                 <p className="mt-1 text-sm font-medium text-slate-600">
                   Explore wellness and health support services
                 </p>
-              </div>
+              </div> */}
 
               <div className="space-y-1">
                 {SERVICE_LINKS.map((service) => (
@@ -86,7 +86,7 @@ export default function Header() {
                   >
                     <span>{service.label}</span>
 
-                    <span className="translate-x-[-4px] text-primary-500 opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:text-white group-hover/item:opacity-100">
+                    <span className="translate-x-[-4px] text-tertiary-500 opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:text-white group-hover/item:opacity-100">
                       →
                     </span>
                   </Link>

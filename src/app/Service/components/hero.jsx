@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -20,8 +20,9 @@ export default function HeroSection() {
       </div>
 
       {/* Decorative Glow */}
-      <div className="absolute -left-24 top-28 h-72 w-72 rounded-full bg-primary-500/20 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-secondary-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-[-10%] top-[-20%] h-[32rem] w-[32rem] rounded-full bg-primary-500/15 blur-[130px]" />
+      <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[32rem] w-[32rem] rounded-full bg-secondary-500/10 blur-[130px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:88px_88px]" />
 
       <div className="relative mx-auto grid min-h-[92vh]  items-center gap-12 px-6 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         {/* Left Content */}
@@ -64,21 +65,19 @@ export default function HeroSection() {
 
           {/* Trust Points */}
           <div className="mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
-            {[
-              "No Obligation",
-              "Clear Plan Options",
-              "Personal Guidance",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-md"
-              >
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-primary-400/15 text-primary-300">
-                  ✓
+            {["No Obligation", "Clear Plan Options", "Personal Guidance"].map(
+              (item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-md"
+                >
+                  <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-primary-400/15 text-primary-300">
+                    ✓
+                  </div>
+                  <p className="text-sm font-semibold text-white">{item}</p>
                 </div>
-                <p className="text-sm font-semibold text-white">{item}</p>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
 
@@ -149,7 +148,7 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Card 2 */}
-            <div className="absolute -right-6 bottom-20 rounded-3xl border border-white/20 bg-white/90 p-5 shadow-2xl backdrop-blur-xl">
+            {/* <div className="absolute -right-6 bottom-20 rounded-3xl border border-white/20 bg-white/90 p-5 shadow-2xl backdrop-blur-xl">
               <p className="text-sm font-semibold text-slate-500">
                 Plan Support
               </p>
@@ -167,13 +166,13 @@ export default function HeroSection() {
               <p className="mt-3 text-xs font-medium text-slate-500">
                 Health · Dental · Life
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
+      {/* <div className="absolute bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-[#f8fffb] to-transparent" /> */}
     </section>
   );
 }

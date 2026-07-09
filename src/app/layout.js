@@ -24,7 +24,7 @@ export const metadata = {
     "Affordable health, Medicare, dental, vision, and life insurance plans with fast claims and 24/7 support.",
   icons: {
     icon: [
-      { url: "/logo.png", type: "image/png", sizes: "32x32" },
+      { url: "/BRZ LOGOf.png", type: "image/png", sizes: "32x32" },
     ],
   },
 };

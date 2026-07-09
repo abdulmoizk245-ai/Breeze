@@ -144,12 +144,12 @@ export default function ManagingStressPage() {
   return (
     <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
       {/* Hero — dark, editorial */}
-      <section className="relative isolate overflow-hidden bg-slate-950 px-6 pb-24 pt-40 lg:px-16 lg:pb-32 lg:pt-48">
+      <section className="relative isolate overflow-hidden bg-slate-950 px-6 pb-24 pt-28 sm:pt-32 lg:px-16 lg:pb-32 lg:pt-48">
         <div className="pointer-events-none absolute left-[-10%] top-[-20%] h-[32rem] w-[32rem] rounded-full bg-primary-500/15 blur-[130px]" />
         <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[32rem] w-[32rem] rounded-full bg-secondary-500/10 blur-[130px]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:88px_88px]" />
 
-        <div className="relative mx-auto max-w-3xl">
+        <div className="relative mx-auto ">
           <div className="flex items-center gap-3">
             <span className="h-px w-10 bg-primary-400" />
             <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-300">
@@ -166,10 +166,10 @@ export default function ManagingStressPage() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
-            Stress is a normal part of life, but chronic stress can affect
-            your body, mood, sleep, immune system, and long-term health.
-            The good news is that simple daily habits can help you feel
-            more calm, focused, and in control.
+            Stress is a normal part of life, but chronic stress can affect your
+            body, mood, sleep, immune system, and long-term health. The good
+            news is that simple daily habits can help you feel more calm,
+            focused, and in control.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-8">
@@ -250,10 +250,10 @@ export default function ManagingStressPage() {
 
           <div className="rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
             <p className="text-base leading-8 text-slate-600">
-              At Breezy Health Solutions, we believe protecting your health
-              is about more than having quality health insurance. It is
-              also about developing healthy habits that support your
-              physical, mental, and emotional wellness.
+              At Breezy Health Solutions, we believe protecting your health is
+              about more than having quality health insurance. It is also about
+              developing healthy habits that support your physical, mental, and
+              emotional wellness.
             </p>
           </div>
         </div>
@@ -282,10 +282,10 @@ export default function ManagingStressPage() {
             </h2>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              When you&apos;re stressed, your body releases hormones such
-              as cortisol and adrenaline. These hormones can help in
-              emergencies, but when stress becomes constant, they may
-              contribute to physical and emotional health concerns.
+              When you&apos;re stressed, your body releases hormones such as
+              cortisol and adrenaline. These hormones can help in emergencies,
+              but when stress becomes constant, they may contribute to physical
+              and emotional health concerns.
             </p>
           </div>
 
@@ -312,9 +312,8 @@ export default function ManagingStressPage() {
             </h3>
 
             <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-300">
-              Stress management is about building healthy habits that help
-              you respond with resilience, clarity, and better emotional
-              balance.
+              Stress management is about building healthy habits that help you
+              respond with resilience, clarity, and better emotional balance.
             </p>
           </div>
         </div>
@@ -344,9 +343,9 @@ export default function ManagingStressPage() {
             </h2>
 
             <p className="mt-6 text-base leading-8 text-slate-300">
-              Sometimes you need relief right away. These simple
-              techniques can help you slow down, reset, and feel more in
-              control within minutes.
+              Sometimes you need relief right away. These simple techniques can
+              help you slow down, reset, and feel more in control within
+              minutes.
             </p>
           </div>
 
@@ -397,18 +396,13 @@ export default function ManagingStressPage() {
               </div>
 
               <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
-                <span className="font-sans font-semibold">
-                  Healthy resets
-                </span>{" "}
-                <span className="font-serif italic">
-                  for stressful days.
-                </span>
+                <span className="font-sans font-semibold">Healthy resets</span>{" "}
+                <span className="font-serif italic">for stressful days.</span>
               </h2>
 
               <p className="mt-6 text-base leading-8 text-slate-600">
-                These habits can help you pause, organize your thoughts,
-                and regain a sense of calm during a busy or emotionally
-                heavy day.
+                These habits can help you pause, organize your thoughts, and
+                regain a sense of calm during a busy or emotionally heavy day.
               </p>
 
               <div className="mt-8 rounded-2xl bg-primary-50 p-7">
@@ -458,7 +452,7 @@ export default function ManagingStressPage() {
 
       {/* Long-Term Strategies */}
       <section className="relative px-6 py-20 sm:py-24 lg:px-8">
-        <div className="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-primary-100/50 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-tertiary-100/50 blur-3xl" />
 
         <div className="relative mx-auto max-w-9xl">
           <div className="mx-auto max-w-2xl text-center">
@@ -471,18 +465,16 @@ export default function ManagingStressPage() {
             </div>
 
             <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
-              <span className="font-sans font-semibold">
-                Build a lifestyle
-              </span>{" "}
+              <span className="font-sans font-semibold">Build a lifestyle</span>{" "}
               <span className="font-serif italic">
                 that supports resilience.
               </span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600">
-              Managing stress is not only about reacting to difficult
-              moments. It is also about creating healthy routines that
-              support your mind, body, and emotional wellbeing over time.
+              Managing stress is not only about reacting to difficult moments.
+              It is also about creating healthy routines that support your mind,
+              body, and emotional wellbeing over time.
             </p>
           </div>
 
@@ -548,10 +540,10 @@ export default function ManagingStressPage() {
             </h2>
 
             <p className="mt-6 text-base leading-8 text-slate-600">
-              Stress and poor sleep often create a frustrating cycle.
-              Stress can make it harder to sleep, and lack of sleep can
-              make stress more difficult to manage. Adults should aim for
-              7 to 9 hours of quality sleep each night.
+              Stress and poor sleep often create a frustrating cycle. Stress can
+              make it harder to sleep, and lack of sleep can make stress more
+              difficult to manage. Adults should aim for 7 to 9 hours of quality
+              sleep each night.
             </p>
 
             <div className="mt-8 rounded-2xl bg-primary-50 p-7">
@@ -560,8 +552,8 @@ export default function ManagingStressPage() {
               </h3>
 
               <p className="mt-4 text-sm leading-7 text-slate-600">
-                A consistent bedtime routine and limiting screen time
-                before bed can help improve sleep quality.
+                A consistent bedtime routine and limiting screen time before bed
+                can help improve sleep quality.
               </p>
             </div>
           </div>
@@ -586,29 +578,32 @@ export default function ManagingStressPage() {
       </section>
 
       {/* Seek Help */}
-      <section className="relative overflow-hidden bg-slate-950 px-6 py-20 sm:py-24 lg:px-8">
-        <div className="pointer-events-none absolute left-[-10%] top-[-10%] h-[28rem] w-[28rem] rounded-full bg-primary-500/15 blur-[120px]" />
-        <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[28rem] w-[28rem] rounded-full bg-secondary-500/10 blur-[120px]" />
+      <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="relative w-full overflow-hidden rounded-[2rem] bg-slate-950 px-6 py-20 sm:py-24 lg:px-8">
+          <div className="pointer-events-none absolute left-[-10%] top-[-10%] h-[28rem] w-[28rem] rounded-full bg-primary-500/15 blur-[120px]" />
+          <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[28rem] w-[28rem] rounded-full bg-secondary-500/10 blur-[120px]" />
 
-        <div className="relative mx-auto max-w-4xl text-center">
-          <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
-            Know When to Seek Help
-          </span>
-
-          <h2 className="mx-auto mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
-            <span className="font-sans font-semibold">Asking for support</span>{" "}
-            <span className="font-serif italic text-primary-300">
-              is a sign of strength, not weakness.
+          <div className="relative mx-auto text-center">
+            <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
+              Know When to Seek Help
             </span>
-          </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-300">
-            While everyday stress is common, persistent feelings of
-            anxiety, sadness, hopelessness, or being overwhelmed should
-            not be ignored. Talking with a healthcare provider or licensed
-            mental health professional can provide valuable support and
-            guidance.
-          </p>
+            <h2 className="mx-auto mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
+              <span className="font-sans font-semibold">
+                Asking for support
+              </span>{" "}
+              <span className="font-serif italic text-primary-300">
+                is a sign of strength, not weakness.
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-300">
+              While everyday stress is common, persistent feelings of anxiety,
+              sadness, hopelessness, or being overwhelmed should not be ignored.
+              Talking with a healthcare provider or licensed mental health
+              professional can provide valuable support and guidance.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -634,9 +629,9 @@ export default function ManagingStressPage() {
               </h2>
 
               <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">
-                One common source of stress is worrying about unexpected
-                medical expenses. Having quality health insurance can
-                provide peace of mind and access to care when you need it.
+                One common source of stress is worrying about unexpected medical
+                expenses. Having quality health insurance can provide peace of
+                mind and access to care when you need it.
               </p>
             </div>
 
@@ -659,9 +654,8 @@ export default function ManagingStressPage() {
               </div>
 
               <p className="mt-6 text-sm leading-7 text-slate-600">
-                Knowing you have coverage when you need it allows you to
-                focus more on your health and less on financial
-                uncertainty.
+                Knowing you have coverage when you need it allows you to focus
+                more on your health and less on financial uncertainty.
               </p>
             </div>
           </div>
@@ -670,7 +664,7 @@ export default function ManagingStressPage() {
 
       {/* Daily Actions */}
       <section className="relative px-6 py-20 sm:py-24 lg:px-8">
-        <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-primary-100/50 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-secondary-100/50 blur-3xl" />
 
         <div className="relative mx-auto max-w-9xl">
           <div className="mx-auto max-w-2xl text-center">
@@ -712,79 +706,101 @@ export default function ManagingStressPage() {
       </section>
 
       {/* Breezy CTA */}
-      <section
-        id="contact"
-        className="relative overflow-hidden bg-slate-950 px-6 py-20 sm:py-24 lg:px-8"
-      >
-        <div className="pointer-events-none absolute left-[-10%] top-[-10%] h-[32rem] w-[32rem] rounded-full bg-primary-500/15 blur-[120px]" />
-        <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[32rem] w-[32rem] rounded-full bg-secondary-500/10 blur-[120px]" />
+      <section id="contact" className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="relative w-full overflow-hidden rounded-[2rem] bg-slate-950 px-6 py-16 shadow-2xl shadow-slate-900/25 sm:px-10 lg:px-14">
+          {/* Background Effects */}
+          <div className="pointer-events-none absolute left-[-10%] top-[-20%] h-[32rem] w-[32rem] rounded-full bg-primary-500/20 blur-[120px]" />
+          <div className="pointer-events-none absolute bottom-[-25%] right-[-10%] h-[32rem] w-[32rem] rounded-full bg-secondary-500/15 blur-[120px]" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-[110px]" />
 
-        <div className="relative mx-auto max-w-4xl text-center">
-          <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
-            Let Breezy Health Solutions Help
-          </span>
+          <div className="relative mx-auto grid  items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            {/* Left Content */}
+            <div className="text-left">
+              <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
+                Let Breezy Health Solutions Help
+              </span>
 
-          <h2 className="mx-auto mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
-            <span className="font-sans font-semibold">
-              Protect what matters most
-            </span>{" "}
-            <span className="font-serif italic text-primary-300">
-              with guidance you can trust.
-            </span>
-          </h2>
+              <h2 className="mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
+                <span className="font-sans font-semibold">
+                  Protect what matters most
+                </span>{" "}
+                <span className="font-serif italic text-primary-300">
+                  with guidance you can trust.
+                </span>
+              </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-300">
-            Breezy Health Solutions helps individuals, families, and small
-            business owners find affordable health insurance solutions
-            that fit their lives and budgets.
-          </p>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300">
+                Breezy Health Solutions helps individuals, families, and small
+                business owners find affordable health insurance solutions that
+                fit their lives and budgets.
+              </p>
 
-          <div className="mt-10 rounded-[1.5rem] border border-white/10 bg-white/5 p-8">
-            <h3 className="font-serif text-xl text-white">
-              Coverage options include:
-            </h3>
-
-            <div className="mx-auto mt-6 grid max-w-2xl gap-3 sm:grid-cols-2">
-              {coverageOptions.map((option) => (
-                <div
-                  key={option}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5"
-                >
-                  <p className="text-sm font-medium text-primary-100">
-                    {option}
-                  </p>
-                </div>
-              ))}
+              <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-2">
+                {[
+                  "Personal guidance",
+                  "Affordable plan options",
+                  "Private PPO solutions",
+                  "Support for families & businesses",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                  >
+                    <span className="h-2.5 w-2.5 rounded-full bg-primary-300" />
+                    <span className="text-sm font-semibold text-slate-200">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-10 border-t border-white/10 pt-8">
+            {/* Right Card */}
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl shadow-black/25 backdrop-blur-xl sm:p-8">
               <h3 className="font-serif text-2xl text-white">
-                Brenda Ruiz
+                Coverage options include:
               </h3>
 
-              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
-                Licensed Health Insurance Advisor
-              </p>
-
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <a
-                  href="tel:5125579308"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-400"
-                >
-                  Call (512) 557-9308
-                </a>
-
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
-                  Request Coverage Help
-                </a>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {coverageOptions.map((option) => (
+                  <div
+                    key={option}
+                    className="rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+                  >
+                    <p className="text-sm font-semibold leading-6 text-primary-100">
+                      {option}
+                    </p>
+                  </div>
+                ))}
               </div>
 
-              <p className="mt-8 font-serif text-lg italic text-primary-300">
-                “Better Coverage. Better Protection. Breezy Solutions.”
-              </p>
+              <div className="mt-8 rounded-2xl border border-white/10 bg-slate-900/70 p-6">
+                <h3 className="font-serif text-2xl text-white">Brenda Ruiz</h3>
+
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
+                  Licensed Health Insurance Advisor
+                </p>
+
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="tel:+15125579308"
+                    className="inline-flex flex-1 items-center justify-center rounded-full bg-primary-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
+                  >
+                    Call (512) 557-9308
+                  </a>
+
+                  <a
+                    href="/contact"
+                    className="inline-flex flex-1 items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+                  >
+                    Request Help
+                  </a>
+                </div>
+
+                <p className="mt-6 font-serif text-lg italic leading-8 text-primary-300">
+                  “Better Coverage. Better Protection. Breezy Solutions.”
+                </p>
+              </div>
             </div>
           </div>
         </div>

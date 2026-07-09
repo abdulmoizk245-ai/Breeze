@@ -124,7 +124,7 @@ export default function ImmuneSystemPage() {
   return (
     <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
       {/* Hero — dark, editorial */}
-      <section className="relative isolate overflow-hidden bg-slate-950 px-6 pb-24 pt-40 lg:px-16 lg:pb-32 lg:pt-48">
+      <section className="relative isolate overflow-hidden bg-slate-950 px-6 pb-24 pt-28 sm:pt-32 lg:px-16 lg:pb-32 lg:pt-48">
         <div className="pointer-events-none absolute left-[-10%] top-[-20%] h-[32rem] w-[32rem] rounded-full bg-primary-500/15 blur-[130px]" />
         <div className="pointer-events-none absolute bottom-[-20%] right-[-10%] h-[32rem] w-[32rem] rounded-full bg-secondary-500/10 blur-[130px]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:88px_88px]" />
@@ -314,7 +314,7 @@ export default function ImmuneSystemPage() {
 
       {/* Prevention + Insurance */}
       <section className="relative overflow-hidden bg-slate-950 px-6 py-20 sm:py-24 lg:px-8">
-        <div className="pointer-events-none absolute right-[-10%] top-0 h-96 w-96 rounded-full bg-primary-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute right-[-10%] top-0 h-96 w-96 rounded-full bg-secondary-500/10 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-9xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>

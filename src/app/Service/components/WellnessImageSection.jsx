@@ -11,7 +11,7 @@ export default function WellnessImageSection() {
   return (
     <section className="relative overflow-hidden bg-[#f8fffb] px-6 py-24 lg:px-8">
       <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-primary-100 blur-3xl" />
-      <div className="absolute bottom-10 right-0 h-80 w-80 rounded-full bg-primary-100 blur-3xl" />
+      <div className="absolute bottom-10 right-0 h-80 w-80 rounded-full bg-tertiary-100 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
         {/* Image Side */}
@@ -20,7 +20,7 @@ export default function WellnessImageSection() {
             <img
               src="/Service/wellness-care.png"
               alt="Wellness consultation"
-              className="h-[520px] w-full object-cover"
+              className="h-[280px] w-full object-cover sm:h-[380px] lg:h-[520px]"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />

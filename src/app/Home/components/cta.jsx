@@ -14,7 +14,7 @@ export default function Cta() {
           }}
         />
         <div className="pointer-events-none absolute -bottom-32 -left-16 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-        <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-primary-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-tertiary-400/20 blur-3xl" />
 
         <div className="relative flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:text-left">
           <div>
