@@ -152,9 +152,13 @@ export default function AboutBrenda() {
         {/* Solutions — editorial numbered list */}
         <div className="mt-24">
           <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
-              Who We Help
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="block h-px w-10 bg-primary-500" />
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
+                Who We Help
+              </span>
+            </div>
+
             <h3 className="mt-4 text-2xl leading-tight text-slate-900 sm:text-3xl">
               <span className="font-serif italic">Coverage options</span>{" "}
               <span className="font-sans font-semibold">
@@ -203,44 +207,88 @@ export default function AboutBrenda() {
         </div>
 
         {/* What Sets Me Apart */}
-        <div className="mt-24 grid gap-10 lg:grid-cols-2 lg:items-start">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
-              What Sets Me Apart
-            </span>
+        <div className="mt-24 grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-stretch">
+          {/* Left Content */}
+          <div className="relative rounded-[28px] border border-slate-200 p-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.45)] sm:p-8 lg:p-10">
+            <div className="absolute left-0 top-8 h-16 w-1 rounded-r-full bg-primary-500" />
 
-            <h3 className="mt-4 text-2xl leading-tight text-slate-900 sm:text-3xl">
-              <span className="font-serif italic">More than a quote</span>{" "}
+            <div className="flex items-center gap-3">
+              <span className="block h-px w-10 bg-primary-500" />
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
+                What Sets Me Apart
+              </span>
+            </div>
+
+            <h3 className="mt-5 max-w-xl text-3xl leading-tight text-slate-950 sm:text-4xl">
+              <span className="font-serif italic text-primary-700">
+                More than a quote
+              </span>{" "}
               <span className="font-sans font-semibold">
                 — an advisor who listens.
               </span>
             </h3>
 
-            <p className="mt-5 text-base leading-8 text-slate-600">
-              Every client deserves more than just a quote. Brenda takes the
-              time to understand your unique situation, answer your questions,
-              explain your options in plain language, and recommend solutions
-              designed specifically for you.
-            </p>
+            <div className="mt-7 space-y-5">
+              <p className="text-base leading-8 text-slate-600">
+                Every client deserves more than just a quote. Brenda takes the
+                time to understand your unique situation, answer your questions,
+                explain your options in plain language, and recommend solutions
+                designed specifically for you.
+              </p>
 
-            <p className="mt-5 text-base leading-8 text-slate-600">
-              Her commitment doesn&apos;t end once your policy is issued. She is
-              here to support you throughout the life of your policy whenever
-              questions or changes arise.
-            </p>
+              <p className="text-base leading-8 text-slate-600">
+                Her commitment doesn&apos;t end once your policy is issued. She
+                is here to support you throughout the life of your policy
+                whenever questions or changes arise.
+              </p>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {["Personal Guidance", "Clear Answers", "Long-Term Support"].map(
+                (item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700"
+                  >
+                    {item}
+                  </span>
+                ),
+              )}
+            </div>
           </div>
 
-          <div className="border-t border-slate-200 pt-8">
-            <FaPeopleGroup className="h-8 w-8 text-primary-600" />
-            <h4 className="mt-5 text-xl font-semibold text-slate-900">
-              Why clients choose Breezy Health Solutions
-            </h4>
+          {/* Right Content */}
+          <div className="relative rounded-[28px] border border-slate-200 p-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.45)] sm:p-8 lg:p-10">
+            <div className="flex items-start justify-between gap-5">
+              <div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-primary-200">
+                  <FaPeopleGroup className="h-7 w-7 text-primary-600" />
+                </div>
 
-            <div className="mt-6 space-y-4">
-              {reasons.map((reason) => (
-                <div key={reason} className="flex gap-3">
-                  <FaCheck className="mt-1 h-3.5 w-3.5 shrink-0 text-primary-600" />
-                  <p className="text-sm leading-7 text-slate-600">{reason}</p>
+                <h4 className="mt-6 text-2xl font-semibold leading-tight text-slate-950">
+                  Why clients choose Breezy Health Solutions
+                </h4>
+
+                <p className="mt-3 text-sm leading-7 text-slate-500">
+                  A simple, honest, and supportive experience from the first
+                  call to ongoing policy support.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 space-y-4">
+              {reasons.map((reason, index) => (
+                <div
+                  key={reason}
+                  className="group flex gap-4 rounded-2xl border border-slate-200 p-4 transition duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-[0_14px_35px_-25px_rgba(15,23,42,0.45)]"
+                >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary-200 text-xs font-bold text-primary-700">
+                    {index + 1}
+                  </div>
+
+                  <p className="text-sm leading-7 text-slate-600 transition group-hover:text-slate-900">
+                    {reason}
+                  </p>
                 </div>
               ))}
             </div>
@@ -248,106 +296,127 @@ export default function AboutBrenda() {
         </div>
 
         {/* Privacy */}
-        <div className="mt-24 flex flex-col gap-6 border-t border-slate-200 pt-10 lg:flex-row lg:items-start">
-          <FaLock className="h-6 w-6 shrink-0 text-primary-600" />
+        <div className="mt-12 rounded-[28px] border border-slate-200 p-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.45)] sm:p-8 lg:p-10">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary-200">
+              <FaLock className="h-6 w-6 text-primary-600" />
+            </div>
 
-          <div>
-            <h3 className="text-xl font-semibold text-slate-900">
-              Your privacy matters
-            </h3>
+            <div>
+              <div className="flex flex-wrap items-center gap-3">
+                <h3 className="text-2xl font-semibold text-slate-950">
+                  Your privacy matters
+                </h3>
 
-            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">
-              Your personal information is treated with the highest level of
-              confidentiality and respect. Having spent decades working in
-              healthcare with strict compliance standards, Brenda understands
-              the importance of protecting sensitive information. Your
-              information will never be sold, shared, or distributed to third
-              parties for marketing purposes.
-            </p>
+                <span className="rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600">
+                  Confidential
+                </span>
+              </div>
 
-            <p className="mt-5 font-semibold text-slate-900">
-              Integrity, professionalism, and trust are the foundation of every
-              client relationship.
-            </p>
+              <p className="mt-5 max-w-4xl text-base leading-8 text-slate-600">
+                Your personal information is treated with the highest level of
+                confidentiality and respect. Having spent decades working in
+                healthcare with strict compliance standards, Brenda understands
+                the importance of protecting sensitive information.
+              </p>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl border border-slate-200 p-5">
+                  <FaCheck className="h-4 w-4 text-primary-600" />
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    Your information will never be sold, shared, or distributed
+                    to third parties for marketing purposes.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 p-5">
+                  <FaCheck className="h-4 w-4 text-primary-600" />
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    Integrity, professionalism, and trust are the foundation of
+                    every client relationship.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Final CTA */}
-      <div className="relative mt-24 overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-slate-950 via-slate-900 to-primary-950 px-8 py-14 shadow-2xl sm:px-10 lg:px-16">
-  {/* Background Glow */}
-  <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-primary-500/20 blur-3xl" />
-  <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-secondary-400/10 blur-3xl" />
+        <div className="relative mt-24 overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-slate-950 via-slate-900 to-primary-950 px-8 py-14 shadow-2xl sm:px-10 lg:px-16">
+          {/* Background Glow */}
+          <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-primary-500/20 blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-secondary-400/10 blur-3xl" />
 
-  <div className="relative grid items-center gap-10 lg:grid-cols-[1.25fr_0.75fr]">
-    {/* Left Content */}
-    <div className="max-w-3xl">
-      <div className="flex items-center gap-3">
-        <span className="h-px w-10 bg-primary-400" />
-        <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary-300">
-          Trusted Guidance
-        </span>
-      </div>
+          <div className="relative grid items-center gap-10 lg:grid-cols-[1.25fr_0.75fr]">
+            {/* Left Content */}
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-10 bg-primary-400" />
+                <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary-300">
+                  Trusted Guidance
+                </span>
+              </div>
 
-      <h3 className="mt-6 text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
-        <span className="font-sans font-black">
-          Better coverage. Better protection.
-        </span>
-        <br />
-        <span className="font-serif italic text-primary-300">
-          Breezy Solutions.
-        </span>
-      </h3>
+              <h3 className="mt-6 text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+                <span className="font-sans font-black">
+                  Better coverage. Better protection.
+                </span>
+                <br />
+                <span className="font-serif italic text-primary-300">
+                  Breezy Solutions.
+                </span>
+              </h3>
 
-      <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-        Let Brenda help you find health insurance that fits your healthcare
-        needs, your budget, and your peace of mind — with honest guidance and
-        no pressure.
-      </p>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
+                Let Brenda help you find health insurance that fits your
+                healthcare needs, your budget, and your peace of mind — with
+                honest guidance and no pressure.
+              </p>
 
-      {/* Trust Points */}
-      <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-white/10 pt-7">
-        <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
-          <p className="text-sm text-slate-300">
-            <span className="font-bold text-white">10–15 min</span> quote
-            process
-          </p>
+              {/* Trust Points */}
+              <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-white/10 pt-7">
+                <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
+                  <p className="text-sm text-slate-300">
+                    <span className="font-bold text-white">10–15 min</span>{" "}
+                    quote process
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
+                  <p className="text-sm text-slate-300">
+                    <span className="font-bold text-white">No obligation</span>{" "}
+                    free consult
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
+                  <p className="text-sm text-slate-300">
+                    <span className="font-bold text-white">Personalized</span>{" "}
+                    plans for you
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Buttons */}
+            <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
+              <Link
+                href="/quote"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
+              >
+                Get a Free Quote
+                <FaArrowRight className="h-3.5 w-3.5" />
+              </Link>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
+              >
+                Book Consultation
+              </Link>
+            </div>
+          </div>
         </div>
-
-        <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
-          <p className="text-sm text-slate-300">
-            <span className="font-bold text-white">No obligation</span> free
-            consult
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
-          <p className="text-sm text-slate-300">
-            <span className="font-bold text-white">Personalized</span> plans
-            for you
-          </p>
-        </div>
-      </div>
-    </div>
-
-    {/* Right Buttons */}
-    <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
-      <Link
-        href="/quote"
-        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
-      >
-        Get a Free Quote
-        <FaArrowRight className="h-3.5 w-3.5" />
-      </Link>
-
-      <Link
-        href="/contact"
-        className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
-      >
-        Book Consultation
-      </Link>
-    </div>
-  </div>
-</div>
       </div>
     </section>
   );

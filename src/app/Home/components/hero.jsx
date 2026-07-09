@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section className="relative isolate flex min-h-[92vh] w-full items-center overflow-hidden W">
       <Image
-        src="/Home/heroo.png"
+        src="/Home/herooo.png"
         alt="Family protected by health insurance"
         fill
         priority

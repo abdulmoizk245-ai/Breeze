@@ -66,9 +66,8 @@ export default function Header() {
                 />
               </svg>
             </Link>
-
-            <div className="invisible absolute left-1/2 top-full z-50 mt-5 w-80 -translate-x-1/2 translate-y-3 rounded-3xl border border-white/20 bg-white/95 p-3 opacity-0 shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="absolute -top-4 left-0 h-4 w-full" />
+<div className="invisible absolute bottom-full left-1/2 z-50 mb-5 w-80 -translate-x-1/2 translate-y-3 rounded-3xl border border-white/20 bg-white/95 p-3 opacity-0 shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+  <div className="absolute -bottom-5 left-0 h-5 w-full" />
 
               {/* <div className="mb-2 rounded-2xl bg-primary-500/10 px-4 py-3">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-600">
