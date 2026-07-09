@@ -149,36 +149,63 @@ export default function AboutBrenda() {
           </div>
         </div>
 
-        {/* Solutions — editorial numbered list */}
+        {/* Solutions — creative light cards */}
         <div className="mt-24">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3">
-              <span className="block h-px w-10 bg-primary-500" />
-              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
-                Who We Help
-              </span>
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-3">
+                <span className="block h-px w-10 bg-primary-500" />
+                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
+                  Who We Help
+                </span>
+              </div>
+
+              <h3 className="mt-4 text-2xl leading-tight text-slate-900 sm:text-3xl">
+                <span className="font-serif italic">Coverage options</span>{" "}
+                <span className="font-sans font-semibold">
+                  designed around your needs.
+                </span>
+              </h3>
             </div>
 
-            <h3 className="mt-4 text-2xl leading-tight text-slate-900 sm:text-3xl">
-              <span className="font-serif italic">Coverage options</span>{" "}
-              <span className="font-sans font-semibold">
-                designed around your needs.
-              </span>
-            </h3>
+            <p className="max-w-sm text-sm leading-7 text-slate-500">
+              Simple, flexible support for people who want clear guidance and
+              dependable coverage.
+            </p>
           </div>
 
-          <div className="mt-10 grid border-t border-slate-200 sm:grid-cols-2">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {solutions.map((title, index) => (
               <div
                 key={title}
-                className="flex items-start gap-5 border-b border-slate-200 py-6 pr-6 sm:odd:border-r sm:odd:pr-8 sm:even:pl-8"
+                className="group relative min-h-[190px] overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl hover:shadow-primary-100/60"
               >
-                <span className="font-serif text-2xl text-primary-500/50">
+                {/* Large number watermark */}
+                <span className="pointer-events-none absolute -right-3 -top-6 font-serif text-8xl italic leading-none text-slate-100 transition duration-300 group-hover:text-primary-50">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="pt-1 text-sm font-medium leading-7 text-slate-700">
-                  {title}
-                </p>
+
+                {/* Top accent */}
+                <div className="relative flex items-center justify-between">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-sm font-bold text-primary-600 ring-1 ring-primary-100">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className="rounded-full border border-slate-200 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400 transition group-hover:border-primary-200 group-hover:text-primary-600">
+                    Coverage
+                  </span>
+                </div>
+
+                <div className="relative mt-10">
+                  <p className="text-base font-semibold leading-7 text-slate-800">
+                    {title}
+                  </p>
+
+                  <div className="mt-6 flex items-center gap-3">
+                    <span className="h-px flex-1 bg-slate-200 transition group-hover:bg-primary-200" />
+                    <span className="h-2 w-2 rounded-full bg-primary-500" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>

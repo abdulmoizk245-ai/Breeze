@@ -7,7 +7,7 @@ const TESTIMONIALS = [
     location: "Austin, TX",
     initials: "MG",
     quote:
-      "I switched to Breeze after my old provider hiked my premium for no reason. Within a week I had better coverage for less money, and an actual human called to walk me through it.",
+      "I switched to Breezy after my old provider hiked my premium for no reason. Within a week I had better coverage for less money, and an actual human called to walk me through it.",
     rating: 5,
     featured: true,
   },

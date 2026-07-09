@@ -23,7 +23,7 @@ export default function Cta() {
             </h2>
             <p className="mt-4 max-w-xl text-lg lg:text-[17px] text-primary-50/90">
               Get a free, no-obligation quote today and see why 12,000+
-              members trust Breeze with their coverage.
+              members trust Breezy with their coverage.
             </p>
           </div>
 

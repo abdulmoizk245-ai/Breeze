@@ -78,21 +78,39 @@ const trustedSources = [
     short: "NIMH",
     url: "https://www.nimh.nih.gov/",
     text: "Provides educational guidance on what stress is, common signs, coping strategies, and when to seek help.",
-    topics: ["Stress Basics", "Signs", "Symptoms", "Coping", "Professional Help"],
+    topics: [
+      "Stress Basics",
+      "Signs",
+      "Symptoms",
+      "Coping",
+      "Professional Help",
+    ],
   },
   {
     name: "American Heart Association",
     short: "AHA",
     url: "https://www.heart.org/",
     text: "Highlights the connection between stress, blood pressure, heart disease risk, stroke risk, exercise, and healthy coping.",
-    topics: ["Blood Pressure", "Heart Risk", "Stroke Risk", "Exercise", "Stress Education"],
+    topics: [
+      "Blood Pressure",
+      "Heart Risk",
+      "Stroke Risk",
+      "Exercise",
+      "Stress Education",
+    ],
   },
   {
     name: "Centers for Disease Control & Prevention",
     short: "CDC",
     url: "https://www.cdc.gov/mentalhealth",
     text: "Shares practical mental health and emotional wellbeing resources focused on stress management and healthy lifestyle habits.",
-    topics: ["Physical Activity", "Sleep", "Healthy Eating", "Social Connection", "Wellbeing"],
+    topics: [
+      "Physical Activity",
+      "Sleep",
+      "Healthy Eating",
+      "Social Connection",
+      "Wellbeing",
+    ],
   },
   {
     name: "Mayo Clinic",
@@ -147,20 +165,25 @@ export default function StressWellnessPage() {
             </span>
           </div>
 
-          <h1 className="mt-8 text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            <span className="font-sans font-semibold">Understand stress.</span>
-            <br />
-            <span className="font-serif italic text-primary-300">
-              Protect your wellness.
-            </span>
-          </h1>
+          {/* Light backdrop panel so Home's navy heading/paragraph colors stay legible on this dark hero */}
+          <div className="mt-8 max-w-2xl rounded-3xl  p-6 sm:p-8">
+            <h1 className="text-4xl leading-[1.05] tracking-tight text-[#132A4A] sm:text-5xl lg:text-6xl">
+              <span className="font-sans font-semibold">
+                Understand stress.
+              </span>
+              <br />
+              <span className="font-serif italic bg-gradient-to-r from-[#2F8F8B] to-[#7FA64A] bg-clip-text text-transparent">
+                Protect your wellness.
+              </span>
+            </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
-            Stress affects the mind, body, emotions, behavior, sleep, and
-            long-term health. This guide brings together trusted wellness
-            education from leading health organizations in a simple,
-            easy-to-understand way.
-          </p>
+            <p className="mt-6 text-lg leading-8 text-[#334155]">
+              Stress affects the mind, body, emotions, behavior, sleep, and
+              long-term health. This guide brings together trusted wellness
+              education from leading health organizations in a simple,
+              easy-to-understand way.
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-8">
             <a
@@ -229,18 +252,16 @@ export default function StressWellnessPage() {
             </div>
 
             <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
-              <span className="font-sans font-semibold">
-                Stress can affect
-              </span>{" "}
+              <span className="font-sans font-semibold">Stress can affect</span>{" "}
               <span className="font-serif italic">
                 nearly every part of the body.
               </span>
             </h2>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Trusted health organizations explain that stress is not only
-              an emotional experience. It can also affect your body,
-              behavior, sleep, focus, and long-term health.
+              Trusted health organizations explain that stress is not only an
+              emotional experience. It can also affect your body, behavior,
+              sleep, focus, and long-term health.
             </p>
           </div>
 
@@ -282,16 +303,14 @@ export default function StressWellnessPage() {
               </div>
 
               <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
-                <span className="font-sans font-semibold">
-                  Stress shows up
-                </span>{" "}
+                <span className="font-sans font-semibold">Stress shows up</span>{" "}
                 <span className="font-serif italic">in different ways.</span>
               </h2>
 
               <p className="mt-6 text-base leading-8 text-slate-600">
-                Some signs are physical, some are emotional, and some appear
-                in daily habits or behavior. Recognizing these signs early
-                can help people take healthier next steps.
+                Some signs are physical, some are emotional, and some appear in
+                daily habits or behavior. Recognizing these signs early can help
+                people take healthier next steps.
               </p>
 
               <div className="mt-8 rounded-[1.5rem] bg-slate-950 p-7 text-white">
@@ -300,9 +319,9 @@ export default function StressWellnessPage() {
                 </h3>
 
                 <p className="mt-4 text-sm leading-7 text-slate-300">
-                  If stress becomes overwhelming, affects daily life,
-                  disrupts sleep, impacts relationships, or creates ongoing
-                  emotional distress, professional support may be helpful.
+                  If stress becomes overwhelming, affects daily life, disrupts
+                  sleep, impacts relationships, or creates ongoing emotional
+                  distress, professional support may be helpful.
                 </p>
               </div>
             </div>
@@ -357,8 +376,8 @@ export default function StressWellnessPage() {
 
             <p className="mt-6 text-base leading-8 text-slate-600">
               These organizations provide helpful information about stress,
-              symptoms, body effects, emotional wellbeing, and healthy
-              coping strategies.
+              symptoms, body effects, emotional wellbeing, and healthy coping
+              strategies.
             </p>
           </div>
 
@@ -465,47 +484,48 @@ export default function StressWellnessPage() {
       </section>
 
       {/* Consultant CTA */}
-<section className="px-6 py-20 sm:py-24 lg:px-8">
-  <div className="mx-auto max-w-7xl rounded-[1.5rem] bg-slate-950 px-6 py-14 sm:px-12">
-    <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-      {/* Left Content */}
-      <div className="text-left">
-        <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
-          Health Solutions Consultant
-        </span>
+      <section className="px-6 py-20 sm:py-24 lg:px-8">
+        <div className="mx-auto rounded-[1.5rem] bg-slate-950 px-6 py-14 sm:px-12">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+            {/* Left Content */}
+            <div className="text-left">
+              <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">
+                Health Solutions Consultant
+              </span>
 
-        <h2 className="mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
-          <span className="font-sans font-semibold">Ready to take a</span>{" "}
-          <span className="font-serif italic text-primary-300">
-            healthier step forward?
-          </span>
-        </h2>
+              <h2 className="mt-7 max-w-3xl text-3xl leading-tight text-white sm:text-5xl">
+                <span className="font-sans font-semibold">Ready to take a</span>{" "}
+                <span className="font-serif italic text-primary-300">
+                  healthier step forward?
+                </span>
+              </h2>
 
-        <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-          Learn how stress may be affecting your lifestyle and discover simple
-          wellness steps that support balance, clarity, and better daily habits.
-        </p>
-      </div>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
+                Learn how stress may be affecting your lifestyle and discover
+                simple wellness steps that support balance, clarity, and better
+                daily habits.
+              </p>
+            </div>
 
-      {/* Right Buttons */}
-      <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
-        <a
-          href="/contact"
-          className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
-        >
-          Speak With a Consultant
-        </a>
+            {/* Right Buttons */}
+            <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
+              >
+                Speak With a Consultant
+              </a>
 
-        <a
-          href="/Service"
-          className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
-        >
-          View Wellness Services
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+              <a
+                href="/Service"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+              >
+                View Wellness Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

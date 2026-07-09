@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -66,8 +65,8 @@ export default function Header() {
                 />
               </svg>
             </Link>
-<div className="invisible absolute bottom-full left-1/2 z-50 mb-5 w-80 -translate-x-1/2 translate-y-3 rounded-3xl border border-white/20 bg-white/95 p-3 opacity-0 shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-  <div className="absolute -bottom-5 left-0 h-5 w-full" />
+            <div className="invisible absolute bottom-full left-1/2 z-50 mb-5 w-80 -translate-x-1/2 translate-y-3 rounded-3xl border border-white/20 bg-white/95 p-3 opacity-0 shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="absolute -bottom-5 left-0 h-5 w-full" />
 
               {/* <div className="mb-2 rounded-2xl bg-primary-500/10 px-4 py-3">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-600">
@@ -162,7 +161,7 @@ export default function Header() {
       <div
         onClick={() => setOpen(false)}
         aria-hidden="true"
-        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-black/60 transition-opacity duration-300 lg:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />

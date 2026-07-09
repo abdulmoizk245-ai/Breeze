@@ -122,19 +122,23 @@ export default function QuitSmokingPage() {
             </span>
           </div>
 
-          <h1 className="mt-8 text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            <span className="font-sans font-semibold">Quitting smoking:</span>
-            <br />
-            <span className="font-serif italic text-primary-300">
-              one of the best decisions for your health.
-            </span>
-          </h1>
+          {/* Light backdrop panel so Home's navy heading/paragraph colors stay legible on this dark hero */}
+          <div className="mt-8 max-w-2xl rounded-3xl  p-6  sm:p-8">
+            <h1 className="text-4xl leading-[1.05] tracking-tight text-[#132A4A] sm:text-5xl lg:text-6xl">
+              <span className="font-sans font-semibold">Quitting smoking:</span>
+              <br />
+              <span className="font-serif italic bg-gradient-to-r from-[#2F8F8B] to-[#7FA64A] bg-clip-text text-transparent">
+                one of the best decisions for your health.
+              </span>
+            </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
-            Every cigarette you don&apos;t smoke is a step toward a healthier
-            future. Quitting smoking can improve your health, protect your loved
-            ones, and lower the risk of serious long-term disease.
-          </p>
+            <p className="mt-6 text-lg leading-8 text-[#334155]">
+              Every cigarette you don&apos;t smoke is a step toward a
+              healthier future. Quitting smoking can improve your health,
+              protect your loved ones, and lower the risk of serious
+              long-term disease.
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-8">
             <a

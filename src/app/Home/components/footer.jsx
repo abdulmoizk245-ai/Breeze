@@ -154,10 +154,10 @@ export default function Footer() {
               <FaEnvelope className="h-3.5 w-3.5" />
             </span>
             <a
-              href="mailto:support@breezehealth.com"
+              href="mailto:support@Breezyhealth.com"
               className="text-sm text-primary-100/70 transition-colors hover:text-primary-300"
             >
-              support@breezehealth.com
+              support@Breezyhealth.com
             </a>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center gap-4 border-t border-white/10 py-8 sm:flex-row sm:justify-between">
           <p className="text-xs text-primary-100/50">
-            &copy; {new Date().getFullYear()} BreezeHealth. All rights reserved.
+            &copy; {new Date().getFullYear()} BreezyHealth. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6">
             <a

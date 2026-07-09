@@ -157,20 +157,23 @@ export default function ManagingStressPage() {
             </span>
           </div>
 
-          <h1 className="mt-8 text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            <span className="font-sans font-semibold">Managing stress:</span>
-            <br />
-            <span className="font-serif italic text-primary-300">
-              simple strategies for a healthier mind and body.
-            </span>
-          </h1>
+          {/* Light backdrop panel so Home's navy heading/paragraph colors stay legible on this dark hero */}
+          <div className="mt-8 max-w-2xl rounded-3xl  p-6  sm:p-8">
+            <h1 className="text-4xl leading-[1.05] tracking-tight text-[#132A4A] sm:text-5xl lg:text-6xl">
+              <span className="font-sans font-semibold">Managing stress:</span>
+              <br />
+              <span className="font-serif italic bg-gradient-to-r from-[#2F8F8B] to-[#7FA64A] bg-clip-text text-transparent">
+                simple strategies for a healthier mind and body.
+              </span>
+            </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
-            Stress is a normal part of life, but chronic stress can affect your
-            body, mood, sleep, immune system, and long-term health. The good
-            news is that simple daily habits can help you feel more calm,
-            focused, and in control.
-          </p>
+            <p className="mt-6 text-lg leading-8 text-[#334155]">
+              Stress is a normal part of life, but chronic stress can affect
+              your body, mood, sleep, immune system, and long-term health.
+              The good news is that simple daily habits can help you feel
+              more calm, focused, and in control.
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-8">
             <a

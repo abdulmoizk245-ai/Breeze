@@ -32,18 +32,21 @@ export default function HeroSection() {
             Licensed Health, Accident & Life Insurance Advisor
           </div>
 
-          <h1 className="mt-7 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl">
-            Health Insurance
-            <span className="block text-primary-400">
-              Made Clear, Simple & Personal.
-            </span>
-          </h1>
+          {/* Light backdrop panel so Home's navy heading/paragraph colors stay legible on this dark hero */}
+          <div className="mt-7 max-w-2xl rounded-3xl p-6  sm:p-8">
+            <h1 className="text-4xl font-bold tracking-tight text-[#132A4A] sm:text-5xl lg:text-6xl">
+              Health Insurance
+              <span className="block bg-gradient-to-r from-[#2F8F8B] to-[#7FA64A] bg-clip-text text-transparent">
+                Made Clear, Simple & Personal.
+              </span>
+            </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Explore affordable health coverage options for individuals,
-            families, self-employed professionals, and small business owners —
-            with guidance that helps you choose confidently.
-          </p>
+            <p className="mt-6 text-base leading-8 text-[#334155] sm:text-lg">
+              Explore affordable health coverage options for individuals,
+              families, self-employed professionals, and small business
+              owners — with guidance that helps you choose confidently.
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">

@@ -26,21 +26,24 @@ export default function AboutHero() {
             </span>
           </div>
 
-          <h1 className="mt-8 text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="font-sans font-semibold">
-              Health insurance guidance,
-            </span>
-            <br />
-            <span className="font-serif italic text-primary-300">
-              made simple.
-            </span>
-          </h1>
+          {/* Light backdrop panel so Home's navy heading/paragraph colors stay legible on this dark hero */}
+          <div className="mt-8 rounded-3xl  p-6  sm:p-8">
+            <h1 className="text-4xl leading-[1.05] tracking-tight text-[#132A4A] sm:text-5xl lg:text-6xl">
+              <span className="font-sans font-semibold">
+                Health insurance guidance,
+              </span>
+              <br />
+              <span className="font-serif italic bg-gradient-to-r from-[#2F8F8B] to-[#7FA64A] bg-clip-text text-transparent">
+                made simple.
+              </span>
+            </h1>
 
-          <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-300">
-            Finding the right health insurance shouldn&apos;t be confusing or
-            overwhelming. Brenda makes the process simple, educational, and
-            personalized so you can choose coverage with confidence.
-          </p>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[#334155]">
+              Finding the right health insurance shouldn&apos;t be confusing
+              or overwhelming. Brenda makes the process simple, educational,
+              and personalized so you can choose coverage with confidence.
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-6 border-t border-white/10 pt-8">
             <div>
