@@ -1,4 +1,4 @@
-// }
+
 "use client";
 
 import Image from "next/image";
@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const NAV_LINKS = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/About" },
   { label: "Contact", href: "/contact" },
 ];
@@ -41,7 +42,8 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl shadow-black/10 backdrop-blur-md lg:flex">
+        {/* <div className="hidden items-center rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl shadow-black/10 backdrop-blur-md lg:flex"> */}
+        <div className="fixed bottom-6 left-1/2 z-[999] hidden -translate-x-1/2 items-center rounded-full border border-white/15 bg-slate-950/70 px-3 py-2 shadow-2xl shadow-black/30 backdrop-blur-xl lg:flex">
           {/* Services Dropdown */}
           <div className="group relative">
             <Link

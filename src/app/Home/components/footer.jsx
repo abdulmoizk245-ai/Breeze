@@ -42,7 +42,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-primary-950 pt-20">
+    <footer className="relative w-full overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 pt-20">
       <div className="pointer-events-none absolute -top-32 left-1/3 h-72 w-72 rounded-full bg-tertiary-500/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 right-0 h-72 w-72 rounded-full bg-secondary-500/10 blur-3xl" />
 
