@@ -76,7 +76,7 @@ export default function Hero() {
           </div>
         </div> */}
         {/* Text + CTA - LEFT SIDE */}
-        <div className="max-w-xl text-[#132A4A]">
+        <div className="max-w-xl text-[#132A4A] relative z-10 pt-24 sm:pt-28 lg:pt-0">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#6EC7C2]/40 bg-white/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#132A4A] backdrop-blur-sm">
             <FaShieldHeart className="h-3.5 w-3.5 text-[#6EC7C2]" />
             #1 Rated Coverage Plans

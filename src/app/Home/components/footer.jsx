@@ -27,6 +27,8 @@ const FOOTER_LINKS = [
   {
     heading: "Company",
     links: [
+      { label: "Home", href: "/" },
+      { label: "Service", href: "/Service" },
       { label: "About Us", href: "/About" },
       { label: "Contact", href: "/contact" },
     ],
@@ -50,10 +52,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 pb-16 lg:grid-cols-[1.3fr_2fr]">
           {/* Brand + newsletter */}
           <div>
-            <Link
-              href="/"
-              className="block transition-transform "
-            >
+            <Link href="/" className="block transition-transform ">
               <Image
                 src="/BRZ LOGO1.png"
                 alt="Breezy Health Solutions"

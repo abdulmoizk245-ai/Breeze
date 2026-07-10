@@ -5,11 +5,11 @@ import {
   FaCheck,
   FaCheckCircle,
   FaArrowRight,
-  FaPaperPlane,
   FaClock,
 } from "react-icons/fa";
 import Footer from "../Home/components/footer";
 import Header from "../Home/components/header";
+import ContactForm from "./components/ContactForm";
 
 const coverageOptions = [
   "Private PPO Health Plans",
@@ -71,8 +71,8 @@ export default function ContactPage() {
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-[#334155]">
                 Healthy habits protect your future, but the right health
-                insurance protects you when life becomes unexpected. Brenda
-                Ruiz at Breezy Health Solutions helps you explore affordable,
+                insurance protects you when life becomes unexpected. Brenda Ruiz
+                at Breezy Health Solutions helps you explore affordable,
                 reliable coverage built around your needs, budget, and
                 lifestyle.
               </p>
@@ -248,81 +248,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form className="rounded-[1.75rem] bg-white p-6 shadow-2xl sm:p-8">
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label className="text-sm font-semibold text-slate-800">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-primary-400 focus:bg-white focus:ring-4 focus:ring-primary-100"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-semibold text-slate-800">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  placeholder="Your phone number"
-                  className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-primary-400 focus:bg-white focus:ring-4 focus:ring-primary-100"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-semibold text-slate-800">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-primary-400 focus:bg-white focus:ring-4 focus:ring-primary-100"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-semibold text-slate-800">
-                  Coverage Interest
-                </label>
-                <select className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-primary-400 focus:bg-white focus:ring-4 focus:ring-primary-100">
-                  <option>Select an option</option>
-                  <option>Private PPO Health Plan</option>
-                  <option>Family Coverage</option>
-                  <option>Dental & Vision</option>
-                  <option>Medicare Supplement Plan</option>
-                  <option>Small Business Coverage</option>
-                  <option>Not Sure Yet</option>
-                </select>
-              </div>
-
-              <div className="sm:col-span-2">
-                <label className="text-sm font-semibold text-slate-800">
-                  Message
-                </label>
-                <textarea
-                  rows="5"
-                  placeholder="Tell us what kind of coverage you are looking for..."
-                  className="mt-2 w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-primary-400 focus:bg-white focus:ring-4 focus:ring-primary-100"
-                />
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary-600 px-7 py-4 text-sm font-semibold text-white shadow-xl shadow-primary-600/20 transition hover:-translate-y-0.5 hover:bg-primary-500"
-            >
-              Send Message
-              <FaPaperPlane className="h-3.5 w-3.5" />
-            </button>
-
-            <p className="mt-4 text-center text-xs leading-6 text-slate-500">
-              By submitting this form, you agree to be contacted about health
-              insurance options that may fit your needs.
-            </p>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
@@ -361,10 +287,10 @@ export default function ContactPage() {
               </div>
 
               {/* Right Buttons */}
-              <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="tel:+15125579308"
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
+                  className="inline-flex w-60 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-6 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
                 >
                   <FaPhoneAlt className="h-3.5 w-3.5" />
                   Call Brenda Ruiz
@@ -372,7 +298,7 @@ export default function ContactPage() {
 
                 <Link
                   href="/plans"
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
+                  className="inline-flex w-60 items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
                 >
                   View Coverage Options
                 </Link>

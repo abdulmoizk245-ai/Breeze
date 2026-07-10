@@ -27,7 +27,7 @@ export default function HeroSection() {
       <div className="relative mx-auto grid min-h-[92vh]  items-center gap-12 px-6 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         {/* Left Content */}
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-primary-100 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 mt-20 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-primary-100 backdrop-blur-md">
             <span className="h-2 w-2 rounded-full bg-primary-400" />
             Licensed Health, Accident & Life Insurance Advisor
           </div>

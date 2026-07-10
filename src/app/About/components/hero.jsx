@@ -4,18 +4,28 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export default function AboutHero() {
   return (
-    <section className="relative isolate flex min-h-[95vh] w-full items-center overflow-hidden bg-slate-950">
+    // <section className="relative isolate flex min-h-[95vh] w-full items-center overflow-hidden bg-slate-950">
+    <section className="relative isolate flex min-h-screen w-full items-center overflow-hidden bg-slate-950 lg:min-h-[95vh]">
       {/* Background Image */}
-      <Image
+      {/* <Image
         src="/about/hero.png"
         alt="Brenda Ruiz health insurance advisor"
         fill
         priority
         className="object-cover object-center"
-      />
+      /> */}
+    <Image
+  src="/about/hero.png"
+  alt="Brenda Ruiz health insurance advisor"
+  fill
+  priority
+  sizes="100vw"
+  className="object-cover object-[65%_center] sm:object-center"
+/>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-slate-950/20" />
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-slate-950/20" /> */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/75 lg:to-slate-950/20" />
 
       <div className="relative z-10 w-full px-6 py-24 sm:py-28 lg:px-16 lg:py-32">
         <div className="max-w-2xl text-white">
@@ -39,9 +49,9 @@ export default function AboutHero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#334155]">
-              Finding the right health insurance shouldn&apos;t be confusing
-              or overwhelming. Brenda makes the process simple, educational,
-              and personalized so you can choose coverage with confidence.
+              Finding the right health insurance shouldn&apos;t be confusing or
+              overwhelming. Brenda makes the process simple, educational, and
+              personalized so you can choose coverage with confidence.
             </p>
           </div>
 

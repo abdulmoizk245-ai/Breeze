@@ -8,6 +8,9 @@ import {
   FaLanguage,
   FaLock,
   FaPeopleGroup,
+  FaShieldHalved,
+  FaCircleCheck,
+  FaUserShield,
 } from "react-icons/fa6";
 
 const solutions = [
@@ -110,40 +113,84 @@ export default function AboutBrenda() {
             </div>
           </div>
 
-          {/* Right Image + Caption */}
-          <div className="flex flex-col overflow-hidden rounded-[1.5rem] border border-slate-100">
-            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl sm:h-[420px] lg:h-[600px]">
+          {/* Right Image + Information Card */}
+          <div className="group relative overflow-hidden rounded-[2rem] border border-slate-200/70 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
+            {/* Image */}
+            <div className="relative h-[300px] w-full overflow-hidden sm:h-[400px] lg:h-[480px] xl:h-[520px]">
               <img
                 src="/about/brenda-about.png"
                 alt="Brenda Ruiz helping a client choose health insurance coverage"
-                className="absolute inset-0 h-full w-full object-cover object-center"
+                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
               />
-            </div>
 
-            <div className="flex flex-1 flex-col justify-center gap-6 bg-primary-50 p-7">
-              <div className="flex gap-4">
-                <FaClock className="mt-1 h-5 w-5 shrink-0 text-primary-600" />
+              {/* Image Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-transparent to-transparent" />
+
+              {/* Floating Badge */}
+              <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl border border-white/20 bg-slate-950/55 px-4 py-3 text-white shadow-xl backdrop-blur-md sm:left-6 sm:right-auto">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-500">
+                  <FaClock className="h-4 w-4" />
+                </span>
+
                 <div>
-                  <h3 className="font-semibold text-slate-900">
-                    Most quotes take 10–15 minutes
-                  </h3>
-                  <p className="mt-1 text-sm leading-7 text-slate-600">
-                    No obligation — review your options clearly and decide with
-                    confidence.
+                  <p className="text-xs font-medium text-white/70">
+                    Quick &amp; simple process
+                  </p>
+
+                  <p className="text-sm font-bold sm:text-base">
+                    Most quotes in 10–15 minutes
                   </p>
                 </div>
               </div>
+            </div>
 
-              <div className="flex gap-4 border-t border-primary-100 pt-6">
-                <FaLanguage className="mt-1 h-5 w-5 shrink-0 text-primary-600" />
-                <div>
-                  <h3 className="font-semibold text-slate-900">
-                    English &amp; Spanish support
-                  </h3>
-                  <p className="mt-1 text-sm leading-7 text-slate-600">
-                    Virtual nationwide, in-person throughout Texas.
-                  </p>
+            {/* Information Area */}
+            <div className="relative bg-gradient-to-br from-primary-50 via-white to-primary-50/60 p-5 sm:p-7 lg:p-8">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                {/* Quote Process */}
+                <div className="flex gap-4 rounded-2xl border border-primary-100 bg-white/80 p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md sm:p-5">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-700">
+                    <FaClock className="h-4 w-4" />
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-bold leading-5 text-slate-900 sm:text-base">
+                      Fast Quote Process
+                    </h3>
+
+                    <p className="mt-2 text-xs leading-6 text-slate-600 sm:text-sm">
+                      No obligation. Review your options clearly and decide with
+                      confidence.
+                    </p>
+                  </div>
                 </div>
+
+                {/* Language Support */}
+                <div className="flex gap-4 rounded-2xl border border-primary-100 bg-white/80 p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md sm:p-5">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-700">
+                    <FaLanguage className="h-5 w-5" />
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-bold leading-5 text-slate-900 sm:text-base">
+                      English &amp; Spanish Support
+                    </h3>
+
+                    <p className="mt-2 text-xs leading-6 text-slate-600 sm:text-sm">
+                      Virtual service nationwide and in-person support
+                      throughout Texas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Trust Line */}
+              <div className="mt-5 flex items-center justify-center gap-2 border-t border-primary-100 pt-5 text-center">
+                <span className="h-2 w-2 rounded-full bg-primary-500" />
+
+                <p className="text-xs font-semibold text-slate-500 sm:text-sm">
+                  Personalized guidance with no pressure or obligation
+                </p>
               </div>
             </div>
           </div>
@@ -236,17 +283,21 @@ export default function AboutBrenda() {
         {/* What Sets Me Apart */}
         <div className="mt-24 grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-stretch">
           {/* Left Content */}
-          <div className="relative rounded-[28px] border border-slate-200 p-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.45)] sm:p-8 lg:p-10">
-            <div className="absolute left-0 top-8 h-16 w-1 rounded-r-full bg-primary-500" />
+          <div className="relative overflow-hidden rounded-[22px] border border-slate-200 p-5 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.45)] sm:rounded-[28px] sm:p-8 lg:p-10">
+            {/* Side Accent */}
+            <div className="absolute left-0 top-7 h-14 w-1 rounded-r-full bg-primary-500 sm:top-8 sm:h-16" />
 
-            <div className="flex items-center gap-3">
-              <span className="block h-px w-10 bg-primary-500" />
-              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
+            {/* Small Heading */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="block h-px w-7 shrink-0 bg-primary-500 sm:w-10" />
+
+              <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-primary-600 sm:text-xs sm:tracking-[0.35em]">
                 What Sets Me Apart
               </span>
             </div>
 
-            <h3 className="mt-5 max-w-xl text-3xl leading-tight text-slate-950 sm:text-4xl">
+            {/* Main Heading */}
+            <h3 className="mt-4 max-w-xl text-2xl leading-[1.2] text-slate-950 sm:mt-5 sm:text-4xl sm:leading-tight">
               <span className="font-serif italic text-primary-700">
                 More than a quote
               </span>{" "}
@@ -255,27 +306,29 @@ export default function AboutBrenda() {
               </span>
             </h3>
 
-            <div className="mt-7 space-y-5">
-              <p className="text-base leading-8 text-slate-600">
+            {/* Description */}
+            <div className="mt-5 space-y-4 sm:mt-7 sm:space-y-5">
+              <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
                 Every client deserves more than just a quote. Brenda takes the
                 time to understand your unique situation, answer your questions,
                 explain your options in plain language, and recommend solutions
                 designed specifically for you.
               </p>
 
-              <p className="text-base leading-8 text-slate-600">
+              <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
                 Her commitment doesn&apos;t end once your policy is issued. She
                 is here to support you throughout the life of your policy
                 whenever questions or changes arise.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* Tags */}
+            <div className="mt-6 grid grid-cols-3 gap-2 sm:mt-8 sm:flex sm:flex-wrap sm:gap-3">
               {["Personal Guidance", "Clear Answers", "Long-Term Support"].map(
                 (item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700"
+                    className="flex min-w-0 items-center justify-center whitespace-nowrap rounded-full border border-slate-200 px-1.5 py-2 text-center text-[8px] font-semibold uppercase tracking-[0.04em] text-slate-700 sm:px-4 sm:text-xs sm:tracking-[0.18em]"
                   >
                     {item}
                   </span>
@@ -321,45 +374,88 @@ export default function AboutBrenda() {
             </div>
           </div>
         </div>
+        {/* Privacy Section */}
+        <div className="relative mt-12 overflow-hidden rounded-[24px] border border-primary-100 bg-gradient-to-br from-white via-primary-50/40 to-white shadow-[0_25px_70px_-45px_rgba(15,23,42,0.5)] sm:rounded-[32px]">
+          {/* Decorative Background */}
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-tertiary-200/30 blur-3xl" />
 
-        {/* Privacy */}
-        <div className="mt-12 rounded-[28px] border border-slate-200 p-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.45)] sm:p-8 lg:p-10">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary-200">
-              <FaLock className="h-6 w-6 text-primary-600" />
-            </div>
+          <div className="relative grid lg:grid-cols-[0.72fr_1.28fr]">
+            {/* Left Highlight Area */}
+            <div className="flex flex-col justify-between bg-slate-950 p-6 sm:p-8 lg:p-10">
+              <div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-500 text-white shadow-lg shadow-primary-500/30 sm:h-16 sm:w-16">
+                  <FaShieldHalved className="h-6 w-6 sm:h-7 sm:w-7" />
+                </div>
 
-            <div>
-              <div className="flex flex-wrap items-center gap-3">
-                <h3 className="text-2xl font-semibold text-slate-950">
-                  Your privacy matters
+                <span className="mt-6 inline-flex rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-primary-200 backdrop-blur-md sm:text-xs">
+                  Confidential &amp; Secure
+                </span>
+
+                <h3 className="mt-5 text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">
+                  Your privacy always comes first.
                 </h3>
 
-                <span className="rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600">
-                  Confidential
+                <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
+                  Every conversation and personal detail is handled with care,
+                  professionalism, and complete respect.
+                </p>
+              </div>
+
+              <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6">
+                <FaUserShield className="h-5 w-5 shrink-0 text-primary-300" />
+
+                <p className="text-xs font-medium leading-5 text-slate-300 sm:text-sm">
+                  Trusted guidance backed by decades of healthcare experience.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className="p-6 sm:p-8 lg:p-10">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-8 bg-primary-500 sm:w-10" />
+
+                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary-600 sm:text-xs sm:tracking-[0.35em]">
+                  Privacy Commitment
                 </span>
               </div>
 
-              <p className="mt-5 max-w-4xl text-base leading-8 text-slate-600">
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
                 Your personal information is treated with the highest level of
-                confidentiality and respect. Having spent decades working in
-                healthcare with strict compliance standards, Brenda understands
-                the importance of protecting sensitive information.
+                confidentiality and respect. Brenda understands the importance
+                of protecting sensitive information and following strict
+                professional standards.
               </p>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-slate-200 p-5">
-                  <FaCheck className="h-4 w-4 text-primary-600" />
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
+              {/* Privacy Points */}
+              <div className="mt-7 grid gap-4 sm:grid-cols-2">
+                <div className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-lg">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition group-hover:bg-primary-500 group-hover:text-white">
+                    <FaCircleCheck className="h-4 w-4" />
+                  </div>
+
+                  <h4 className="mt-4 text-base font-bold text-slate-900">
+                    Your data stays private
+                  </h4>
+
+                  <p className="mt-2 text-sm leading-7 text-slate-600">
                     Your information will never be sold, shared, or distributed
                     to third parties for marketing purposes.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-slate-200 p-5">
-                  <FaCheck className="h-4 w-4 text-primary-600" />
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    Integrity, professionalism, and trust are the foundation of
+                <div className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-lg">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition group-hover:bg-primary-500 group-hover:text-white">
+                    <FaCircleCheck className="h-4 w-4" />
+                  </div>
+
+                  <h4 className="mt-4 text-base font-bold text-slate-900">
+                    Built on trust
+                  </h4>
+
+                  <p className="mt-2 text-sm leading-7 text-slate-600">
+                    Integrity, professionalism, and respect are at the heart of
                     every client relationship.
                   </p>
                 </div>
@@ -401,24 +497,30 @@ export default function AboutBrenda() {
               </p>
 
               {/* Trust Points */}
-              <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-white/10 pt-7">
-                <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
-                  <p className="text-sm text-slate-300">
-                    <span className="font-bold text-white">10–15 min</span>{" "}
+              <div className="mt-8 grid grid-cols-3 gap-2 border-t border-white/10 pt-7">
+                <div className="rounded-xl border border-white/10 bg-white/10 px-3 py-2 text-center backdrop-blur-md">
+                  <p className="text-[11px] leading-4 text-slate-300 sm:text-xs">
+                    <span className="block font-bold text-white">
+                      10–15 min
+                    </span>
                     quote process
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
-                  <p className="text-sm text-slate-300">
-                    <span className="font-bold text-white">No obligation</span>{" "}
+                <div className="rounded-xl border border-white/10 bg-white/10 px-3 py-2 text-center backdrop-blur-md">
+                  <p className="text-[11px] leading-4 text-slate-300 sm:text-xs">
+                    <span className="block font-bold text-white">
+                      No obligation
+                    </span>
                     free consult
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
-                  <p className="text-sm text-slate-300">
-                    <span className="font-bold text-white">Personalized</span>{" "}
+                <div className="rounded-xl border border-white/10 bg-white/10 px-3 py-2 text-center backdrop-blur-md">
+                  <p className="text-[11px] leading-4 text-slate-300 sm:text-xs">
+                    <span className="block font-bold text-white">
+                      Personalized
+                    </span>
                     plans for you
                   </p>
                 </div>
@@ -426,7 +528,7 @@ export default function AboutBrenda() {
             </div>
 
             {/* Right Buttons */}
-            <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/quote"
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"

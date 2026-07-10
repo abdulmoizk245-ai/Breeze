@@ -25,10 +25,10 @@ export default function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 w-full">
-      <nav className="mx-auto flex items-center justify-between px-6">
-        <Link
+      <nav className="mx-auto flex items-start justify-between px-4 sm:px-6 lg:items-center">
+        {/* <Link
           href="/"
-          className="relative inline-flex h-20 w-52 shrink-0 items-center transition-transform duration-300 hover:scale-105 sm:h-24 sm:w-64"
+          className="relative inline-flex h-20 w-52 shrink-0 items-center transition-transform duration-300 hover:scale-105 sm:h-31 sm:w-60"
         >
           <Image
             src="/BRZ LOGO1.png"
@@ -37,6 +37,19 @@ export default function Header() {
             priority
             sizes="(max-width: 640px) 176px, 208px"
             className="object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.35)]"
+          />
+        </Link> */}
+        <Link
+          href="/"
+          className="relative inline-flex h-16 w-36 shrink-0 items-center justify-start transition-transform duration-300 hover:scale-105 sm:h-20 sm:w-48 lg:h-31 lg:w-60"
+        >
+          <Image
+            src="/BRZ LOGO1.png"
+            alt="Breezy Health Solutions"
+            fill
+            priority
+            sizes="(max-width: 640px) 144px, 208px"
+            className="object-contain object-left drop-shadow-[0_10px_25px_rgba(0,0,0,0.35)]"
           />
         </Link>
 
@@ -107,7 +120,7 @@ export default function Header() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-start gap-3 lg:flex">
           <a
             href="tel:+18005551234"
             className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-black/10 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-primary-300"
@@ -231,7 +244,36 @@ export default function Header() {
                   : "grid-rows-[0fr] opacity-0"
               }`}
             >
+              {/* <div className="min-h-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2">
+                {SERVICE_LINKS.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    onClick={() => {
+                      setOpen(false);
+                      setServiceOpen(false);
+                    }}
+                    className="block rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-300 transition-all hover:bg-primary-500 hover:text-white"
+                  >
+                    {service.label}
+                  </Link>
+                ))}
+              </div> */}
               <div className="min-h-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2">
+                {/* All Services Button */}
+                <Link
+                  href="/Service"
+                  onClick={() => {
+                    setOpen(false);
+                    setServiceOpen(false);
+                  }}
+                  className="mb-2 flex items-center justify-between rounded-xl bg-primary-500 px-4 py-3 text-sm font-bold text-white transition-all hover:bg-primary-400"
+                >
+                  <span>All Services</span>
+                  <span>→</span>
+                </Link>
+
+                {/* Individual Services */}
                 {SERVICE_LINKS.map((service) => (
                   <Link
                     key={service.href}
