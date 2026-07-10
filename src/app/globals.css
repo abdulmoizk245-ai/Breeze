@@ -103,6 +103,22 @@ body {
   animation: logo-blink 1.4s ease-in-out infinite;
 }
 
+@keyframes card-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.12);
+  }
+}
+
+.animate-card-glow-pulse {
+  animation: card-glow-pulse 3.5s ease-in-out infinite;
+}
+
 @keyframes loader-pulse {
   0% {
     transform: scale(0.7);

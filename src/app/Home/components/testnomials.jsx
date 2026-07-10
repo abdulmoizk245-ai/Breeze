@@ -128,32 +128,35 @@ export default function Testimonials() {
             ) : (
               <div
                 key={t.name}
-                className="flex flex-col justify-between rounded-3xl border border-primary-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-900/5"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-primary-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-lg hover:shadow-primary-900/5"
               >
-                <div>
-                  <FaQuoteLeft className="h-6 w-6 text-primary-200" />
-                  <p className="mt-4 text-base leading-relaxed text-zinc-600">
+                {/* Dark Gradient Hover Background */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+                <div className="relative">
+                  <FaQuoteLeft className="h-6 w-6 text-primary-200 transition-colors duration-500 group-hover:text-white/40" />
+                  <p className="mt-4 text-base leading-relaxed text-zinc-600 transition-colors duration-500 group-hover:text-white/90">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
+                <div className="relative mt-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white transition-colors duration-500 group-hover:bg-white/15">
                     {t.initials}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-primary-950">
+                    <p className="text-sm font-semibold text-primary-950 transition-colors duration-500 group-hover:text-white">
                       {t.name}
                     </p>
-                    <p className="text-xs text-zinc-500">
+                    <p className="text-xs text-zinc-500 transition-colors duration-500 group-hover:text-white/70">
                       {t.plan} · {t.location}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-4 flex gap-1">
+                <div className="relative mt-4 flex gap-1">
                   {Array.from({ length: t.rating }).map((_, i) => (
-                    <FaStar key={i} className="h-3.5 w-3.5 text-primary-500" />
+                    <FaStar key={i} className="h-3.5 w-3.5 text-primary-500 transition-colors duration-500 group-hover:text-white" />
                   ))}
                 </div>
               </div>

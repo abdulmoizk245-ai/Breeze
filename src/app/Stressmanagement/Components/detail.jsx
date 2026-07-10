@@ -269,19 +269,23 @@ export default function StressWellnessPage() {
             {stressEffects.map((item) => (
               <div
                 key={item.title}
-                className="group rounded-2xl border border-slate-100 bg-white p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
               >
-                <span className="font-serif text-2xl text-primary-500/50">
-                  {item.icon}
-                </span>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <h3 className="mt-5 text-base font-semibold text-slate-900">
-                  {item.title}
-                </h3>
+                <div className="relative">
+                  <span className="font-serif text-2xl text-primary-500/50 transition-colors duration-500 group-hover:text-white/60">
+                    {item.icon}
+                  </span>
 
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  {item.text}
-                </p>
+                  <h3 className="mt-5 text-base font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
+                    {item.text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -330,21 +334,25 @@ export default function StressWellnessPage() {
               {symptomGroups.map((group) => (
                 <div
                   key={group.title}
-                  className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
+                  className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
                 >
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    {group.title}
-                  </h3>
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                  <div className="mt-5 space-y-3">
-                    {group.points.map((point) => (
-                      <div key={point} className="flex gap-3">
-                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary-500" />
-                        <p className="text-sm leading-6 text-slate-600">
-                          {point}
-                        </p>
-                      </div>
-                    ))}
+                  <div className="relative">
+                    <h3 className="text-lg font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
+                      {group.title}
+                    </h3>
+
+                    <div className="mt-5 space-y-3">
+                      {group.points.map((point) => (
+                        <div key={point} className="flex gap-3">
+                          <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary-500 transition-colors duration-500 group-hover:bg-white" />
+                          <p className="text-sm leading-6 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
+                            {point}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -388,40 +396,42 @@ export default function StressWellnessPage() {
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative overflow-hidden rounded-[1.75rem] border p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                className={`group relative overflow-hidden rounded-[1.75rem] border p-7 transition duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl ${
                   index === 0
                     ? "border-primary-200 bg-primary-50"
                     : "border-slate-100 bg-white"
                 }`}
               >
-                <div className="flex items-start gap-5">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-primary-200">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+                <div className="relative flex items-start gap-5">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-primary-200 transition-colors duration-500 group-hover:bg-white/15 group-hover:text-white">
                     {source.short}
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-900">
+                    <h3 className="text-xl font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
                       {source.name}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-7 text-slate-600">
+                    <p className="mt-3 text-sm leading-7 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
                       {source.text}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="relative mt-6 flex flex-wrap gap-2">
                   {source.topics.map((topic) => (
                     <span
                       key={topic}
-                      className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700"
+                      className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors duration-500 group-hover:border-white/20 group-hover:bg-white/10 group-hover:text-white"
                     >
                       {topic}
                     </span>
                   ))}
                 </div>
 
-                <div className="mt-6 text-sm font-semibold text-primary-700">
+                <div className="relative mt-6 text-sm font-semibold text-primary-700 transition-colors duration-500 group-hover:text-white">
                   Visit Resource →
                 </div>
               </a>

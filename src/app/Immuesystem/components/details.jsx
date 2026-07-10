@@ -273,34 +273,36 @@ export default function ImmuneSystemPage() {
               return (
                 <div
                   key={habit.title}
-                  className="group rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl sm:p-7"
+                  className="group relative overflow-hidden rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl sm:p-7"
                 >
-                  <div className="flex flex-col gap-5 sm:flex-row">
-                    <div className="flex h-14 w-14 flex-none items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition group-hover:bg-primary-600 group-hover:text-white">
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+                  <div className="relative flex flex-col gap-5 sm:flex-row">
+                    <div className="flex h-14 w-14 flex-none items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition duration-500 group-hover:bg-white/15 group-hover:text-white">
                       <Icon className="h-6 w-6" />
                     </div>
 
                     <div className="min-w-0">
                       <div className="flex items-center gap-3">
-                        <span className="font-serif text-lg text-primary-500/60">
+                        <span className="font-serif text-lg text-primary-500/60 transition-colors duration-500 group-hover:text-white/60">
                           {habit.number}
                         </span>
-                        <div className="h-px flex-1 bg-slate-100" />
+                        <div className="h-px flex-1 bg-slate-100 transition-colors duration-500 group-hover:bg-white/20" />
                       </div>
 
-                      <h3 className="mt-3 text-xl font-semibold text-slate-900">
+                      <h3 className="mt-3 text-xl font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
                         {habit.title}
                       </h3>
 
-                      <p className="mt-4 text-sm leading-7 text-slate-600">
+                      <p className="mt-4 text-sm leading-7 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
                         {habit.text}
                       </p>
 
                       <div className="mt-5 grid gap-3 sm:grid-cols-2">
                         {habit.points.map((point) => (
                           <div key={point} className="flex gap-3">
-                            <FaCheckCircle className="mt-1 h-4 w-4 flex-none text-primary-500" />
-                            <p className="text-sm leading-6 text-slate-600">
+                            <FaCheckCircle className="mt-1 h-4 w-4 flex-none text-primary-500 transition-colors duration-500 group-hover:text-white" />
+                            <p className="text-sm leading-6 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
                               {point}
                             </p>
                           </div>

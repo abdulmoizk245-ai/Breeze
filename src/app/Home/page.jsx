@@ -17,7 +17,7 @@ export default function Main() {
       <Categories />
       <Services />
       <Benefits />
-      <Plan />
+      {/* <Plan /> */}
       <Testimonials />
       <Faq />
       <Cta />

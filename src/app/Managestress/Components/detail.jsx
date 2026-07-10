@@ -296,15 +296,19 @@ export default function ManagingStressPage() {
             {stressEffects.map((effect) => (
               <div
                 key={effect}
-                className="group rounded-2xl border border-slate-100 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700 transition group-hover:bg-primary-600 group-hover:text-white">
-                  <FaExclamationCircle className="h-4 w-4" />
-                </div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <h3 className="text-sm font-semibold text-slate-900">
-                  {effect}
-                </h3>
+                <div className="relative">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700 transition duration-500 group-hover:bg-white/15 group-hover:text-white">
+                    <FaExclamationCircle className="h-4 w-4" />
+                  </div>
+
+                  <h3 className="text-sm font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
+                    {effect}
+                  </h3>
+                </div>
               </div>
             ))}
           </div>
@@ -430,22 +434,26 @@ export default function ManagingStressPage() {
               {shortTermStrategies.map((strategy, index) => (
                 <div
                   key={strategy.title}
-                  className="group rounded-2xl border border-slate-100 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
+                  className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="font-serif text-2xl text-primary-500/50">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div className="h-px flex-1 bg-slate-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+                  <div className="relative">
+                    <div className="flex items-center gap-3">
+                      <span className="font-serif text-2xl text-primary-500/50 transition-colors duration-500 group-hover:text-white/60">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div className="h-px flex-1 bg-slate-100 transition-colors duration-500 group-hover:bg-white/20" />
+                    </div>
+
+                    <h3 className="mt-4 text-xl font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
+                      {strategy.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-7 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
+                      {strategy.text}
+                    </p>
                   </div>
-
-                  <h3 className="mt-4 text-xl font-semibold text-slate-900">
-                    {strategy.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    {strategy.text}
-                  </p>
                 </div>
               ))}
             </div>
@@ -485,25 +493,29 @@ export default function ManagingStressPage() {
             {longTermStrategies.map((strategy) => (
               <div
                 key={strategy.title}
-                className="rounded-2xl border border-slate-100 bg-white p-7 shadow-sm"
+                className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
               >
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {strategy.title}
-                </h3>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <p className="mt-4 text-sm leading-7 text-slate-600">
-                  {strategy.text}
-                </p>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
+                    {strategy.title}
+                  </h3>
 
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {strategy.activities.map((activity) => (
-                    <span
-                      key={activity}
-                      className="rounded-full border border-slate-200 bg-primary-50 px-3 py-1.5 text-xs font-medium text-slate-700"
-                    >
-                      {activity}
-                    </span>
-                  ))}
+                  <p className="mt-4 text-sm leading-7 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
+                    {strategy.text}
+                  </p>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {strategy.activities.map((activity) => (
+                      <span
+                        key={activity}
+                        className="rounded-full border border-slate-200 bg-primary-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors duration-500 group-hover:border-white/20 group-hover:bg-white/10 group-hover:text-white"
+                      >
+                        {activity}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -693,15 +705,19 @@ export default function ManagingStressPage() {
             {dailyActions.map((action) => (
               <div
                 key={action}
-                className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
+                className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700">
-                  <FaCheckCircle className="h-4 w-4" />
-                </div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <h3 className="text-base font-semibold text-slate-900">
-                  {action}
-                </h3>
+                <div className="relative">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700 transition-colors duration-500 group-hover:bg-white/15 group-hover:text-white">
+                    <FaCheckCircle className="h-4 w-4" />
+                  </div>
+
+                  <h3 className="text-base font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
+                    {action}
+                  </h3>
+                </div>
               </div>
             ))}
           </div>

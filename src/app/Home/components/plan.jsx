@@ -94,67 +94,74 @@ export default function Plan() {
           {PLANS.map((plan) => (
             <div
               key={plan.name}
-              className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 ${
+              className={`group relative flex flex-col overflow-hidden rounded-3xl p-8 transition-all duration-300 ${
                 plan.featured
                   ? "bg-gradient-to-br from-primary-600 to-primary-800 shadow-2xl shadow-primary-900/20 lg:-translate-y-4"
-                  : "border border-zinc-200 bg-white shadow-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-900/5"
+                  : "border border-zinc-200 bg-white shadow-sm hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl hover:shadow-primary-900/5"
               }`}
             >
-              {plan.featured && (
-                <span className="absolute -top-4 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary-700 shadow-lg">
-                  <FaStar className="h-3 w-3 text-primary-500" />
-                  Most Popular
-                </span>
+              {/* Dark Gradient Hover Background */}
+              {!plan.featured && (
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               )}
 
-              <h3
-                className={`text-xl font-bold ${plan.featured ? "text-white" : "text-primary-950"}`}
-              >
-                {plan.name}
-              </h3>
-              <p
-                className={`mt-1 text-sm ${plan.featured ? "text-primary-100/80" : "text-zinc-500"}`}
-              >
-                {plan.tagline}
-              </p>
+              <div className="relative flex flex-1 flex-col">
+                {plan.featured && (
+                  <span className="absolute -top-4 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary-700 shadow-lg">
+                    <FaStar className="h-3 w-3 text-primary-500" />
+                    Most Popular
+                  </span>
+                )}
 
-              <div className="mt-6 flex items-baseline gap-1">
-                <span
-                  className={`text-4xl font-bold ${plan.featured ? "text-white" : "text-primary-950"}`}
+                <h3
+                  className={`text-xl font-bold transition-colors duration-500 ${plan.featured ? "text-white" : "text-primary-950 group-hover:text-white"}`}
                 >
-                  ${yearly ? plan.yearly : plan.monthly}
-                </span>
-                <span
-                  className={`text-sm ${plan.featured ? "text-primary-100/80" : "text-zinc-500"}`}
+                  {plan.name}
+                </h3>
+                <p
+                  className={`mt-1 text-sm transition-colors duration-500 ${plan.featured ? "text-primary-100/80" : "text-zinc-500 group-hover:text-white/80"}`}
                 >
-                  /month
-                </span>
-              </div>
+                  {plan.tagline}
+                </p>
 
-              <ul className="mt-8 flex flex-1 flex-col gap-3">
-                {plan.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className={`flex items-start gap-2.5 text-sm ${plan.featured ? "text-primary-50" : "text-zinc-600"}`}
+                <div className="mt-6 flex items-baseline gap-1">
+                  <span
+                    className={`text-4xl font-bold transition-colors duration-500 ${plan.featured ? "text-white" : "text-primary-950 group-hover:text-white"}`}
                   >
-                    <FaCheck
-                      className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${plan.featured ? "text-primary-300" : "text-primary-500"}`}
-                    />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+                    ${yearly ? plan.yearly : plan.monthly}
+                  </span>
+                  <span
+                    className={`text-sm transition-colors duration-500 ${plan.featured ? "text-primary-100/80" : "text-zinc-500 group-hover:text-white/80"}`}
+                  >
+                    /month
+                  </span>
+                </div>
 
-              <a
-                href="#quote"
-                className={`mt-8 w-full rounded-full px-6 py-3 text-center text-sm font-semibold transition-all hover:scale-105 ${
-                  plan.featured
-                    ? "bg-white text-primary-700 shadow-lg hover:bg-primary-50"
-                    : "bg-primary-500 text-white shadow-lg shadow-primary-500/20 hover:bg-primary-600"
-                }`}
-              >
-                Choose {plan.name}
-              </a>
+                <ul className="mt-8 flex flex-1 flex-col gap-3">
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className={`flex items-start gap-2.5 text-sm transition-colors duration-500 ${plan.featured ? "text-primary-50" : "text-zinc-600 group-hover:text-white/90"}`}
+                    >
+                      <FaCheck
+                        className={`mt-0.5 h-3.5 w-3.5 shrink-0 transition-colors duration-500 ${plan.featured ? "text-primary-300" : "text-primary-500 group-hover:text-white"}`}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href="#quote"
+                  className={`mt-8 w-full rounded-full px-6 py-3 text-center text-sm font-semibold transition-all hover:scale-105 ${
+                    plan.featured
+                      ? "bg-white text-primary-700 shadow-lg hover:bg-primary-50"
+                      : "bg-primary-500 text-white shadow-lg shadow-primary-500/20 group-hover:bg-white group-hover:text-primary-700"
+                  }`}
+                >
+                  Choose {plan.name}
+                </a>
+              </div>
             </div>
           ))}
         </div>

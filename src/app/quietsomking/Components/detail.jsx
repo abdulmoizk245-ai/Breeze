@@ -258,13 +258,17 @@ export default function QuitSmokingPage() {
             {healthRisks.map((risk) => (
               <div
                 key={risk}
-                className="group rounded-2xl border border-slate-100 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700 transition group-hover:bg-primary-600 group-hover:text-white">
-                  <FaExclamationCircle className="h-4 w-4" />
-                </div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <h3 className="text-sm font-semibold text-slate-900">{risk}</h3>
+                <div className="relative">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-700 transition duration-500 group-hover:bg-white/15 group-hover:text-white">
+                    <FaExclamationCircle className="h-4 w-4" />
+                  </div>
+
+                  <h3 className="text-sm font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">{risk}</h3>
+                </div>
               </div>
             ))}
           </div>
@@ -338,10 +342,13 @@ export default function QuitSmokingPage() {
 
                     {/* Card */}
                     <div
-                      className={`group relative ml-16 w-full rounded-[2rem] border border-primary-100 bg-white/90 p-6 shadow-lg shadow-primary-900/5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-primary-300 hover:shadow-2xl hover:shadow-primary-900/10 sm:p-7 lg:ml-0 lg:w-[44%] ${
+                      className={`group relative ml-16 w-full overflow-visible rounded-[2rem] border border-primary-100 bg-white/90 p-6 shadow-lg shadow-primary-900/5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-primary-300 hover:shadow-2xl hover:shadow-primary-900/10 sm:p-7 lg:ml-0 lg:w-[44%] ${
                         isLeft ? "lg:mr-auto" : "lg:ml-auto"
                       }`}
                     >
+                      {/* Dark Gradient Hover Background */}
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
                       {/* Desktop Connector Line */}
                       <div
                         className={`absolute top-10 hidden h-px w-12 bg-gradient-to-r from-primary-300 to-primary-100 lg:block ${
@@ -350,23 +357,20 @@ export default function QuitSmokingPage() {
                       />
 
                       {/* Number Badge */}
-                      <div className="absolute -right-4 -top-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-500 text-sm font-black text-white shadow-xl shadow-primary-500/30">
+                      <div className="absolute -right-4 -top-4 z-10 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-500 text-sm font-black text-white shadow-xl shadow-primary-500/30">
                         {String(index + 1).padStart(2, "0")}
                       </div>
 
-                      {/* Soft Glow */}
-                      <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary-100 opacity-60 blur-2xl transition duration-300 group-hover:bg-primary-200" />
-
                       <div className="relative">
-                        <span className="inline-flex rounded-full bg-primary-50 px-4 py-2 text-xs font-black uppercase tracking-wide text-primary-700">
+                        <span className="inline-flex rounded-full bg-primary-50 px-4 py-2 text-xs font-black uppercase tracking-wide text-primary-700 transition-colors duration-500 group-hover:bg-white/15 group-hover:text-white">
                           {item.time}
                         </span>
 
-                        <h3 className="mt-5 text-xl font-black text-slate-950 sm:text-2xl">
+                        <h3 className="mt-5 text-xl font-black text-slate-950 transition-colors duration-500 group-hover:text-white sm:text-2xl">
                           {item.title}
                         </h3>
 
-                        <p className="mt-4 text-sm leading-7 text-slate-600">
+                        <p className="mt-4 text-sm leading-7 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
                           {item.text}
                         </p>
                       </div>

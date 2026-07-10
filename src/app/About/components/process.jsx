@@ -166,32 +166,34 @@ export default function AboutProcess() {
               key={step.number}
               className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary-500/30 hover:shadow-2xl hover:shadow-primary-500/10"
             >
-              {/* Top Number */}
-              <div className="flex items-center justify-between">
-                <span className="font-serif text-5xl leading-none text-primary-500/20 transition-all duration-300 group-hover:text-primary-500/40">
-                  {step.number}
-                </span>
+              {/* Dark Gradient Hover Background */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-slate-950 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-500/10 text-primary-600 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white">
-                  <FaCheck className="h-3.5 w-3.5" />
-                </span>
+              <div className="relative">
+                {/* Top Number */}
+                <div className="flex items-center justify-between">
+                  <span className="font-serif text-5xl leading-none text-primary-500/20 transition-all duration-300 group-hover:text-white/20">
+                    {step.number}
+                  </span>
+
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-500/10 text-primary-600 transition-all duration-300 group-hover:bg-white/15 group-hover:text-white">
+                    <FaCheck className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+
+                <h3 className="mt-8 text-xl font-semibold text-slate-900 transition-colors duration-500 group-hover:text-white">
+                  {step.title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-7 text-slate-600 transition-colors duration-500 group-hover:text-white/80">
+                  {step.description}
+                </p>
+
+                {/* Bottom Line */}
+                <div className="mt-7 h-px w-full bg-slate-100 group-hover:bg-white/20">
+                  <div className="h-px w-0 bg-primary-500 transition-all duration-500 group-hover:w-full group-hover:bg-white/60" />
+                </div>
               </div>
-
-              <h3 className="mt-8 text-xl font-semibold text-slate-900">
-                {step.title}
-              </h3>
-
-              <p className="mt-4 text-sm leading-7 text-slate-600">
-                {step.description}
-              </p>
-
-              {/* Bottom Line */}
-              <div className="mt-7 h-px w-full bg-slate-100">
-                <div className="h-px w-0 bg-primary-500 transition-all duration-500 group-hover:w-full" />
-              </div>
-
-              {/* Decorative Glow */}
-              <div className="pointer-events-none absolute -bottom-16 -right-16 h-36 w-36 rounded-full bg-primary-500/0 blur-2xl transition-all duration-300 group-hover:bg-primary-500/10" />
             </div>
           ))}
         </div>
