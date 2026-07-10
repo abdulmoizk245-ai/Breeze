@@ -117,7 +117,10 @@ export default function Hero() {
         </div>
 
         {/* Quote form - RIGHT SIDE */}
-        <div className="w-full max-w-md rounded-3xl border border-white/20 bg-white/95 p-6 shadow-2xl backdrop-blur-xl ring-1 ring-white/10 sm:p-8">
+        <div
+          id="quote"
+          className="w-full max-w-md scroll-mt-28 rounded-3xl border border-white/20 bg-white/95 p-6 shadow-2xl backdrop-blur-xl ring-1 ring-white/10 sm:p-8"
+        >
           <h2 className="text-xl font-bold text-[#061222]">Get a Free Quote</h2>
 
           <p className="mt-1 text-sm text-slate-500">

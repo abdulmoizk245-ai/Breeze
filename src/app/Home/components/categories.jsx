@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FaHeartPulse,
   FaUserDoctor,
@@ -93,7 +94,7 @@ export default function Categories() {
             return (
               <a
                 key={label}
-                href={href}
+                // href={href}
                 className={`group relative flex overflow-hidden rounded-[2rem] border border-slate-200 bg-white text-slate-950 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:border-primary-400 hover:shadow-2xl hover:shadow-primary-200/60 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-300 ${
                   isFeatured
                     ? "p-8 sm:col-span-2 sm:row-span-2"
@@ -159,12 +160,24 @@ export default function Categories() {
                     </p>
 
                     {/* Explore */}
-                    <div className="mt-7 flex items-center gap-3">
+                    {/* <div className="mt-7 flex items-center gap-3">
                       <span className="h-px flex-1 bg-slate-200 transition-colors duration-500 group-hover:bg-white/30 group-focus-visible:bg-white/30" />
 
                       <span className="text-xs font-bold uppercase tracking-[0.22em] text-primary-600 transition-colors duration-500 group-hover:text-white group-focus-visible:text-white">
                         Explore
                       </span>
+                    </div> */}
+                    {/* Explore */}
+                    <div className="mt-7 flex items-center gap-3">
+                      <span className="h-px flex-1 bg-slate-200 transition-colors duration-500 group-hover:bg-white/30" />
+
+                      <Link
+                        href="/About"
+                        className="relative z-20 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-primary-600 transition-all duration-500 hover:gap-3 group-hover:text-white"
+                      >
+                        Explore
+                        <FaChevronRight className="h-3 w-3" />
+                      </Link>
                     </div>
                   </div>
                 </div>
