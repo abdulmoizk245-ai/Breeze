@@ -1,24 +1,135 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { FaStar, FaArrowRight, FaShieldHeart } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import {
+  FaStar,
+  FaArrowRight,
+  FaShieldHeart,
+  FaCircleCheck,
+  FaCircleExclamation,
+  FaXmark,
+} from "react-icons/fa6";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_RE = /^[+]?[\d\s().-]{7,20}$/;
+
+function validate(values) {
+  const errors = {};
+
+  if (!values.name.trim()) {
+    errors.name = "Please enter your full name.";
+  } else if (values.name.trim().length < 2) {
+    errors.name = "Name looks too short.";
+  }
+
+  if (!values.phone.trim()) {
+    errors.phone = "Please enter a phone number.";
+  } else if (!PHONE_RE.test(values.phone.trim())) {
+    errors.phone = "Enter a valid phone number.";
+  }
+
+  if (!values.email.trim()) {
+    errors.email = "Please enter your email.";
+  } else if (!EMAIL_RE.test(values.email.trim())) {
+    errors.email = "Enter a valid email address.";
+  }
+
+  return errors;
+}
+
+function Toast({ toast, onClose }) {
+  useEffect(() => {
+    if (!toast) return;
+    const timer = setTimeout(onClose, 4500);
+    return () => clearTimeout(timer);
+  }, [toast, onClose]);
+
+  if (!toast) return null;
+
+  const isSuccess = toast.type === "success";
+
+  return (
+    <div className="pointer-events-none fixed inset-x-0 top-6 z-[100] flex justify-center px-4 sm:justify-end sm:px-6">
+      <div
+        role="status"
+        aria-live="polite"
+        className={`pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-2xl border p-4 shadow-2xl backdrop-blur-md ${
+          isSuccess
+            ? "border-secondary-200 bg-secondary-50/95 text-secondary-900"
+            : "border-primary-200 bg-white/95 text-primary-900"
+        }`}
+      >
+        {isSuccess ? (
+          <FaCircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-secondary-600" />
+        ) : (
+          <FaCircleExclamation className="mt-0.5 h-5 w-5 shrink-0 text-primary-500" />
+        )}
+        <div className="flex-1">
+          <p className="text-sm font-semibold">{toast.title}</p>
+          <p className="mt-0.5 text-sm leading-6 opacity-80">
+            {toast.message}
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Dismiss notification"
+          className="shrink-0 rounded-full p-1 opacity-60 transition hover:opacity-100"
+        >
+          <FaXmark className="h-3.5 w-3.5" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default function Hero() {
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
+  const [errors, setErrors] = useState({});
+  const [toast, setToast] = useState(null);
 
   function handleChange(e) {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => {
+      if (!prev[name]) return prev;
+      const next = { ...prev };
+      delete next[name];
+      return next;
+    });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    const validationErrors = validate(form);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) {
+      setToast({
+        type: "error",
+        title: "Please fix the highlighted fields",
+        message:
+          "A few details still need your attention before we can send your quote.",
+      });
+      return;
+    }
+
     console.log("Quote request:", form);
+    setToast({
+      type: "success",
+      title: "Quote request sent",
+      message: "Thanks! We'll get back to you shortly.",
+    });
+    setForm({ name: "", phone: "", email: "" });
+    setErrors({});
   }
 
   return (
     <section className="relative isolate flex min-h-[92vh] w-full items-center overflow-hidden W">
+      <Toast toast={toast} onClose={() => setToast(null)} />
+
       <Image
         src="/Home/herooo.png"
         alt="Family protected by health insurance"
@@ -127,7 +238,11 @@ export default function Hero() {
             Fill in your details and we&apos;ll get back to you.
           </p>
 
-          <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
+          <form
+            noValidate
+            onSubmit={handleSubmit}
+            className="mt-6 flex flex-col gap-4"
+          >
             <div>
               <label
                 htmlFor="name"
@@ -139,12 +254,21 @@ export default function Hero() {
                 id="name"
                 name="name"
                 type="text"
-                required
                 value={form.name}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 outline-none focus:border-[#6EC7C2] focus:ring-2 focus:ring-[#6EC7C2]/30"
+                aria-invalid={Boolean(errors.name)}
+                className={`w-full rounded-xl border px-4 py-2.5 text-slate-900 outline-none focus:ring-2 ${
+                  errors.name
+                    ? "border-primary-400 focus:border-primary-400 focus:ring-primary-100"
+                    : "border-slate-300 focus:border-[#6EC7C2] focus:ring-[#6EC7C2]/30"
+                }`}
               />
+              {errors.name && (
+                <p className="mt-1.5 text-xs font-medium text-primary-500">
+                  {errors.name}
+                </p>
+              )}
             </div>
 
             <div>
@@ -158,12 +282,21 @@ export default function Hero() {
                 id="phone"
                 name="phone"
                 type="tel"
-                required
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="+1 (555) 000-0000"
-                className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 outline-none focus:border-[#6EC7C2] focus:ring-2 focus:ring-[#6EC7C2]/30"
+                aria-invalid={Boolean(errors.phone)}
+                className={`w-full rounded-xl border px-4 py-2.5 text-slate-900 outline-none focus:ring-2 ${
+                  errors.phone
+                    ? "border-primary-400 focus:border-primary-400 focus:ring-primary-100"
+                    : "border-slate-300 focus:border-[#6EC7C2] focus:ring-[#6EC7C2]/30"
+                }`}
               />
+              {errors.phone && (
+                <p className="mt-1.5 text-xs font-medium text-primary-500">
+                  {errors.phone}
+                </p>
+              )}
             </div>
 
             <div>
@@ -177,12 +310,21 @@ export default function Hero() {
                 id="email"
                 name="email"
                 type="email"
-                required
                 value={form.email}
                 onChange={handleChange}
                 placeholder="you@example.com"
-                className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-slate-900 outline-none focus:border-[#6EC7C2] focus:ring-2 focus:ring-[#6EC7C2]/30"
+                aria-invalid={Boolean(errors.email)}
+                className={`w-full rounded-xl border px-4 py-2.5 text-slate-900 outline-none focus:ring-2 ${
+                  errors.email
+                    ? "border-primary-400 focus:border-primary-400 focus:ring-primary-100"
+                    : "border-slate-300 focus:border-[#6EC7C2] focus:ring-[#6EC7C2]/30"
+                }`}
               />
+              {errors.email && (
+                <p className="mt-1.5 text-xs font-medium text-primary-500">
+                  {errors.email}
+                </p>
+              )}
             </div>
 
             <button
