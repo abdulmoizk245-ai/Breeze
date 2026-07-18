@@ -151,7 +151,7 @@ export default function AboutProcess() {
           </div>
 
           <Link
-            href="/quote"
+            href="/contact"
             className="group inline-flex w-fit items-center gap-2 rounded-full bg-primary-600 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-500 hover:shadow-primary-500/40 active:translate-y-0"
           >
             Start Your Free Consultation
