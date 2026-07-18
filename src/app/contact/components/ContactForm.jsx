@@ -125,11 +125,11 @@ export default function ContactForm() {
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [toast, setToast] = useState(null);
-  const submitTimer = useRef(null);
+  const mounted = useRef(true);
 
   useEffect(() => {
     return () => {
-      if (submitTimer.current) clearTimeout(submitTimer.current);
+      mounted.current = false;
     };
   }, []);
 
@@ -144,7 +144,7 @@ export default function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const validationErrors = validate(values);
@@ -160,8 +160,20 @@ export default function ContactForm() {
     }
 
     setSubmitting(true);
-    submitTimer.current = setTimeout(() => {
-      setSubmitting(false);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        throw new Error("Request failed");
+      }
+
+      if (!mounted.current) return;
+
       setToast({
         type: "success",
         title: "Message sent",
@@ -169,7 +181,17 @@ export default function ContactForm() {
       });
       setValues(initialValues);
       setErrors({});
-    }, 900);
+    } catch {
+      if (!mounted.current) return;
+
+      setToast({
+        type: "error",
+        title: "Message not sent",
+        message: "Something went wrong. Please try again in a moment.",
+      });
+    } finally {
+      if (mounted.current) setSubmitting(false);
+    }
   };
 
   return (

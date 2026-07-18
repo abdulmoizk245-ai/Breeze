@@ -196,6 +196,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import {
   FaFacebookF,
   FaXTwitter,
@@ -237,6 +238,29 @@ const SOCIALS = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle");
+
+  async function handleNewsletterSubmit(e) {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <footer className="relative w-full overflow-hidden bg-gradient-to-br from-[#F8FFFB] via-[#F1F8F6] to-[#EAF5F2] pt-16 sm:pt-20">
       {/* Decorative Background */}
@@ -269,23 +293,36 @@ export default function Footer() {
 
             {/* Newsletter */}
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleNewsletterSubmit}
               className="mt-6 flex w-full max-w-md flex-col gap-3 sm:flex-row"
             >
               <input
                 type="email"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
                 className="w-full rounded-full border border-[#CBDDD8] bg-white/80 px-5 py-3 text-sm text-[#132A4A] shadow-sm outline-none placeholder:text-slate-400 focus:border-[#2F8F8B] focus:ring-4 focus:ring-[#2F8F8B]/10"
               />
 
               <button
                 type="submit"
-                className="shrink-0 rounded-full bg-[#2F8F8B] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#2F8F8B]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#267A77]"
+                disabled={status === "sending"}
+                className="shrink-0 rounded-full bg-[#2F8F8B] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#2F8F8B]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#267A77] disabled:pointer-events-none disabled:opacity-70"
               >
-                Join
+                {status === "sending" ? "Joining..." : "Join"}
               </button>
             </form>
+            {status === "success" && (
+              <p className="mt-2 text-xs font-medium text-[#2F8F8B]">
+                Thanks for subscribing!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="mt-2 text-xs font-medium text-primary-500">
+                Something went wrong. Please try again.
+              </p>
+            )}
 
             {/* Socials */}
             <div className="mt-6 flex flex-wrap gap-3">

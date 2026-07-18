@@ -88,6 +88,7 @@ export default function Hero() {
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
   const [errors, setErrors] = useState({});
   const [toast, setToast] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -100,7 +101,7 @@ export default function Hero() {
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const validationErrors = validate(form);
@@ -116,14 +117,35 @@ export default function Hero() {
       return;
     }
 
-    console.log("Quote request:", form);
-    setToast({
-      type: "success",
-      title: "Quote request sent",
-      message: "Thanks! We'll get back to you shortly.",
-    });
-    setForm({ name: "", phone: "", email: "" });
-    setErrors({});
+    setSubmitting(true);
+
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        throw new Error("Request failed");
+      }
+
+      setToast({
+        type: "success",
+        title: "Quote request sent",
+        message: "Thanks! We'll get back to you shortly.",
+      });
+      setForm({ name: "", phone: "", email: "" });
+      setErrors({});
+    } catch {
+      setToast({
+        type: "error",
+        title: "Request not sent",
+        message: "Something went wrong. Please try again in a moment.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -329,9 +351,10 @@ export default function Hero() {
 
             <button
               type="submit"
-              className="mt-2 w-full rounded-xl bg-gradient-to-r from-[#6EC7C2] to-[#A8C96A] px-4 py-3 text-base font-bold text-[#061222] shadow-lg shadow-[#6EC7C2]/20 transition-all hover:-translate-y-0.5 hover:shadow-[#6EC7C2]/40"
+              disabled={submitting}
+              className="mt-2 w-full rounded-xl bg-gradient-to-r from-[#6EC7C2] to-[#A8C96A] px-4 py-3 text-base font-bold text-[#061222] shadow-lg shadow-[#6EC7C2]/20 transition-all hover:-translate-y-0.5 hover:shadow-[#6EC7C2]/40 disabled:pointer-events-none disabled:opacity-70"
             >
-              Get My Quote
+              {submitting ? "Sending..." : "Get My Quote"}
             </button>
           </form>
         </div>
