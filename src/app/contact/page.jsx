@@ -297,7 +297,7 @@ export default function ContactPage() {
                 </a>
 
                 <Link
-                  href="/plans"
+                  href="/contact"
                   className="inline-flex w-60 items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
                 >
                   View Coverage Options
