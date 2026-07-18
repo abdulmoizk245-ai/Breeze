@@ -129,7 +129,7 @@ export default function Header() {
           </a>
 
           <a
-            href="#quote"
+            href="/contact"
             className="group relative overflow-hidden rounded-full bg-primary-500 px-6 py-3 text-sm font-bold tracking-wide text-white shadow-xl shadow-primary-500/35 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-400 hover:shadow-primary-500/50 active:translate-y-0 active:scale-95"
           >
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
@@ -315,7 +315,7 @@ export default function Header() {
             </a>
 
             <a
-              href="#quote"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="animate-quote-pulse mt-3 flex items-center justify-center rounded-full bg-primary-500 px-5 py-3 text-center text-sm font-bold tracking-wide text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-400 active:scale-95 active:bg-primary-700"
             >
