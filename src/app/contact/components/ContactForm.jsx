@@ -325,10 +325,7 @@ export default function ContactForm() {
           )}
         </button>
 
-        <p className="mt-4 text-center text-xs leading-6 text-slate-500">
-          By submitting this form, you agree to be contacted about health
-          insurance options that may fit your needs.
-        </p>
+       
       </form>
     </>
   );
