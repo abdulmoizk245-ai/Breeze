@@ -92,9 +92,8 @@ export default function Categories() {
             const isAgent = index === 6;
 
             return (
-              <a
+              <div
                 key={label}
-                // href={href}
                 className={`group relative flex overflow-hidden rounded-[2rem] border border-slate-200 bg-white text-slate-950 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:border-primary-400 hover:shadow-2xl hover:shadow-primary-200/60 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-300 ${
                   isFeatured
                     ? "p-8 sm:col-span-2 sm:row-span-2"
@@ -181,7 +180,7 @@ export default function Categories() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             );
           })}
         </div>

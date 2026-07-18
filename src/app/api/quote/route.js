@@ -47,7 +47,8 @@ export async function POST(request) {
     });
 
     return Response.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("quote form send failed:", err);
     return Response.json(
       { error: "Failed to send request. Please try again later." },
       { status: 502 }
