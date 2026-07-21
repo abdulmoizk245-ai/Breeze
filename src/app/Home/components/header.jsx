@@ -122,10 +122,10 @@ export default function Header() {
         {/* Desktop CTA */}
         <div className="hidden items-start gap-3 lg:flex">
           <a
-            href="tel:+18005551234"
+            href="tel:+18888791872"
             className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-black/10 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:text-primary-300"
           >
-            +1 (800) 555-1234
+            +1 (888) 879-1872
           </a>
 
           <a
