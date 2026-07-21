@@ -91,11 +91,11 @@ export default function ContactPage() {
             {/* CTAs */}
             <div className="mt-10 flex flex-wrap items-center gap-8">
               <a
-                href="tel:+15125579308"
+                href="tel:+1888879-1872"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-400"
               >
                 <FaPhoneAlt className="h-3.5 w-3.5" />
-                Call (512) 557-9308
+                Call (888) 879-1872
               </a>
 
               <a
@@ -289,7 +289,7 @@ export default function ContactPage() {
               {/* Right Buttons */}
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href="tel:+15125579308"
+                  href="tel:+1888879-1872"
                   className="inline-flex w-60 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-6 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
                 >
                   <FaPhoneAlt className="h-3.5 w-3.5" />
