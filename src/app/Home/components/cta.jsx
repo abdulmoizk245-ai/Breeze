@@ -37,11 +37,11 @@ export default function Cta() {
             </a>
 
             <a
-              href="tel:+18005551234"
+              href="tel:+18888791872"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
             >
               <FaPhone className="h-3.5 w-3.5" />
-              +1 (800) 555-1234
+              +1 (888) 879-1872
             </a>
           </div>
         </div>
