@@ -142,7 +142,7 @@ export default function ContactPage() {
             href="tel:+15125579308"
             className="mt-3 block font-serif text-2xl text-white transition hover:text-primary-300"
           >
-            (512) 557-9308
+            (888) 879-1872557-9308
           </a>
           <p className="mt-2 text-sm text-zinc-400">
             Brenda Ruiz &middot; Licensed Advisor
@@ -289,7 +289,7 @@ export default function ContactPage() {
               {/* Right Buttons */}
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href="tel:+1888879-1872"
+                  href="tel:+18888791872"
                   className="inline-flex w-60 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-6 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
                 >
                   <FaPhoneAlt className="h-3.5 w-3.5" />

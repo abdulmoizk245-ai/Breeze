@@ -22,14 +22,23 @@ export default function Cta() {
               Peace of mind is a few minutes away
             </h2>
             <p className="mt-4 max-w-xl text-lg lg:text-[17px] text-primary-50/90">
-              Get a free, no-obligation quote today and see why 12,000+
-              members trust Breezy with their coverage.
+              Get a free, no-obligation quote today and see why 12,000+ members
+              trust Breezy with their coverage.
             </p>
           </div>
 
           <div className="flex flex-shrink-0 flex-wrap items-center justify-center gap-4">
-            <a
+            {/* <a
               href="#quote"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-base font-semibold text-primary-700 shadow-lg transition-all hover:scale-105 hover:bg-primary-50"
+            >
+              Get My Free Quote
+              <FaArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+            </a> */}
+            <a
+              href="https://calendly.com/breezy12/quote-consult"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-base font-semibold text-primary-700 shadow-lg transition-all hover:scale-105 hover:bg-primary-50"
             >
               Get My Free Quote
@@ -37,11 +46,11 @@ export default function Cta() {
             </a>
 
             <a
-              href="tel:+18005551234"
+              href="tel:+18888791872"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
             >
               <FaPhone className="h-3.5 w-3.5" />
-              +1 (800) 555-1234
+              +1 (888) 879-1872
             </a>
           </div>
         </div>

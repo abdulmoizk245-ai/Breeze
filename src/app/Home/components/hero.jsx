@@ -228,14 +228,21 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-6">
-            <button
+            {/* <button
               type="button"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#132A4A] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#132A4A]/25 transition-all hover:scale-105 hover:bg-[#2F8F8B]"
             >
               Get Started
               <FaArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </button>
-
+            </button> */}
+            <a
+  href="mailto:Info@breezyhealthsolutions.com"
+  className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#132A4A] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#132A4A]/25 transition-all hover:scale-105 hover:bg-[#2F8F8B]"
+>
+  <span>Get Started</span>
+  <FaArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+</a>
+   
             <div className="flex items-center gap-2">
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (

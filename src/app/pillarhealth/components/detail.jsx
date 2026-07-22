@@ -152,11 +152,11 @@ export default function ThreePillarsHealthPage() {
 
             <div className="mt-10 flex flex-wrap items-center gap-8">
               <a
-                href="tel:+15125579308"
+                href="tel:+18888791872"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-400"
               >
                 <FaPhoneAlt className="h-3.5 w-3.5" />
-                Call (512) 557-9308
+                Call (888) 879-1872
               </a>
 
               <Link
@@ -490,11 +490,11 @@ export default function ThreePillarsHealthPage() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="tel:+15125579308"
+                  href="tel:+18888791872"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-400"
                 >
                   <FaPhoneAlt className="h-3.5 w-3.5" />
-                  (512) 557-9308
+                  (888) 879-1872
                 </a>
 
                 <Link

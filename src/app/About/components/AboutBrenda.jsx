@@ -1,6 +1,8 @@
 "use client";
 
+import QuoteModal from "@/app/components/QuoteModal";
 import Link from "next/link";
+import { useState } from "react";
 import {
   FaCheck,
   FaArrowRight,
@@ -31,6 +33,7 @@ const reasons = [
 ];
 
 export default function AboutBrenda() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className="relative bg-[#f8fffb] py-24 sm:py-28">
       <div className="relative mx-auto max-w-9xl px-6 lg:px-8">
@@ -271,13 +274,21 @@ export default function AboutBrenda() {
             </p>
           </div>
 
-          <Link
+          {/* <Link
             href="/quote"
             className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-primary-700 transition hover:bg-primary-50"
           >
-            Compare My Plan
+            Get Quote 
             <FaArrowRight className="h-3.5 w-3.5" />
-          </Link>
+          </Link> */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-primary-700 transition hover:bg-primary-50"
+          >
+            Get Quote
+            <FaArrowRight className="h-3.5 w-3.5" />
+          </button>
+          <QuoteModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </div>
 
         {/* What Sets Me Apart */}
@@ -538,7 +549,9 @@ export default function AboutBrenda() {
               </Link>
 
               <Link
-                href="/contact"
+                href="https://calendly.com/breezy12/quote-consult"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
               >
                 Book Consultation

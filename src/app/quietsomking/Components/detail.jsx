@@ -677,16 +677,16 @@ export default function QuitSmokingPage() {
                   </p>
 
                   <a
-                    href="tel:+15125579308"
+                    href="tel:+18888791872"
                     className="mt-2 block text-2xl font-black text-white transition hover:text-primary-300"
                   >
-                    (512) 557-9308
+                    (888) 879-1872
                   </a>
                 </div>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="tel:+15125579308"
+                    href="tel:+18888791872"
                     className="inline-flex flex-1 items-center justify-center rounded-full bg-primary-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
                   >
                     Call Now
