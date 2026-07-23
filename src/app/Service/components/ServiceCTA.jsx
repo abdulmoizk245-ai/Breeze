@@ -51,9 +51,15 @@
 //   );
 // }
 
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function ServiceCTA() {
+  const [showNumber, setShowNumber] = useState(false);
+
   return (
     <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto">
@@ -89,12 +95,23 @@ export default function ServiceCTA() {
                 Get Started Today
               </Link>
 
-              <Link
-                href="/about"
-                className="inline-flex w-56 items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-xs font-black text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20 sm:text-sm"
-              >
-                Meet Your Advisor
-              </Link>
+              {showNumber ? (
+                <a
+                  href="tel:+18888791872"
+                  className="inline-flex w-56 items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-xs font-black text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20 sm:text-sm"
+                >
+                  <FaPhoneAlt className="h-3.5 w-3.5" />
+                  +1 (888) 879-1872
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setShowNumber(true)}
+                  className="inline-flex w-56 items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-xs font-black text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20 sm:text-sm"
+                >
+                  Meet Your Advisor
+                </button>
+              )}
             </div>
           </div>
         </div>

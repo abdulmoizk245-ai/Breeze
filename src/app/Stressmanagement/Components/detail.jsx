@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
+
 const stressEffects = [
   {
     title: "Cortisol & Chronic Stress",
@@ -149,6 +154,8 @@ const copingCards = [
 ];
 
 export default function StressWellnessPage() {
+  const [showNumber, setShowNumber] = useState(false);
+
   return (
     <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
       {/* Hero — dark, editorial */}
@@ -519,12 +526,23 @@ export default function StressWellnessPage() {
 
             {/* Right Buttons */}
             <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
-              >
-                Speak With a Consultant
-              </a>
+              {showNumber ? (
+                <a
+                  href="tel:+18888791872"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
+                >
+                  <FaPhoneAlt className="h-3.5 w-3.5" />
+                  +1 (888) 879-1872
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setShowNumber(true)}
+                  className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition hover:-translate-y-0.5 hover:bg-primary-400"
+                >
+                  Speak With a Consultant
+                </button>
+              )}
 
               <a
                 href="/Service"

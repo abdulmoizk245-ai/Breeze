@@ -1,6 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import { FaArrowRight, FaPhone } from "react-icons/fa6";
+import QuoteModal from "@/app/components/QuoteModal";
 
 export default function Cta() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="relative w-full overflow-hidden bg-[#f8fffb] px-6 py-16">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 px-8 py-16 text-center shadow-2xl shadow-primary-900/20 sm:px-16">
@@ -35,15 +41,14 @@ export default function Cta() {
               Get My Free Quote
               <FaArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </a> */}
-            <a
-              href="https://calendly.com/breezy12/quote-consult"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-base font-semibold text-primary-700 shadow-lg transition-all hover:scale-105 hover:bg-primary-50"
             >
               Get My Free Quote
               <FaArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </a>
+            </button>
 
             <a
               href="tel:+18888791872"
@@ -55,6 +60,8 @@ export default function Cta() {
           </div>
         </div>
       </div>
+
+      <QuoteModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </section>
   );
 }

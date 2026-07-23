@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import {
   FaArrowRight,
   FaAppleAlt,
@@ -121,6 +124,8 @@ const services = [
 ];
 
 export default function ImmuneSystemPage() {
+  const [showNumber, setShowNumber] = useState(false);
+
   return (
     <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
       {/* Hero — dark, editorial */}
@@ -173,13 +178,24 @@ export default function ImmuneSystemPage() {
                 Call (888) 879-1872
               </a>
 
-              <Link
-                href="/Contact"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
-              >
-                Speak With Brenda
-                <FaArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-              </Link>
+              {showNumber ? (
+                <a
+                  href="tel:+18888791872"
+                  className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
+                >
+                  <FaPhoneAlt className="h-3 w-3" />
+                  +1 (888) 879-1872
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setShowNumber(true)}
+                  className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
+                >
+                  Speak With Brenda
+                  <FaArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                </button>
+              )}
             </div>
           </div>
 
