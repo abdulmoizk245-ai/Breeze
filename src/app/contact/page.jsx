@@ -43,10 +43,10 @@ export default function ContactPage() {
         />
 
         {/* Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/40" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
         <div className="pointer-events-none absolute right-[-10%] top-[-10%] h-96 w-96 rounded-full bg-primary-500/10 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-[-15%] left-[15%] h-80 w-80 rounded-full bg-secondary-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-15%] left-[15%] h-80 w-80 rounded-full bg-secondary-500/10 blur-3xl" /> */}
 
         <div className="relative z-10 w-full px-6 py-28 sm:py-32 lg:px-16">
           <div className="max-w-2xl text-white">
@@ -99,10 +99,12 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="#contact-form"
+                href="https://calendly.com/BREEZY12"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
               >
-                Request Free Consultation
+                Book a Consultation
                 <FaArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -123,12 +125,18 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="h-10 w-px bg-white/10" />
-              <div>
-                <p className="font-serif text-3xl text-white">Free</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-zinc-400">
-                  Consultation
-                </p>
-              </div>
+              <a
+                href="https://calendly.com/BREEZY12"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="cursor-pointer">
+                  <p className="font-serif text-3xl text-white">Book a</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.2em] text-zinc-400">
+                    Consultation
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -296,12 +304,14 @@ export default function ContactPage() {
                   Call Brenda Ruiz
                 </a>
 
-                <Link
-                  href="/contact"
+                <a
+                  href="https://calendly.com/BREEZY12"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex w-60 items-center justify-center whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
                 >
-                  View Coverage Options
-                </Link>
+                  Book a Consultation
+                </a>
               </div>
             </div>
           </div>

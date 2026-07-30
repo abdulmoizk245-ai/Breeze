@@ -14,18 +14,18 @@ export default function AboutHero() {
         priority
         className="object-cover object-center"
       /> */}
-    <Image
-  src="/about/hero.png"
-  alt="Brenda Ruiz health insurance advisor"
-  fill
-  priority
-  sizes="100vw"
-  className="object-cover object-[65%_center] sm:object-center"
-/>
+      <Image
+        src="/about/hero.png"
+        alt="Brenda Ruiz health insurance advisor"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[65%_center] sm:object-center"
+      />
 
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-slate-950/20" /> */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/75 lg:to-slate-950/20" />
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/75 lg:to-slate-950/20" /> */}
 
       <div className="relative z-10 w-full px-6 py-24 sm:py-28 lg:px-16 lg:py-32">
         <div className="max-w-2xl text-white">
@@ -57,15 +57,17 @@ export default function AboutHero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-6 border-t border-white/10 pt-8">
             <div>
-              <p className="font-serif text-3xl text-white">20+</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-zinc-400">
+              <p className="font-serif text-3xl text-[#132A4A]">20+</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#132A4A]">
                 Years in healthcare
               </p>
             </div>
+
             <div className="h-10 w-px bg-white/10" />
+
             <div>
-              <p className="font-serif text-3xl text-white">EN / ES</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-zinc-400">
+              <p className="font-serif text-3xl text-[#132A4A]">EN / ES</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#132A4A]">
                 Bilingual service
               </p>
             </div>
@@ -79,13 +81,15 @@ export default function AboutHero() {
               Get a Free Quote
             </Link>
 
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
+            <a
+              href="https://calendly.com/BREEZY12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-[#132A4A] text-sm font-semibold"
             >
               Book a Consultation
               <FaArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -18,10 +18,10 @@ const CATEGORIES = [
     text: "Flexible medical coverage for everyday care, doctor visits, and real-life health needs.",
   },
   {
-    label: "Medicare",
+    label: "Catastrophic Coverage",
     icon: FaUserDoctor,
-    href: "#medicare",
-    text: "Clear guidance for choosing the Medicare option that fits your lifestyle.",
+    href: "#catastrophic-coverage",
+    text: "Coverage for major medical emergencies.",
   },
   {
     label: "Dental",

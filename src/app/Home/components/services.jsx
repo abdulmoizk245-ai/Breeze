@@ -125,14 +125,14 @@ const SERVICES = [
     ],
   },
   {
-    title: "Medicare Solutions",
+    title: "Catastrophic & Accident Coverage",
     description:
-      "Original Medicare, Advantage, and Supplement plans explained in plain English by a real person.",
+      "Affordable protection for unexpected accidents and major medical expenses.",
     icon: FaUserDoctor,
     points: [
-      "Free plan comparison",
-      "Enrollment period guidance",
-      "No cost to switch",
+      "Emergency protection",
+      "Lower monthly costs",
+      "Flexible coverage options",
     ],
   },
   {
@@ -140,7 +140,11 @@ const SERVICES = [
     description:
       "Stand-alone or bundled add-ons that cover cleanings, frames, and everything in between.",
     icon: FaTooth,
-    points: ["Low waiting periods", "Nationwide network", "Kids covered from day one"],
+    points: [
+      "Low waiting periods",
+      "Nationwide network",
+      "Kids covered from day one",
+    ],
   },
   {
     title: "Life & Supplemental",
@@ -215,13 +219,14 @@ export default function Services() {
               </ul>
 
               <a
-                href="#quote"
+                href="https://calendly.com/BREEZY12"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full border border-primary-200 px-5 py-3 text-sm font-bold text-primary-700 transition duration-300 hover:border-primary-500 hover:bg-primary-500 hover:text-white"
               >
-                Explore coverage
+                Book a Consultation
                 <FaArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
-
               {/* Bottom Accent Line */}
               <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary-500 transition-all duration-500 group-hover:w-full" />
             </div>
