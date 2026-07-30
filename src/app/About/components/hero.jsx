@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import QuoteModal from "@/app/components/QuoteModal";
 
 export default function AboutHero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     // <section className="relative isolate flex min-h-[95vh] w-full items-center overflow-hidden bg-slate-950">
     <section className="relative isolate flex min-h-screen w-full items-center overflow-hidden bg-slate-950 lg:min-h-[95vh]">
@@ -74,12 +79,13 @@ export default function AboutHero() {
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-8">
-            <Link
-              href="/quote"
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-400"
             >
               Get a Free Quote
-            </Link>
+            </button>
 
             <a
               href="https://calendly.com/BREEZY12"
@@ -93,6 +99,8 @@ export default function AboutHero() {
           </div>
         </div>
       </div>
+
+      <QuoteModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </section>
   );
 }

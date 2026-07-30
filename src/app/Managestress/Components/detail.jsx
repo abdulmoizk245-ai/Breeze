@@ -1,4 +1,7 @@
-import { FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
+"use client";
+
+import { useState } from "react";
+import { FaExclamationCircle, FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
 
 const stressEffects = [
   "High blood pressure",
@@ -141,6 +144,8 @@ const coverageOptions = [
 ];
 
 export default function ManagingStressPage() {
+  const [showNumber, setShowNumber] = useState(false);
+
   return (
     <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
       {/* Hero — dark, editorial */}
@@ -183,15 +188,26 @@ export default function ManagingStressPage() {
               Explore Stress Relief
             </a>
 
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
-            >
-              Speak With Brenda
-              <span className="transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </a>
+            {showNumber ? (
+              <a
+                href="tel:+18888791872"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
+              >
+                <FaPhoneAlt className="h-3 w-3" />
+                +1 (888) 879-1872
+              </a>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setShowNumber(true)}
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
+              >
+                Speak With Brenda
+                <span className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </button>
+            )}
           </div>
         </div>
       </section>

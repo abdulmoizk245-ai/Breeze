@@ -2,8 +2,7 @@
 import { sendEnquiryEmail } from "@/lib/mailer";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const PHONE_RE = /^[+]?[\d\s().-]{7,20}$/;
-const ZIP_RE = /^\d{5}(-\d{4})?$/;
+const NUMERIC_RE = /^\d+$/;
 
 function validate(body) {
   const errors = {};
@@ -21,8 +20,8 @@ function validate(body) {
 
   if (!zip) {
     errors.zip = "Zip code is required.";
-  } else if (!ZIP_RE.test(zip)) {
-    errors.zip = "Enter a valid 5-digit zip code.";
+  } else if (!NUMERIC_RE.test(zip)) {
+    errors.zip = "Zip code must contain numbers only.";
   }
 
   if (!age) {
@@ -32,18 +31,17 @@ function validate(body) {
   }
 
   if (!height) errors.height = "Height is required.";
-  if (!weight) errors.weight = "Weight is required.";
+
+  if (!weight) {
+    errors.weight = "Weight is required.";
+  } else if (!NUMERIC_RE.test(weight)) {
+    errors.weight = "Weight must contain numbers only.";
+  }
 
   if (!email) {
     errors.email = "Email is required.";
   } else if (!EMAIL_RE.test(email)) {
     errors.email = "Enter a valid email address.";
-  }
-
-  // Phone is only required when the client marks this as a multi-person
-  // quote; otherwise validate it only if provided.
-  if (phone && !PHONE_RE.test(phone)) {
-    errors.phone = "Enter a valid phone number.";
   }
 
   return {

@@ -33,8 +33,8 @@ const initialValues = {
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const PHONE_RE = /^[+]?[\d\s().-]{7,20}$/;
-const ZIP_RE = /^\d{5}(-\d{4})?$/;
+const DIGITS_ONLY_RE = /\D/g;
+const NUMERIC_FIELDS = new Set(["zip", "weight"]);
 
 const BENEFITS = [
   "No-obligation, free quote",
@@ -51,8 +51,6 @@ function validate(values) {
 
   if (!values.zip.trim()) {
     errors.zip = "Zip code is required.";
-  } else if (!ZIP_RE.test(values.zip.trim())) {
-    errors.zip = "Enter a valid 5-digit zip code.";
   }
 
   if (!values.age.trim()) {
@@ -73,10 +71,6 @@ function validate(values) {
     errors.email = "Please enter your email.";
   } else if (!EMAIL_RE.test(values.email.trim())) {
     errors.email = "Enter a valid email address.";
-  }
-
-  if (values.phone.trim() && !PHONE_RE.test(values.phone.trim())) {
-    errors.phone = "Enter a valid phone number.";
   }
 
   return errors;
@@ -182,7 +176,10 @@ export default function QuoteModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleChange = (field) => (e) => {
-    const value = e.target.value;
+    const raw = e.target.value;
+    const value = NUMERIC_FIELDS.has(field)
+      ? raw.replace(DIGITS_ONLY_RE, "")
+      : raw;
     setValues((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => {
       if (!prev[field]) return prev;
@@ -210,7 +207,7 @@ export default function QuoteModal({ isOpen, onClose }) {
     setSubmitting(true);
 
     try {
-      const res = await fetch("/api/quote", {
+      const res = await fetch("/api/quoteforn", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
@@ -394,7 +391,8 @@ export default function QuoteModal({ isOpen, onClose }) {
                 <Field label="Weight" error={errors.weight} icon={FaWeight}>
                   <input
                     type="text"
-                    placeholder="e.g. 160 lbs"
+                    inputMode="numeric"
+                    placeholder="e.g. 160"
                     value={values.weight}
                     onChange={handleChange("weight")}
                     aria-invalid={Boolean(errors.weight)}

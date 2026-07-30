@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaCheck, FaStar } from "react-icons/fa6";
+import QuoteModal from "@/app/components/QuoteModal";
 
 const PLANS = [
   {
@@ -47,6 +48,7 @@ const PLANS = [
 
 export default function Plan() {
   const [yearly, setYearly] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section id="plans" className="relative w-full overflow-hidden bg-[#f8fffb] py-24">
@@ -151,8 +153,9 @@ export default function Plan() {
                   ))}
                 </ul>
 
-                <a
-                  href="#quote"
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(true)}
                   className={`mt-8 w-full rounded-full px-6 py-3 text-center text-sm font-semibold transition-all hover:scale-105 ${
                     plan.featured
                       ? "bg-white text-primary-700 shadow-lg hover:bg-primary-50"
@@ -160,12 +163,14 @@ export default function Plan() {
                   }`}
                 >
                   Choose {plan.name}
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <QuoteModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </section>
   );
 }

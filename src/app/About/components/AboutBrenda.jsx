@@ -540,13 +540,14 @@ export default function AboutBrenda() {
 
             {/* Right Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/contact"
+              <button
+                type="button"
+                onClick={() => setIsOpen(true)}
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
               >
                 Get a Free Quote
                 <FaArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              </button>
 
               <Link
                 href="https://calendly.com/breezy12/quote-consult"

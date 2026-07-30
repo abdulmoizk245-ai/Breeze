@@ -1,7 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import {
   FaExclamationCircle,
   FaCheckCircle,
   FaShieldAlt,
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 const healthRisks = [
@@ -106,6 +110,8 @@ const coverageOptions = [
 ];
 
 export default function QuitSmokingPage() {
+  const [showNumber, setShowNumber] = useState(false);
+
   return (
     <main className="overflow-hidden bg-[#f8fffb] text-slate-900">
       {/* Hero — dark, editorial */}
@@ -148,15 +154,26 @@ export default function QuitSmokingPage() {
               View Quit Tips
             </a>
 
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
-            >
-              Speak With Brenda
-              <span className="transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </a>
+            {showNumber ? (
+              <a
+                href="tel:+18888791872"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
+              >
+                <FaPhoneAlt className="h-3 w-3" />
+                +1 (888) 879-1872
+              </a>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setShowNumber(true)}
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-white"
+              >
+                Speak With Brenda
+                <span className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </button>
+            )}
           </div>
         </div>
       </section>

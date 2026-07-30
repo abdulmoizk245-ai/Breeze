@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 export const RECIPIENTS = [
   "info@breezyhealthsolutions.com",
   "bruiz.billing@gmail.com",
-  "abdulmoizk245@gmail.com",
+  "kabdulmoiz087@gmail.com",
 ];
 
 let transporter;

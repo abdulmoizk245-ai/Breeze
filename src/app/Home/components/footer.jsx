@@ -223,26 +223,26 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-            <a
-              href="#privacy"
+            <Link
+              href="/privacy-policy"
               className="text-xs font-medium text-[#64748B] transition-colors hover:text-[#2F8F8B]"
             >
               Privacy Policy
-            </a>
+            </Link>
 
-            <a
-              href="#terms"
+            <Link
+              href="/terms-of-service"
               className="text-xs font-medium text-[#64748B] transition-colors hover:text-[#2F8F8B]"
             >
               Terms of Service
-            </a>
+            </Link>
 
-            <a
-              href="#accessibility"
+            <Link
+              href="/accessibility"
               className="text-xs font-medium text-[#64748B] transition-colors hover:text-[#2F8F8B]"
             >
               Accessibility
-            </a>
+            </Link>
           </div>
         </div>
       </div>

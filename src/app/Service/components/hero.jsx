@@ -1,9 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
+import QuoteModal from "@/app/components/QuoteModal";
 
 export default function HeroSection() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showNumber, setShowNumber] = useState(false);
+
   return (
     <section className="relative overflow-hidden bg-slate-950">
       {/* Background Image */}
@@ -50,20 +55,32 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/quote"
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
               className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-4 text-sm font-bold text-white shadow-2xl shadow-primary-500/25 transition hover:-translate-y-1 hover:bg-primary-400"
             >
               Get a Free Quote
               <span className="ml-2">→</span>
-            </Link>
+            </button>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
-            >
-              Speak With Brenda
-            </Link>
+            {showNumber ? (
+              <a
+                href="tel:+18888791872"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
+              >
+                <FaPhoneAlt className="h-3.5 w-3.5" />
+                +1 (888) 879-1872
+              </a>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setShowNumber(true)}
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20"
+              >
+                Speak With Brenda
+              </button>
+            )}
           </div>
 
           {/* Trust Points */}
@@ -176,6 +193,8 @@ export default function HeroSection() {
 
       {/* Bottom Wave */}
       {/* <div className="absolute bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-[#f8fffb] to-transparent" /> */}
+
+      <QuoteModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </section>
   );
 }

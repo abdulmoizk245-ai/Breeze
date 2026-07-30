@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f8fffb;
   --foreground: #171717;
 }
 
@@ -47,13 +47,6 @@
   --color-tertiary-800: #1e3e47;
   --color-tertiary-900: #183037;
   --color-tertiary-950: #0e1e22;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

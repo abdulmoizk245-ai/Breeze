@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
 import {
   FaPhoneAlt,
   FaCheck,
@@ -10,6 +12,7 @@ import {
 import Footer from "../Home/components/footer";
 import Header from "../Home/components/header";
 import ContactForm from "./components/ContactForm";
+import QuoteModal from "../components/QuoteModal";
 
 const coverageOptions = [
   "Private PPO Health Plans",
@@ -28,6 +31,8 @@ const trustPoints = [
 ];
 
 export default function ContactPage() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <main className="overflow-hidden bg-[#f8fffb]">
       <Header />
@@ -319,6 +324,8 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+
+      <QuoteModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </main>
   );
 }
