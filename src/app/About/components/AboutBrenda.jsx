@@ -121,7 +121,7 @@ export default function AboutBrenda() {
             {/* Image */}
             <div className="relative h-[300px] w-full overflow-hidden sm:h-[400px] lg:h-[480px] xl:h-[520px]">
               <img
-                src="/about/brenda-about.png"
+                src="/about/brenda-about1.png"
                 alt="Brenda Ruiz helping a client choose health insurance coverage"
                 className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
               />
