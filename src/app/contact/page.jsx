@@ -96,11 +96,11 @@ export default function ContactPage() {
             {/* CTAs */}
             <div className="mt-10 flex flex-wrap items-center gap-8">
               <a
-                href="tel:+1888879-1872"
+                href="tel:+18889681032"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-400"
               >
                 <FaPhoneAlt className="h-3.5 w-3.5" />
-                Call (888) 879-1872
+                Call (888) 968-1032
               </a>
 
               <a
@@ -166,46 +166,86 @@ export default function ContactPage() {
       {/* Coverage Options */}
       <section className="bg-[#f8fffb] px-6 py-24 sm:py-28 lg:px-8">
         <div className="mx-auto max-w-9xl">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3">
-              <span className="h-px w-10 bg-primary-500" />
-              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
-                How We Can Help
-              </span>
-            </div>
-
-            <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
-              <span className="font-sans font-semibold">Coverage options</span>{" "}
-              <span className="font-serif italic">built around your life.</span>
-            </h2>
-
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Whether you need coverage for yourself, your family, or your small
-              business, Breezy Health Solutions helps you understand your
-              options without confusion or pressure.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {coverageOptions.map((item) => (
-              <div
-                key={item}
-                className="group rounded-3xl border border-slate-100 bg-white p-7 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition group-hover:bg-primary-600 group-hover:text-white">
-                  <FaCheckCircle className="h-5 w-5" />
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+            {/* Left Column: Heading + Subtitle + Coverage Cards */}
+            <div className="lg:col-span-7 xl:col-span-7">
+              <div className="max-w-2xl">
+                <div className="flex items-center gap-3">
+                  <span className="h-px w-10 bg-primary-500" />
+                  <span className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-600">
+                    How We Can Help
+                  </span>
                 </div>
 
-                <h3 className="mt-5 text-lg font-semibold text-slate-900">
-                  {item}
-                </h3>
+                <h2 className="mt-6 text-3xl leading-tight tracking-tight text-slate-900 sm:text-5xl">
+                  <span className="font-sans font-semibold">Coverage options</span>{" "}
+                  <span className="font-serif italic">built around your life.</span>
+                </h2>
 
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  Get clear guidance and personalized support to explore a plan
-                  that fits your healthcare needs and monthly budget.
+                <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+                  Whether you need coverage for yourself, your family, or your small
+                  business, Breezy Health Solutions helps you understand your
+                  options without confusion or pressure.
                 </p>
               </div>
-            ))}
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                {coverageOptions.map((item) => (
+                  <div
+                    key={item}
+                    className="group rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition group-hover:bg-primary-600 group-hover:text-white">
+                      <FaCheckCircle className="h-5 w-5" />
+                    </div>
+
+                    <h3 className="mt-4 text-base font-semibold text-slate-900">
+                      {item}
+                    </h3>
+
+                    <p className="mt-2 text-xs leading-6 text-slate-600">
+                      Get clear guidance and personalized support to explore a plan
+                      that fits your healthcare needs and monthly budget.
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column: Image */}
+            <div className="lg:col-span-5 xl:col-span-5">
+              <div className="relative mx-auto max-w-md lg:max-w-none">
+                <div className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-primary-200/50 to-secondary-200/40 blur-2xl" />
+
+                <div className="relative overflow-hidden rounded-[2.25rem] border border-slate-200/80 bg-white shadow-2xl">
+                  <div className="relative aspect-[4/5] w-full sm:aspect-[3/4] lg:aspect-[4/5]">
+                    <Image
+                      src="/contact/about-brenda.png"
+                      alt="Brenda Ruiz - Breezy Health Solutions"
+                      fill
+                      priority
+                      quality={100}
+                      unoptimized
+                      className="object-cover object-top"
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                    />
+                  </div>
+
+                  {/* Overlay badge */}
+                  <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/30 bg-slate-950/85 p-4 text-white shadow-lg backdrop-blur-md">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-primary-300">
+                      Licensed Insurance Advisor
+                    </p>
+                    <p className="mt-1 font-serif text-lg font-medium text-white">
+                      Brenda Ruiz
+                    </p>
+                    <p className="text-xs text-slate-300">
+                      Personalized health plans tailored to your life & budget
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
